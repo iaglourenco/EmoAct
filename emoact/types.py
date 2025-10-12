@@ -16,7 +16,7 @@ class Pose(TypedDict):
 
 class PersonInfo(TypedDict):
     person_id: str
-    face_embedding: ndarray | None  # 128-d vector or None if not computed
+    face_embedding: ndarray  # 128-d vector or None if not computed
     face_location: tuple[
         int, int, int, int, float
     ]  # (top, right, bottom, left, confidence)

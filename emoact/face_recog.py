@@ -19,7 +19,6 @@ def detect_faces(
         align=True,
         enforce_detection=False,
     )
-
     # Get positions in (top, right, bottom, left, embedding, confidence) format
     # Return list (list of faces per image) of list (faces per image) of tuples (top, right, bottom, left, embedding, confidence)
     faces = [

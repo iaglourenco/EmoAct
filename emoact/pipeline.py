@@ -1,7 +1,7 @@
 from emoact.types import PersonInfo, PipelineState
 from langgraph.graph import StateGraph, START, END
 
-from emoact.utils import draw_graph
+from emoact.utils import calculate_bbox_center_distance, cosine_similarity, draw_graph
 
 
 def load_video(state: PipelineState):
@@ -10,7 +10,8 @@ def load_video(state: PipelineState):
     video_path = state["video_path"]
     frames, state["fps"] = video_io.load_video(video_path)
     state["frames"] = [
-        {"image": frame, "persons": [], "objects": []} for frame in frames
+        {"image": frame, "persons": [], "objects": []}
+        for frame in frames  # [:100]  # limit frames for testing
     ]
     return state
 
@@ -18,20 +19,42 @@ def load_video(state: PipelineState):
 def detect_faces(state: PipelineState):
     from emoact import face_recog
 
-    frames = [frame_info["image"] for frame_info in state["frames"]]
-    results = face_recog.detect_faces(frames)
-    for frame_info, faces in zip(state["frames"], results):
-        for i, (top, right, bottom, left, embedding, confidence) in enumerate(faces):
-            person = PersonInfo(
-                person_id=f"person_{i+1}",
-                face_embedding=embedding,
-                face_location=(top, right, bottom, left, confidence),
-                image=frame_info["image"][top:bottom, left:right],
-                emotions=[],
-                pose={"landmarks": []},
-            )
-            if confidence > 0.95:  # Only consider faces with high confidence
-                frame_info["persons"].append(person)
+    batch_size = 10
+    total_frames = len(state["frames"])
+
+    # Process frames in batches of 10
+    for batch_start in range(0, total_frames, batch_size):
+        batch_end = min(batch_start + batch_size, total_frames)
+
+        # Extract frames for this batch
+        batch_frames = [
+            state["frames"][i]["image"] for i in range(batch_start, batch_end)
+        ]
+
+        # Detect faces in this batch
+        batch_results = face_recog.detect_faces(batch_frames)
+
+        # Update frame_info["persons"] for each frame in the batch
+        for i, faces in enumerate(batch_results):
+            frame_idx = batch_start + i
+            frame_info = state["frames"][frame_idx]
+
+            for j, (top, right, bottom, left, embedding, confidence) in enumerate(
+                faces
+            ):
+                person = PersonInfo(
+                    person_id=f"person_{j+1}",
+                    face_embedding=embedding,
+                    face_location=(top, right, bottom, left, confidence),
+                    image=frame_info["image"][top:bottom, left:right],
+                    emotions=[],
+                    pose={"landmarks": []},
+                )
+                if confidence > 0.95:  # Only consider faces with high confidence
+                    frame_info["persons"].append(person)
+                    print(
+                        f"Frame {frame_idx}: Detected person {person['person_id']} with confidence {confidence}"
+                    )
 
     return state
 
@@ -47,7 +70,7 @@ def draw(state: PipelineState):
                 top, right, bottom, left, confidence = person["face_location"]
                 draw_bounding_boxes(image, [(top, right, bottom, left, confidence)])
                 draw_text(
-                    image, f"ID: {person['person_id']}", position=(left, top - 10)
+                    image, f"ID: {person['person_id']}", position=(top - 10, left)
                 )
             # Draw emotions
             if person["emotions"]:
@@ -56,7 +79,7 @@ def draw(state: PipelineState):
                 draw_text(
                     image,
                     f"Emotions: {emotions_text}",
-                    position=(left, bottom + 20),
+                    position=(bottom + 20, left),
                     color=(255, 0, 0),
                 )
 
@@ -71,7 +94,7 @@ def draw(state: PipelineState):
             draw_text(
                 image,
                 f"{obj['label']} ({obj['confidence']:.2f})",
-                position=(left, top - 10),
+                position=(top - 10, left),
                 color=(0, 255, 0),
             )
 
@@ -82,19 +105,74 @@ def draw(state: PipelineState):
 
 def detect_poses(state: PipelineState):
     # Placeholder for pose detection logic
-    # This function should update the 'pose' field in each PersonInfo
+    # TODO: This function should update the 'pose' field in each PersonInfo
     return state
 
 
 def detect_objects(state: PipelineState):
     # Placeholder for object detection logic
-    # This function should update the 'objects' field in each FrameInfo
+    # TODO: This function should update the 'objects' field in each FrameInfo
     return state
 
 
 def detect_emotions(state: PipelineState):
     # Placeholder for emotion detection logic
-    # This function should update the 'emotions' field in each PersonInfo
+    # TODO: This function should update the 'emotions' field in each PersonInfo
+    return state
+
+
+def track_faces(state: PipelineState) -> PipelineState:
+
+    # histórico global de embeddings e IDs
+    known_persons = (
+        []
+    )  # list of dicts: {"person_id": str, "embedding": np.ndarray, "last_bbox": tuple}
+    next_person_id = 0
+    similarity_threshold: float = 0.6
+
+    for frame_info in state["frames"]:
+        for person in frame_info["persons"]:
+            best_match_id = None
+            best_score = -1.0
+
+            for kp in known_persons:
+                score = cosine_similarity(person["face_embedding"], kp["embedding"])
+                # opcional: penaliza muito se bbox estiver longe (melhora tracking em movimento rápido)
+                top, right, bottom, left, _ = person["face_location"]
+                prev_top, prev_right, prev_bottom, prev_left, _ = kp["last_bbox"]
+                center_dist = calculate_bbox_center_distance(
+                    (top, right, bottom, left),
+                    (prev_top, prev_right, prev_bottom, prev_left),
+                )
+                # normaliza distância em pixels (opcional, ajustável)
+                score -= center_dist * 0.001
+
+                if score > best_score:
+                    best_score = score
+                    best_match_id = kp["person_id"]
+
+            if best_score >= similarity_threshold and best_match_id is not None:
+                # match encontrado
+                person["person_id"] = best_match_id
+                # atualiza embedding e bbox histórico
+                for kp in known_persons:
+                    if kp["person_id"] == best_match_id:
+                        kp["embedding"] = person["face_embedding"]
+                        kp["last_bbox"] = person["face_location"]
+                        break
+            else:
+                # nova pessoa
+                person_id = f"person_{next_person_id}"
+                next_person_id += 1
+                person["person_id"] = person_id
+                known_persons.append(
+                    {
+                        "person_id": person_id,
+                        "embedding": person["face_embedding"],
+                        "last_bbox": person["face_location"],
+                    }
+                )
+
     return state
 
 
@@ -121,8 +199,12 @@ def save_video(state: PipelineState):
 graph_builder = StateGraph(PipelineState)
 
 
-def has_persons(state: PipelineState) -> bool:
-    return any(len(frame_info["persons"]) > 0 for frame_info in state["frames"])
+def has_persons(state: PipelineState):
+    return (
+        "has_faces"
+        if any(len(f["persons"]) > 0 for f in state["frames"])
+        else "no_faces"
+    )
 
 
 # Nós
@@ -131,6 +213,7 @@ graph_builder.add_node("detect_faces", detect_faces)
 graph_builder.add_node("detect_poses", detect_poses)
 graph_builder.add_node("detect_objects", detect_objects)
 graph_builder.add_node("detect_emotions", detect_emotions)
+graph_builder.add_node("track_faces", track_faces)
 graph_builder.add_node("draw", draw)
 graph_builder.add_node("summarize", summarize)
 graph_builder.add_node("save_video", save_video)
@@ -139,17 +222,21 @@ graph_builder.add_node("save_video", save_video)
 graph_builder.add_edge(START, "load_video")
 graph_builder.add_edge("load_video", "detect_faces")
 graph_builder.add_conditional_edges(
-    "detect_faces", has_persons, ["detect_poses", "detect_emotions"]
+    "detect_faces",
+    has_persons,
+    {"has_faces": "detect_poses", "no_faces": "detect_objects"},
 )
-graph_builder.add_edge("detect_faces", "detect_objects")
-graph_builder.add_edge(["detect_poses", "detect_emotions", "detect_objects"], "draw")
+graph_builder.add_edge("detect_poses", "detect_emotions")
+
+graph_builder.add_edge("detect_emotions", "detect_objects")
+graph_builder.add_edge("detect_objects", "track_faces")
+
+graph_builder.add_edge("track_faces", "draw")
 graph_builder.add_edge("draw", "summarize")
 graph_builder.add_edge("summarize", "save_video")
 
 graph = graph_builder.compile()
 draw_graph(graph)
-
-exit()
 
 if __name__ == "__main__":
     initial_state: PipelineState = {
@@ -159,5 +246,8 @@ if __name__ == "__main__":
         "frames": [],
         "summary": "",
     }
-    final_state = graph.invoke(initial_state)
-    print("Pipeline completed.")
+    for event in graph.stream(initial_state):
+        if event:
+            node_name = list(event.keys())[0]
+            state = event[node_name]
+            print(f"Node '{node_name}' completed.")
