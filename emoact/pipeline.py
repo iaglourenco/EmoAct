@@ -107,8 +107,17 @@ def detect_objects(state: PipelineState):
 
 
 def detect_emotions(state: PipelineState):
-    # Placeholder for emotion detection logic
-    # TODO: This function should update the 'emotions' field in each PersonInfo
+    from emoact import emotions
+
+    for frame_info in state["frames"]:
+        image = frame_info["image"]
+        for person in frame_info["persons"]:
+            if person["face_location"]:
+                left, top, right, bottom, _ = person["face_location"]
+                face_img = image[top:bottom, left:right]
+                if face_img.size > 0:
+                    emotion = emotions.detect_emotion(face_img)
+                    person["emotions"].append(emotion)
     return state
 
 
@@ -286,14 +295,16 @@ graph_builder.add_node("save_video", save_video)
 # Arestas
 graph_builder.add_edge(START, "load_video")
 graph_builder.add_edge("load_video", "detect_faces")
-graph_builder.add_conditional_edges(
-    "detect_faces",
-    has_persons,
-    {"has_faces": "detect_poses", "no_faces": "detect_objects"},
-)
-graph_builder.add_edge("detect_poses", "detect_emotions")
 
-graph_builder.add_edge("detect_emotions", "detect_objects")
+# Após detect_faces, executar em paralelo quando há faces
+# Usamos add_edge para cada nó para criar fan-out
+graph_builder.add_edge("detect_faces", "detect_poses")
+graph_builder.add_edge("detect_faces", "detect_emotions")
+graph_builder.add_edge("detect_faces", "detect_objects")
+
+# Fan-in: Todos convergem para track_faces
+graph_builder.add_edge("detect_poses", "track_faces")
+graph_builder.add_edge("detect_emotions", "track_faces")
 graph_builder.add_edge("detect_objects", "track_faces")
 
 graph_builder.add_edge("track_faces", "draw")

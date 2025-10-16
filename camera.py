@@ -7,7 +7,7 @@ Detects faces, poses, emotions, and objects in real-time from webcam feed.
 import cv2
 import numpy as np
 from emoact.types import PersonInfo, FrameInfo
-from emoact import face, pose, objects
+from emoact import face, pose, objects, emotions
 from emoact.utils import draw_bounding_boxes, draw_text, draw_pose_skeleton
 
 
@@ -107,9 +107,14 @@ def process_frame(image: np.ndarray) -> FrameInfo:
                 }
             )
 
-    # TODO: Add emotion detection when implemented
-    # 4. Detect emotions (placeholder)
-    # This would call the emotion detection function once implemented
+    # 4. Detect emotions
+    for person in frame_info["persons"]:
+        if person["face_location"]:
+            left, top, right, bottom, _ = person["face_location"]
+            face_img = image[top:bottom, left:right]
+            if face_img.size > 0:
+                emotion = emotions.detect_emotion(face_img)
+                person["emotions"].append(emotion)
 
     return frame_info
 
