@@ -25,7 +25,8 @@ def detect_objects_in_frame(frame):
             bbox = (int(left), int(top), int(right), int(bottom))
             confidence = float(conf)
             class_id = int(cls)
-
-            objects.append((bbox, class_id, confidence))
+            # Remove 'person' class (class_id 0)
+            if class_id != 0:
+                objects.append((bbox, class_id, confidence))
 
     return objects
