@@ -17,44 +17,6 @@ def load_video(state: PipelineState):
 
 
 def detect_faces(state: PipelineState):
-    from emoact import face_recog
-
-    batch_size = 10
-    total_frames = len(state["frames"])
-
-    # Process frames in batches of 10
-    for batch_start in range(0, total_frames, batch_size):
-        batch_end = min(batch_start + batch_size, total_frames)
-
-        # Extract frames for this batch
-        batch_frames = [
-            state["frames"][i]["image"] for i in range(batch_start, batch_end)
-        ]
-
-        # Detect faces in this batch
-        batch_results = face_recog.detect_faces(batch_frames)
-
-        # Update frame_info["persons"] for each frame in the batch
-        for i, faces in enumerate(batch_results):
-            frame_idx = batch_start + i
-            frame_info = state["frames"][frame_idx]
-
-            for j, (top, right, bottom, left, embedding, confidence) in enumerate(
-                faces
-            ):
-                person = PersonInfo(
-                    person_id=f"person_{j+1}",
-                    face_embedding=embedding,
-                    face_location=(top, right, bottom, left, confidence),
-                    image=frame_info["image"][top:bottom, left:right],
-                    emotions=[],
-                    pose={"landmarks": []},
-                )
-                if confidence > 0.95:  # Only consider faces with high confidence
-                    frame_info["persons"].append(person)
-                    print(
-                        f"Frame {frame_idx}: Detected person {person['person_id']} with confidence {confidence}"
-                    )
 
     return state
 
@@ -240,7 +202,7 @@ draw_graph(graph)
 
 if __name__ == "__main__":
     initial_state: PipelineState = {
-        "video_path": "cropped.mp4",
+        "video_path": "input_video.mp4",
         "output_path": "output.mp4",
         "fps": 0.0,
         "frames": [],
