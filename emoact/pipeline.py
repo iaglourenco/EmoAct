@@ -22,10 +22,21 @@ def detect_faces(state: PipelineState):
     for frame_info in state["frames"]:
         image = frame_info["image"]
         face_locations = face.detect_faces(image)
-        for left, top, right, bottom, embedding, confidence in face_locations:
+        for (
+            left,
+            top,
+            right,
+            bottom,
+            embedding,
+            confidence,
+            gender,
+            age,
+        ) in face_locations:
             person_info: PersonInfo = {
                 "face_location": (left, top, right, bottom, confidence),
                 "face_embedding": embedding,
+                "gender": gender,
+                "age": age,
                 "image": image[top:bottom, left:right],
                 "emotions": [],
                 "pose": {"landmarks": []},
@@ -73,7 +84,7 @@ def detect_poses(state: PipelineState):
                         if iou > best_iou:
                             best_iou = iou
                             best_person = person
-            if best_person and best_iou > 0.01:  # IoU threshold
+            if best_person and best_iou > state["iou_threshold"]:
                 best_person["pose"]["landmarks"] = [
                     {
                         "x": float(keypoints[i]),
@@ -95,7 +106,7 @@ def detect_objects(state: PipelineState):
         for bbox, cls, conf in detected_objects:
             left, top, right, bottom = bbox
 
-            if conf > 0.5:
+            if conf > state["object_conf_threshold"]:
                 frame_info["objects"].append(
                     {
                         "bbox": (left, top, right, bottom),
@@ -177,7 +188,9 @@ def draw(state: PipelineState):
             # Draw pose skeleton with connections
             if person["pose"]["landmarks"]:
                 landmarks = person["pose"]["landmarks"]
-                draw_pose_skeleton(image, landmarks, confidence_threshold=0.3)
+                draw_pose_skeleton(
+                    image, landmarks, confidence_threshold=state["pose_conf_threshold"]
+                )
 
             # Draw emotions with enhanced appearance
             if person["emotions"]:
@@ -201,6 +214,28 @@ def draw(state: PipelineState):
                     position=(left + 2, bottom + text_size[1] + 8),
                     font_scale=0.5,
                     color=(0, 0, 0),
+                    thickness=1,
+                )
+            # Draw gender and age
+            if person["gender"] is not None and person["age"] is not None:
+                gender_text = "Male" if person["gender"] == 1 else "Female"
+                age_text = f", Age: {person['age']}"
+                text = f"{gender_text}{age_text}"
+                text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
+                # Background rectangle for text
+                cv2.rectangle(
+                    image,
+                    (left, bottom + 30),
+                    (left + text_size[0] + 4, bottom + 30 + text_size[1] + 8),
+                    COLORS["face_text"],
+                    -1,
+                )
+                draw_text(
+                    image,
+                    text,
+                    position=(left + 2, bottom + 30 + text_size[1] + 3),
+                    font_scale=0.5,
+                    color=(255, 255, 255),
                     thickness=1,
                 )
 
@@ -295,16 +330,14 @@ graph_builder.add_node("save_video", save_video)
 # Arestas
 graph_builder.add_edge(START, "load_video")
 graph_builder.add_edge("load_video", "detect_faces")
+graph_builder.add_conditional_edges(
+    "detect_faces",
+    has_persons,
+    {"has_faces": "detect_poses", "no_faces": "detect_objects"},
+)
+graph_builder.add_edge("detect_poses", "detect_emotions")
 
-# Após detect_faces, executar em paralelo quando há faces
-# Usamos add_edge para cada nó para criar fan-out
-graph_builder.add_edge("detect_faces", "detect_poses")
-graph_builder.add_edge("detect_faces", "detect_emotions")
-graph_builder.add_edge("detect_faces", "detect_objects")
-
-# Fan-in: Todos convergem para track_faces
-graph_builder.add_edge("detect_poses", "track_faces")
-graph_builder.add_edge("detect_emotions", "track_faces")
+graph_builder.add_edge("detect_emotions", "detect_objects")
 graph_builder.add_edge("detect_objects", "track_faces")
 
 graph_builder.add_edge("track_faces", "draw")
@@ -321,6 +354,9 @@ if __name__ == "__main__":
         "fps": 0.0,
         "frames": [],
         "summary": "",
+        "iou_threshold": 0.01,
+        "object_conf_threshold": 0.5,
+        "pose_conf_threshold": 0.3,
     }
     for event in graph.stream(initial_state):
         if event:

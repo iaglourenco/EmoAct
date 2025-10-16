@@ -5,23 +5,31 @@ app = insightface.app.FaceAnalysis("buffalo_l", providers=["CUDAExecutionProvide
 app.prepare(ctx_id=0, det_size=(640, 640))
 
 
-def detect_faces(
-    frame: np.ndarray, threshold: float = 0.5
-) -> list[tuple[int, int, int, int, np.ndarray, float]]:
+def detect_faces(frame: np.ndarray, threshold: float = 0.5):
     """
     Detect faces in a frame.
 
     Returns:
-        List of tuples: (left, top, right, bottom, embedding, confidence)
+        List of tuples: (left, top, right, bottom, embedding, confidence, gender, age)
     """
     faces = app.get(frame)
     face_locations = []
     for face in faces:
         if face.det_score >= threshold:
             bbox = face.bbox.astype(int)
+            gender = face.gender.astype(int)
             # InsightFace returns [x1, y1, x2, y2] which is [left, top, right, bottom]
             left, top, right, bottom = bbox[0], bbox[1], bbox[2], bbox[3]
             face_locations.append(
-                (left, top, right, bottom, face.embedding, face.det_score)
+                (
+                    left,
+                    top,
+                    right,
+                    bottom,
+                    face.embedding,
+                    face.det_score,
+                    gender,
+                    face.age,
+                )
             )
     return face_locations

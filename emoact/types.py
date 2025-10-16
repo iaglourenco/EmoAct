@@ -15,6 +15,8 @@ class Pose(TypedDict):
 
 class PersonInfo(TypedDict):
     person_id: str
+    gender: int  # 0 for female, 1 for male,
+    age: int  # in years
     face_embedding: ndarray  # 128-d vector or None if not computed
     face_location: tuple[
         int, int, int, int, float
@@ -42,3 +44,8 @@ class PipelineState(TypedDict):
     fps: float
     frames: list[FrameInfo]
     summary: str
+    iou_threshold: (
+        float  # IoU (Intersection over Union) threshold for pose-face matching
+    )
+    object_conf_threshold: float  # Confidence threshold for object detection
+    pose_conf_threshold: float  # Confidence threshold for pose landmarks

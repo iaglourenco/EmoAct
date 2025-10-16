@@ -36,11 +36,13 @@ def process_frame(image: np.ndarray) -> FrameInfo:
 
     # 1. Detect faces
     face_locations = face.detect_faces(image)
-    for left, top, right, bottom, embedding, confidence in face_locations:
+    for left, top, right, bottom, embedding, confidence, gender, age in face_locations:
         person_info: PersonInfo = {
             "face_location": (left, top, right, bottom, confidence),
             "face_embedding": embedding,
             "image": image[top:bottom, left:right],
+            "gender": gender,
+            "age": age,
             "emotions": [],
             "pose": {"landmarks": []},
             "person_id": "",
@@ -193,6 +195,28 @@ def draw_detections(image: np.ndarray, frame_info: FrameInfo) -> np.ndarray:
                 position=(left + 2, bottom + text_size[1] + 8),
                 font_scale=0.5,
                 color=(0, 0, 0),
+                thickness=1,
+            )
+        # Draw gender and age
+        if person["gender"] is not None and person["age"] is not None:
+            gender_text = "Male" if person["gender"] == 1 else "Female"
+            age_text = f", Age: {person['age']}"
+            text = f"{gender_text}{age_text}"
+            text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
+            # Background rectangle for text
+            cv2.rectangle(
+                image,
+                (left, bottom + 30),
+                (left + text_size[0] + 4, bottom + 30 + text_size[1] + 8),
+                COLORS["face_text"],
+                -1,
+            )
+            draw_text(
+                image,
+                text,
+                position=(left + 2, bottom + 30 + text_size[1] + 3),
+                font_scale=0.5,
+                color=(255, 255, 255),
                 thickness=1,
             )
 
