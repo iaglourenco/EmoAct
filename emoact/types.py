@@ -1,4 +1,4 @@
-from numpy import imag, ndarray
+from numpy import ndarray
 from typing_extensions import TypedDict
 
 
@@ -6,8 +6,7 @@ class Landmark(TypedDict):
     name: str  # nose, left_shoulder, right_shoulder, etc.
     x: float
     y: float
-    z: float
-    visibility: float
+    confidence: float
 
 
 class Pose(TypedDict):
@@ -19,7 +18,7 @@ class PersonInfo(TypedDict):
     face_embedding: ndarray  # 128-d vector or None if not computed
     face_location: tuple[
         int, int, int, int, float
-    ]  # (top, right, bottom, left, confidence)
+    ]  # (left, top, right, bottom, confidence)
     image: ndarray  # cropped face image
     emotions: list[str]  # list of detected emotions
     pose: Pose  # body pose information
@@ -27,7 +26,7 @@ class PersonInfo(TypedDict):
 
 class SceneObject(TypedDict):
     label: str  # laptop, chair etc.
-    bbox: tuple[int, int, int, int]  # (top, right, bottom, left)
+    bbox: tuple[int, int, int, int]  # (left, top, right, bottom)
     confidence: float
 
 
