@@ -1,3 +1,8 @@
+from calendar import c
+
+import cv2
+from torch import embedding
+from emoact import utils
 from emoact.types import PersonInfo, PipelineState
 from langgraph.graph import StateGraph, START, END
 
@@ -84,7 +89,7 @@ def detect_poses(state: PipelineState):
                         if iou > best_iou:
                             best_iou = iou
                             best_person = person
-            if best_person and best_iou > state["iou_threshold"]:
+            if best_person and best_iou > 0.01:
                 best_person["pose"]["landmarks"] = [
                     {
                         "x": float(keypoints[i]),
@@ -136,7 +141,7 @@ def draw(state: PipelineState):
     from emoact.utils import draw_bounding_boxes, draw_text, draw_pose_skeleton
     import cv2
 
-    # Define consistent color scheme
+    # Define color scheme
     COLORS = {
         "face_bbox": (255, 100, 100),  # Light red/pink for face boxes
         "face_text": (255, 150, 150),  # Lighter red for face text
@@ -164,7 +169,7 @@ def draw(state: PipelineState):
 
                 # Draw semi-transparent background for text
                 person_id = person["person_id"] if person["person_id"] else "Unknown"
-                text = f"ID: {person_id} ({confidence:.2f})"
+                text = f"ID: {person_id}"
                 text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
 
                 # Background rectangle for better text visibility
@@ -285,6 +290,16 @@ def track_faces(state: PipelineState) -> PipelineState:
     return state
 
 
+# TODO: Add a classification node to classify activities based on detected poses and also use 'yolov11-cls' model to classifify images
+def classify_activities(state: PipelineState):
+    return state
+
+
+# TODO: Add transcription node to extract audio and transcribe speech
+def transcribe_audio(state: PipelineState):
+    return state
+
+
 def summarize(state: PipelineState):
     total_frames = len(state["frames"])
     total_persons = sum(len(frame_info["persons"]) for frame_info in state["frames"])
@@ -325,6 +340,8 @@ graph_builder.add_node("detect_emotions", detect_emotions)
 graph_builder.add_node("track_faces", track_faces)
 graph_builder.add_node("draw", draw)
 graph_builder.add_node("summarize", summarize)
+graph_builder.add_node("classify_activities", classify_activities)
+graph_builder.add_node("transcribe_audio", transcribe_audio)
 graph_builder.add_node("save_video", save_video)
 
 # Arestas
@@ -339,8 +356,10 @@ graph_builder.add_edge("detect_poses", "detect_emotions")
 
 graph_builder.add_edge("detect_emotions", "detect_objects")
 graph_builder.add_edge("detect_objects", "track_faces")
+graph_builder.add_edge("track_faces", "classify_activities")
 
-graph_builder.add_edge("track_faces", "draw")
+graph_builder.add_edge("classify_activities", "transcribe_audio")
+graph_builder.add_edge("transcribe_audio", "draw")
 graph_builder.add_edge("draw", "summarize")
 graph_builder.add_edge("summarize", "save_video")
 
@@ -354,7 +373,6 @@ if __name__ == "__main__":
         "fps": 0.0,
         "frames": [],
         "summary": "",
-        "iou_threshold": 0.01,
         "object_conf_threshold": 0.5,
         "pose_conf_threshold": 0.3,
     }

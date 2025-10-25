@@ -1,7 +1,9 @@
 import numpy as np
 import insightface
 
-app = insightface.app.FaceAnalysis("buffalo_l", providers=["CUDAExecutionProvider"])
+app = insightface.app.FaceAnalysis(
+    "buffalo_l", root="./", providers=["CUDAExecutionProvider"]
+)
 app.prepare(ctx_id=0, det_size=(640, 640))
 
 

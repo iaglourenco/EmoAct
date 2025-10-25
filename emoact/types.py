@@ -44,8 +44,6 @@ class PipelineState(TypedDict):
     fps: float
     frames: list[FrameInfo]
     summary: str
-    iou_threshold: (
-        float  # IoU (Intersection over Union) threshold for pose-face matching
-    )
+
     object_conf_threshold: float  # Confidence threshold for object detection
     pose_conf_threshold: float  # Confidence threshold for pose landmarks

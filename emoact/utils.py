@@ -8,6 +8,17 @@ def cosine_similarity(a: np.ndarray, b: np.ndarray) -> float:
     return float(np.dot(a_norm, b_norm))
 
 
+def bbox_distance(bbox1, bbox2):
+    """Calculate the Euclidean distance between the centers of two bounding boxes.
+    Each bbox is defined as (left, top, right, bottom).
+    """
+    x1_center = (bbox1[0] + bbox1[2]) / 2
+    y1_center = (bbox1[1] + bbox1[3]) / 2
+    x2_center = (bbox2[0] + bbox2[2]) / 2
+    y2_center = (bbox2[1] + bbox2[3]) / 2
+    return np.sqrt((x1_center - x2_center) ** 2 + (y1_center - y2_center) ** 2)
+
+
 def draw_graph(graph, filename="graph"):
     """Draws the state graph to a file."""
     graph_bytes = graph.get_graph().draw_mermaid_png()
