@@ -41,6 +41,7 @@ class FrameInfo(TypedDict):
 class PipelineState(TypedDict):
     video_path: str
     output_path: str
+    transcription: str
     fps: float
     frames: list[FrameInfo]
     summary: str

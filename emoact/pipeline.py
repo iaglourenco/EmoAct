@@ -297,6 +297,11 @@ def classify_activities(state: PipelineState):
 
 # TODO: Add transcription node to extract audio and transcribe speech
 def transcribe_audio(state: PipelineState):
+    from emoact.audio import transcribe_video
+
+    video_path = state["video_path"]
+    transcription = transcribe_video(video_path, model="base")
+    state["transcription"] = str(transcription)
     return state
 
 
@@ -371,6 +376,7 @@ if __name__ == "__main__":
         "video_path": "input_video.mp4",
         "output_path": "output.mp4",
         "fps": 0.0,
+        "transcription": "",
         "frames": [],
         "summary": "",
         "object_conf_threshold": 0.5,
