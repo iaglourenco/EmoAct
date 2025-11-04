@@ -2,10 +2,27 @@ import cv2
 import numpy as np
 
 
-def cosine_similarity(a: np.ndarray, b: np.ndarray) -> float:
-    a_norm = a / np.linalg.norm(a)
-    b_norm = b / np.linalg.norm(b)
-    return float(np.dot(a_norm, b_norm))
+def cosine_similarity(emb1: np.ndarray, emb2: np.ndarray) -> float:
+    """
+    Calculate cosine similarity between two embeddings.
+
+    Args:
+        emb1: First embedding vector
+        emb2: Second embedding vector
+
+    Returns:
+        Cosine similarity score between 0 and 1
+    """
+    if emb1 is None or emb2 is None:
+        return 0.0
+
+    # Normalize embeddings
+    emb1_norm = emb1 / (np.linalg.norm(emb1) + 1e-6)
+    emb2_norm = emb2 / (np.linalg.norm(emb2) + 1e-6)
+
+    # Calculate cosine similarity
+    similarity = np.dot(emb1_norm, emb2_norm)
+    return float(max(0.0, min(1.0, similarity)))
 
 
 def bbox_distance(bbox1, bbox2):

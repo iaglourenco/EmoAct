@@ -16,11 +16,3 @@ def transcribe_video(video_path, model="base"):
     text = result["text"]
 
     return text
-
-
-if __name__ == "__main__":
-    video_path = "input_video.mp4"  # Replace with your video file path
-    video_path = os.path.abspath(video_path)
-    transcription = transcribe_video(video_path, model="base")
-    print("Transcription:")
-    print(transcription)

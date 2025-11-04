@@ -9,6 +9,8 @@ import numpy as np
 from emoact.types import PersonInfo, FrameInfo
 from emoact import face, pose, objects, emotions
 from emoact.utils import draw_bounding_boxes, draw_text, draw_pose_skeleton
+from emoact.tracker import FaceTracker
+from emoact.classifier import classify_activity
 
 
 # Define consistent color scheme
@@ -46,6 +48,7 @@ def process_frame(image: np.ndarray) -> FrameInfo:
             "emotions": [],
             "pose": {"landmarks": []},
             "person_id": "",
+            "activity": "unknown",
         }
         frame_info["persons"].append(person_info)
 
@@ -117,6 +120,14 @@ def process_frame(image: np.ndarray) -> FrameInfo:
             if face_img.size > 0:
                 emotion = emotions.detect_emotion(face_img)
                 person["emotions"].append(emotion)
+
+    # 5. Classify activities based on pose
+    for person in frame_info["persons"]:
+        if person["pose"]["landmarks"]:
+            activity = classify_activity(person["pose"]["landmarks"])
+            person["activity"] = activity
+        else:
+            person["activity"] = "unknown"
 
     return frame_info
 
@@ -220,6 +231,29 @@ def draw_detections(image: np.ndarray, frame_info: FrameInfo) -> np.ndarray:
                 thickness=1,
             )
 
+        # Draw activity
+        if person.get("activity") and person["activity"] != "unknown":
+            activity_text = f"Activity: {person['activity']}"
+            text_size = cv2.getTextSize(
+                activity_text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2
+            )[0]
+            # Background rectangle for text
+            cv2.rectangle(
+                image,
+                (left, bottom + 55),
+                (left + text_size[0] + 4, bottom + 55 + text_size[1] + 8),
+                (150, 150, 255),  # Light purple for activity
+                -1,
+            )
+            draw_text(
+                image,
+                activity_text,
+                position=(left + 2, bottom + 55 + text_size[1] + 3),
+                font_scale=0.5,
+                color=(255, 255, 255),
+                thickness=1,
+            )
+
     # Draw detected objects
     for obj in frame_info["objects"]:
         left, top, right, bottom = obj["bbox"]
@@ -265,6 +299,13 @@ def main():
     print("Press 'q' to quit")
     print("Press 's' to save current frame")
 
+    # Initialize face tracker for consistent person IDs
+    tracker = FaceTracker(
+        similarity_threshold=0.6,
+        max_distance_threshold=200.0,
+        max_frames_missing=30,
+    )
+
     # Open webcam (0 is usually the default camera)
     cap = cv2.VideoCapture(0)
 
@@ -288,6 +329,16 @@ def main():
 
         # Process the frame
         frame_info = process_frame(frame)
+
+        # Track faces across frames for consistent person IDs
+        if frame_info["persons"]:
+            frame_info["persons"] = tracker.track_frame(
+                frame_info["persons"], frame_count
+            )
+
+        # Cleanup old tracks periodically
+        if frame_count % 100 == 0:
+            tracker.cleanup_old_tracks(frame_count)
 
         # Draw detections
         output_frame = draw_detections(frame_info["image"], frame_info)

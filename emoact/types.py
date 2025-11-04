@@ -1,5 +1,5 @@
 from numpy import ndarray
-from typing_extensions import TypedDict
+from typing import TypedDict
 
 
 class Landmark(TypedDict):
@@ -24,6 +24,7 @@ class PersonInfo(TypedDict):
     image: ndarray  # cropped face image
     emotions: list[str]  # list of detected emotions
     pose: Pose  # body pose information
+    activity: str  # detected activity (e.g., "standing", "sitting", "raising_hand")
 
 
 class SceneObject(TypedDict):
