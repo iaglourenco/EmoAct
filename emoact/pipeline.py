@@ -1,10 +1,5 @@
-from calendar import c
-
-import cv2
-from torch import embedding
-from emoact import utils
 from emoact.types import PersonInfo, PipelineState
-from langgraph.graph import StateGraph, START, END
+from langgraph.graph import StateGraph, START
 
 from emoact.utils import draw_graph
 
@@ -350,7 +345,7 @@ def summarize(state: PipelineState):
     state["summary"] = (
         f"Processed {total_frames} frames with {total_persons} detected persons."
     )
-    # TODO: Add more detailed summary information if needed by calling a language model
+    # TODO: Add more detailed summary information if needed by calling a local language model
     return state
 
 
