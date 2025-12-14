@@ -322,8 +322,7 @@ def classify_activities(state: PipelineState):
             # Collect raw data from both pose landmarks and image
             # Pass full frame for image classification (not just face crop)
             activity_data = collect_activity_data(
-                person["pose"]["landmarks"], 
-                image=image
+                person["pose"]["landmarks"], image=image
             )
             person["activity"] = activity_data
 
@@ -340,12 +339,26 @@ def transcribe_audio(state: PipelineState):
 
 
 def summarize(state: PipelineState):
+    from emoact.llm import generate_video_summary, prepare_frame_data_summary
+
     total_frames = len(state["frames"])
     total_persons = sum(len(frame_info["persons"]) for frame_info in state["frames"])
-    state["summary"] = (
-        f"Processed {total_frames} frames with {total_persons} detected persons."
+
+    # Calculate video duration
+    video_duration = total_frames / state["fps"] if state["fps"] > 0 else 0
+
+    # Prepare condensed frame data summary
+    frame_data_summary = prepare_frame_data_summary(state["frames"])
+
+    # Generate comprehensive summary using LLM
+    transcription = state.get("transcription", "No audio transcription available.")
+    llm_summary = generate_video_summary(
+        transcription=transcription,
+        frame_data_summary=frame_data_summary,
+        video_duration=video_duration,
     )
-    # TODO: Add more detailed summary information if needed by calling a local language model
+
+    state["summary"] = llm_summary
     return state
 
 
@@ -356,6 +369,30 @@ def save_video(state: PipelineState):
     output_path = state["output_path"]
     fps = state["fps"]
     video_io.save_video(frames, output_path, fps)
+    return state
+
+
+def export_summary(state: PipelineState):
+    """Export the LLM-generated summary to a text file."""
+    import os
+
+    output_path = state["output_path"]
+    # Create summary file path (same name as video, but .txt extension)
+    base_name = os.path.splitext(output_path)[0]
+    summary_path = f"{base_name}_summary.txt"
+
+    # Write summary to file
+    with open(summary_path, "w", encoding="utf-8") as f:
+        f.write("VIDEO ANALYSIS SUMMARY\n")
+        f.write("=" * 80 + "\n\n")
+        f.write(f"Video: {state['video_path']}\n")
+        f.write(f"Duration: {len(state['frames']) / state['fps']:.1f} seconds\n")
+        f.write(f"Total Frames: {len(state['frames'])}\n")
+        f.write(f"FPS: {state['fps']:.1f}\n\n")
+        f.write("=" * 80 + "\n\n")
+        f.write(state["summary"])
+        f.write("\n\n" + "=" * 80 + "\n")
+
     return state
 
 
@@ -382,6 +419,7 @@ graph_builder.add_node("summarize", summarize)
 graph_builder.add_node("classify_activities", classify_activities)
 graph_builder.add_node("transcribe_audio", transcribe_audio)
 graph_builder.add_node("save_video", save_video)
+graph_builder.add_node("export_summary", export_summary)
 
 # Arestas
 graph_builder.add_edge(START, "load_video")
@@ -401,6 +439,7 @@ graph_builder.add_edge("classify_activities", "transcribe_audio")
 graph_builder.add_edge("transcribe_audio", "draw")
 graph_builder.add_edge("draw", "summarize")
 graph_builder.add_edge("summarize", "save_video")
+graph_builder.add_edge("save_video", "export_summary")
 
 graph = graph_builder.compile()
 draw_graph(graph)

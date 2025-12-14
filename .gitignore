@@ -1,4 +1,5 @@
 venv/
 __pycache__/
 output.mp4
+output_summary.txt
 models/
