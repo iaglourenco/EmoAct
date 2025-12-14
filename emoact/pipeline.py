@@ -255,43 +255,6 @@ def draw(state: PipelineState):
                     thickness=1,
                 )
 
-            # Draw activity data summary
-            activity = person.get("activity")
-            if activity and isinstance(activity, dict):
-                # Display summary of raw data collected
-                pose_avail = activity.get("pose_available", False)
-                image_avail = activity.get("image_classification_available", False)
-                
-                parts = []
-                if pose_avail:
-                    parts.append("Pose")
-                if image_avail:
-                    # Get top prediction if available
-                    predictions = activity.get("image_predictions", [])
-                    if predictions:
-                        top_pred = predictions[0]
-                        parts.append(f"{top_pred['class_name']}({top_pred['confidence']:.2f})")
-                
-                if parts:
-                    activity_text = f"Data: {', '.join(parts)}"
-                    text_size = cv2.getTextSize(activity_text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
-                    # Background rectangle for text
-                    cv2.rectangle(
-                        image,
-                        (left, bottom + 55),
-                        (left + text_size[0] + 4, bottom + 55 + text_size[1] + 8),
-                        (150, 150, 255),  # Light purple for activity
-                        -1,
-                    )
-                    draw_text(
-                        image,
-                        activity_text,
-                        position=(left + 2, bottom + 55 + text_size[1] + 3),
-                        font_scale=0.5,
-                        color=(255, 255, 255),
-                        thickness=1,
-                    )
-
         # Draw objects with consistent styling
         for obj in frame_info["objects"]:
             left, top, right, bottom = obj["bbox"]
