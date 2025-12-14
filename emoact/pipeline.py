@@ -315,17 +315,30 @@ def track_faces(state: PipelineState) -> PipelineState:
     return state
 
 
-# TODO: Add a classification node to classify activities based on detected poses and also use 'yolov11-cls' model to classifify images
 def classify_activities(state: PipelineState):
+    """
+    Classify activities based on detected poses and YOLOv11-cls model for image classification.
+    Uses pose-based classification (rule-based) and image-based classification (YOLO11-cls).
+    """
     from emoact.classifier import classify_activity
 
     for frame_info in state["frames"]:
+        image = frame_info["image"]
         for person in frame_info["persons"]:
+            # Get person's image crop if available
+            person_image = person.get("image")
+            
+            # Classify using both pose landmarks and image
             if person["pose"]["landmarks"]:
-                activity = classify_activity(person["pose"]["landmarks"])
+                activity = classify_activity(
+                    person["pose"]["landmarks"], 
+                    image=person_image
+                )
                 person["activity"] = activity
             else:
-                person["activity"] = "unknown"
+                # If no pose landmarks, try image-only classification
+                activity = classify_activity([], image=person_image)
+                person["activity"] = activity
 
     return state
 

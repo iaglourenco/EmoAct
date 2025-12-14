@@ -1,8 +1,17 @@
-"""Activity classification based on pose landmarks."""
+"""Activity classification based on pose landmarks and image classification."""
 
 import math
 from typing import Optional
 from emoact.types import Landmark
+from ultralytics.models import YOLO
+import numpy as np
+
+# Load YOLOv11 classification model
+try:
+    classification_model = YOLO("models/yolo11n-cls.pt")
+except Exception as e:
+    print(f"Warning: Could not load YOLOv11 classification model: {e}")
+    classification_model = None
 
 
 def calculate_angle(p1: Landmark, p2: Landmark, p3: Landmark) -> Optional[float]:
@@ -169,27 +178,75 @@ def is_waving(landmarks: list[Landmark]) -> bool:
     return False
 
 
-def classify_activity(landmarks: list[Landmark]) -> str:
+def classify_image(image: np.ndarray, confidence_threshold: float = 0.3) -> Optional[str]:
     """
-    Classify the activity based on pose landmarks.
+    Classify the activity in an image using YOLOv11 classification model.
+
+    Args:
+        image: The image to classify (numpy array)
+        confidence_threshold: Minimum confidence for classification
+
+    Returns:
+        str: The detected activity class or None if confidence is too low
+    """
+    if classification_model is None or image is None or image.size == 0:
+        return None
+
+    try:
+        # Run inference
+        results = classification_model(image, verbose=False)
+        
+        if len(results) > 0:
+            result = results[0]
+            # Get top prediction
+            probs = result.probs
+            if probs is not None and probs.top1conf >= confidence_threshold:
+                # Get class name
+                class_idx = probs.top1
+                class_name = result.names[class_idx]
+                return class_name
+    except Exception as e:
+        print(f"Warning: Image classification failed: {e}")
+        return None
+
+    return None
+
+
+def classify_activity(landmarks: list[Landmark], image: Optional[np.ndarray] = None) -> str:
+    """
+    Classify the activity based on pose landmarks and optionally image classification.
+
+    Args:
+        landmarks: List of pose landmarks
+        image: Optional image crop for image-based classification
 
     Returns:
         str: The detected activity (e.g., "sitting", "standing", "raising_hand", "waving", "unknown")
     """
-    if not landmarks or len(landmarks) == 0:
+    pose_activity = "unknown"
+    
+    # First, try pose-based classification
+    if landmarks and len(landmarks) > 0:
+        # Priority order: more specific activities first
+        if is_waving(landmarks):
+            pose_activity = "waving"
+        elif is_arms_raised(landmarks):
+            pose_activity = "raising_hand"
+        elif is_sitting(landmarks):
+            pose_activity = "sitting"
+        elif is_standing(landmarks):
+            pose_activity = "standing"
+
+    # Try image-based classification if available
+    image_activity = None
+    if image is not None:
+        image_activity = classify_image(image)
+
+    # Combine results: prioritize pose-based for known activities,
+    # fall back to image classification if pose is unknown
+    if pose_activity != "unknown":
+        return pose_activity
+    elif image_activity is not None:
+        return image_activity
+    else:
         return "unknown"
-
-    # Priority order: more specific activities first
-    if is_waving(landmarks):
-        return "waving"
-
-    if is_arms_raised(landmarks):
-        return "raising_hand"
-
-    if is_sitting(landmarks):
-        return "sitting"
-
-    if is_standing(landmarks):
-        return "standing"
-
-    return "unknown"
