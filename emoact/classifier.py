@@ -180,7 +180,7 @@ def is_waving(landmarks: list[Landmark]) -> bool:
     return False
 
 
-def classify_image(image: np.ndarray, confidence_threshold: float = 0.3) -> Optional[str]:
+def classify_image(image: np.ndarray, confidence_threshold: float = 0.3) -> tuple[Optional[str], float, str]:
     """
     Classify the activity in an image using YOLOv11 classification model.
 
@@ -189,10 +189,10 @@ def classify_image(image: np.ndarray, confidence_threshold: float = 0.3) -> Opti
         confidence_threshold: Minimum confidence for classification
 
     Returns:
-        str: The detected activity class or None if confidence is too low
+        tuple: (class_name or None, confidence, details_string)
     """
     if classification_model is None or image is None or image.size == 0:
-        return None
+        return None, 0.0, "Image classification unavailable (model not loaded or invalid image)"
 
     try:
         # Run inference
@@ -202,53 +202,125 @@ def classify_image(image: np.ndarray, confidence_threshold: float = 0.3) -> Opti
             result = results[0]
             # Get top prediction
             probs = result.probs
-            if probs is not None and probs.top1conf >= confidence_threshold:
-                # Get class name
+            if probs is not None:
                 class_idx = probs.top1
                 class_name = result.names[class_idx]
-                return class_name
+                confidence = float(probs.top1conf)
+                
+                # Get top 3 predictions for details
+                top5_indices = probs.top5
+                top5_conf = probs.top5conf
+                details_list = []
+                for i in range(min(3, len(top5_indices))):
+                    idx = top5_indices[i]
+                    conf = top5_conf[i]
+                    details_list.append(f"{result.names[idx]}({conf:.2f})")
+                details = "Image-based: " + ", ".join(details_list)
+                
+                if confidence >= confidence_threshold:
+                    return class_name, confidence, details
+                else:
+                    return None, confidence, f"{details} (below threshold {confidence_threshold})"
     except Exception as e:
-        print(f"Warning: Image classification failed: {e}")
-        return None
+        return None, 0.0, f"Image classification failed: {str(e)}"
 
-    return None
+    return None, 0.0, "Image classification returned no results"
 
 
-def classify_activity(landmarks: list[Landmark], image: Optional[np.ndarray] = None) -> str:
+def classify_activity(landmarks: list[Landmark], image: Optional[np.ndarray] = None) -> dict:
     """
-    Classify the activity based on pose landmarks and optionally image classification.
+    Classify the activity based on pose landmarks and image classification.
+    Returns detailed information combining both methods for LLM processing.
 
     Args:
         landmarks: List of pose landmarks
-        image: Optional image crop for image-based classification
+        image: Optional image for image-based classification
 
     Returns:
-        str: The detected activity (e.g., "sitting", "standing", "raising_hand", "waving", "unknown")
+        dict: ActivityInfo with keys:
+            - label: Primary activity label
+            - pose_based: Activity from pose landmarks
+            - image_based: Activity from image classification (None if unavailable)
+            - confidence: Overall confidence score (0.0 to 1.0)
+            - details: Detailed information for LLM processing
     """
     pose_activity = "unknown"
+    pose_confidence = 0.0
+    pose_details = []
     
     # First, try pose-based classification
     if landmarks and len(landmarks) > 0:
         # Priority order: more specific activities first
         if is_waving(landmarks):
             pose_activity = "waving"
+            pose_confidence = 0.9  # High confidence for specific gestures
+            pose_details.append("Arms raised above shoulders with bent elbows")
         elif is_arms_raised(landmarks):
             pose_activity = "raising_hand"
+            pose_confidence = 0.85
+            pose_details.append("One or both hands raised above shoulders")
         elif is_sitting(landmarks):
             pose_activity = "sitting"
+            pose_confidence = 0.8
+            # Calculate knee angles for detail
+            left_hip = get_landmark_by_name(landmarks, "left hip")
+            left_knee = get_landmark_by_name(landmarks, "left knee")
+            left_ankle = get_landmark_by_name(landmarks, "left ankle")
+            if left_hip and left_knee and left_ankle:
+                angle = calculate_angle(left_hip, left_knee, left_ankle)
+                if angle:
+                    pose_details.append(f"Knee angle: {angle:.1f}° (sitting range: 50-130°)")
         elif is_standing(landmarks):
             pose_activity = "standing"
+            pose_confidence = 0.75
+            pose_details.append("Legs relatively straight (knee angle > 140°)")
+        else:
+            pose_details.append("No specific pose pattern detected")
+    else:
+        pose_details.append("No pose landmarks available")
 
     # Try image-based classification if available
     image_activity = None
+    image_confidence = 0.0
+    image_details = ""
+    
     if image is not None:
-        image_activity = classify_image(image)
+        image_activity, image_confidence, image_details = classify_image(image)
 
-    # Combine results: prioritize pose-based for known activities,
-    # fall back to image classification if pose is unknown
-    if pose_activity != "unknown":
-        return pose_activity
+    # Combine results with detailed information
+    # Prioritize pose-based for known activities, blend with image-based info
+    if pose_activity != "unknown" and image_activity is not None:
+        # Both methods have results - provide blended information
+        if pose_activity == image_activity:
+            # Agreement between methods - high confidence
+            final_label = pose_activity
+            final_confidence = min(0.95, (pose_confidence + image_confidence) / 2 + 0.1)
+            details = f"Pose-based: {pose_activity} ({pose_confidence:.2f}). {' '.join(pose_details)}. {image_details}. Both methods agree."
+        else:
+            # Disagreement - prefer pose but include both
+            final_label = pose_activity
+            final_confidence = pose_confidence * 0.8  # Reduce confidence due to disagreement
+            details = f"Pose-based: {pose_activity} ({pose_confidence:.2f}). {' '.join(pose_details)}. {image_details}. Methods disagree - using pose-based."
+    elif pose_activity != "unknown":
+        # Only pose-based available
+        final_label = pose_activity
+        final_confidence = pose_confidence
+        details = f"Pose-based: {pose_activity} ({pose_confidence:.2f}). {' '.join(pose_details)}. {image_details if image_details else 'No image classification available.'}"
     elif image_activity is not None:
-        return image_activity
+        # Only image-based available
+        final_label = image_activity
+        final_confidence = image_confidence
+        details = f"Pose-based: unknown. {' '.join(pose_details)}. {image_details}. Using image-based classification."
     else:
-        return "unknown"
+        # No classification available
+        final_label = "unknown"
+        final_confidence = 0.0
+        details = f"Pose-based: unknown. {' '.join(pose_details)}. {image_details if image_details else 'No image classification available.'}"
+
+    return {
+        "label": final_label,
+        "pose_based": pose_activity,
+        "image_based": image_activity,
+        "confidence": final_confidence,
+        "details": details
+    }

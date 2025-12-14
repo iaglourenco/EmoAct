@@ -13,6 +13,14 @@ class Pose(TypedDict):
     landmarks: list[Landmark]
 
 
+class ActivityInfo(TypedDict):
+    label: str  # Primary activity label (e.g., "standing", "sitting", "raising_hand", "unknown")
+    pose_based: str  # Activity detected from pose landmarks
+    image_based: str | None  # Activity detected from image classification (None if unavailable)
+    confidence: float  # Overall confidence score (0.0 to 1.0)
+    details: str  # Additional details for LLM processing
+
+
 class PersonInfo(TypedDict):
     person_id: str
     gender: int  # 0 for female, 1 for male,
@@ -24,7 +32,7 @@ class PersonInfo(TypedDict):
     image: ndarray  # cropped face image
     emotions: list[str]  # list of detected emotions
     pose: Pose  # body pose information
-    activity: str  # detected activity (e.g., "standing", "sitting", "raising_hand")
+    activity: str | ActivityInfo  # detected activity (legacy: str, enhanced: ActivityInfo dict)
 
 
 class SceneObject(TypedDict):

@@ -241,25 +241,35 @@ def draw(state: PipelineState):
                 )
 
             # Draw activity
-            if person.get("activity") and person["activity"] != "unknown":
-                activity_text = f"Activity: {person['activity']}"
-                text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
-                # Background rectangle for text
-                cv2.rectangle(
-                    image,
-                    (left, bottom + 55),
-                    (left + text_size[0] + 4, bottom + 55 + text_size[1] + 8),
-                    (150, 150, 255),  # Light purple for activity
-                    -1,
-                )
-                draw_text(
-                    image,
-                    activity_text,
-                    position=(left + 2, bottom + 55 + text_size[1] + 3),
-                    font_scale=0.5,
-                    color=(255, 255, 255),
-                    thickness=1,
-                )
+            activity = person.get("activity")
+            if activity:
+                # Handle both string (legacy) and dict (new) formats
+                if isinstance(activity, dict):
+                    activity_label = activity.get("label", "unknown")
+                    activity_conf = activity.get("confidence", 0.0)
+                    activity_text = f"Activity: {activity_label} ({activity_conf:.2f})"
+                else:
+                    activity_label = activity
+                    activity_text = f"Activity: {activity}"
+                
+                if activity_label != "unknown":
+                    text_size = cv2.getTextSize(activity_text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
+                    # Background rectangle for text
+                    cv2.rectangle(
+                        image,
+                        (left, bottom + 55),
+                        (left + text_size[0] + 4, bottom + 55 + text_size[1] + 8),
+                        (150, 150, 255),  # Light purple for activity
+                        -1,
+                    )
+                    draw_text(
+                        image,
+                        activity_text,
+                        position=(left + 2, bottom + 55 + text_size[1] + 3),
+                        font_scale=0.5,
+                        color=(255, 255, 255),
+                        thickness=1,
+                    )
 
         # Draw objects with consistent styling
         for obj in frame_info["objects"]:
