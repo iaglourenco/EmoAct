@@ -41,7 +41,22 @@ def detect_faces(state: PipelineState):
                 "emotions": [],
                 "pose": {"landmarks": []},
                 "person_id": "",
-                "activity": "unknown",
+                "activity": {
+                    "pose_landmarks": [],
+                    "pose_angles": {
+                        "left_elbow": None,
+                        "right_elbow": None,
+                        "left_knee": None,
+                        "right_knee": None,
+                        "left_hip": None,
+                        "right_hip": None,
+                        "left_shoulder": None,
+                        "right_shoulder": None,
+                    },
+                    "image_predictions": [],
+                    "pose_available": False,
+                    "image_classification_available": False,
+                },
             }
             frame_info["persons"].append(person_info)
 
@@ -240,19 +255,25 @@ def draw(state: PipelineState):
                     thickness=1,
                 )
 
-            # Draw activity
+            # Draw activity data summary
             activity = person.get("activity")
-            if activity:
-                # Handle both string (legacy) and dict (new) formats
-                if isinstance(activity, dict):
-                    activity_label = activity.get("label", "unknown")
-                    activity_conf = activity.get("confidence", 0.0)
-                    activity_text = f"Activity: {activity_label} ({activity_conf:.2f})"
-                else:
-                    activity_label = activity
-                    activity_text = f"Activity: {activity}"
+            if activity and isinstance(activity, dict):
+                # Display summary of raw data collected
+                pose_avail = activity.get("pose_available", False)
+                image_avail = activity.get("image_classification_available", False)
                 
-                if activity_label != "unknown":
+                parts = []
+                if pose_avail:
+                    parts.append("Pose")
+                if image_avail:
+                    # Get top prediction if available
+                    predictions = activity.get("image_predictions", [])
+                    if predictions:
+                        top_pred = predictions[0]
+                        parts.append(f"{top_pred['class_name']}({top_pred['confidence']:.2f})")
+                
+                if parts:
+                    activity_text = f"Data: {', '.join(parts)}"
                     text_size = cv2.getTextSize(activity_text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
                     # Background rectangle for text
                     cv2.rectangle(
@@ -327,23 +348,21 @@ def track_faces(state: PipelineState) -> PipelineState:
 
 def classify_activities(state: PipelineState):
     """
-    Classify activities based on detected poses and YOLOv11-cls model for image classification.
-    Uses pose-based classification (rule-based) and image-based classification (YOLO11-cls).
+    Collect raw activity data from pose landmarks and YOLOv11-cls model.
+    No inference - just raw data collection for LLM processing.
     """
-    from emoact.classifier import classify_activity
+    from emoact.classifier import collect_activity_data
 
     for frame_info in state["frames"]:
         image = frame_info["image"]
         for person in frame_info["persons"]:
-            # Classify using both pose landmarks and image
-            # Pass landmarks (may be empty) and full frame for dual-mode classification
-            # Note: We pass the full frame, not just person["image"] (face crop),
-            # because activity classification needs full body context
-            activity = classify_activity(
+            # Collect raw data from both pose landmarks and image
+            # Pass full frame for image classification (not just face crop)
+            activity_data = collect_activity_data(
                 person["pose"]["landmarks"], 
                 image=image
             )
-            person["activity"] = activity
+            person["activity"] = activity_data
 
     return state
 

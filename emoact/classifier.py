@@ -1,24 +1,13 @@
-"""Activity classification based on pose landmarks and image classification."""
+"""Activity data collection - gathers raw pose and image data for LLM processing."""
 
 import math
 from typing import Optional
-from emoact.types import Landmark, ActivityInfo
+from emoact.types import Landmark, ActivityRawData, PoseAngles, ImagePrediction
 from ultralytics.models import YOLO
 import numpy as np
 
-# Classification confidence constants
-CONFIDENCE_WAVING = 0.9  # High confidence for specific gestures
-CONFIDENCE_RAISING_HAND = 0.85
-CONFIDENCE_SITTING = 0.8
-CONFIDENCE_STANDING = 0.75
-
-# Blending constants
-MAX_BLENDED_CONFIDENCE = 0.95  # Maximum confidence when methods agree
-AGREEMENT_BONUS = 0.1  # Bonus added when both methods agree
-DISAGREEMENT_PENALTY = 0.8  # Penalty factor when methods disagree
-
 # Image classification constants
-TOP_PREDICTIONS_COUNT = 3  # Number of top predictions to include in details
+TOP_PREDICTIONS_COUNT = 5  # Number of top predictions to return
 
 # Load YOLOv11 classification model for image-based activity classification
 # Model path follows the same pattern as pose.py and objects.py
@@ -26,7 +15,7 @@ try:
     classification_model = YOLO("models/yolo11n-cls.pt")
 except Exception as e:
     print(f"Warning: Could not load YOLOv11 classification model: {e}")
-    print("Image-based classification will be unavailable. Only pose-based classification will work.")
+    print("Image-based classification will be unavailable.")
     classification_model = None
 
 
@@ -74,139 +63,94 @@ def get_landmark_by_name(landmarks: list[Landmark], name: str) -> Optional[Landm
     return None
 
 
-def is_arms_raised(landmarks: list[Landmark]) -> bool:
-    """Check if one or both arms are raised above the shoulders."""
-    left_wrist = get_landmark_by_name(landmarks, "left wrist")
-    right_wrist = get_landmark_by_name(landmarks, "right wrist")
-    left_shoulder = get_landmark_by_name(landmarks, "left shoulder")
-    right_shoulder = get_landmark_by_name(landmarks, "right shoulder")
+def calculate_all_joint_angles(landmarks: list[Landmark]) -> PoseAngles:
+    """
+    Calculate all major joint angles from pose landmarks.
+    Returns raw angle measurements without any interpretation.
 
-    if not all([left_shoulder, right_shoulder]):
-        return False
+    Args:
+        landmarks: List of pose landmarks
 
-    arms_raised = False
+    Returns:
+        PoseAngles: Dictionary of joint angles in degrees (None if cannot be calculated)
+    """
+    angles: PoseAngles = {
+        "left_elbow": None,
+        "right_elbow": None,
+        "left_knee": None,
+        "right_knee": None,
+        "left_hip": None,
+        "right_hip": None,
+        "left_shoulder": None,
+        "right_shoulder": None,
+    }
 
-    # Check left arm
-    if left_wrist and left_shoulder and left_wrist["confidence"] > 0.3:
-        if left_wrist["y"] < left_shoulder["y"]:
-            arms_raised = True
+    if not landmarks or len(landmarks) == 0:
+        return angles
 
-    # Check right arm
-    if right_wrist and right_shoulder and right_wrist["confidence"] > 0.3:
-        if right_wrist["y"] < right_shoulder["y"]:
-            arms_raised = True
-
-    return arms_raised
-
-
-def is_sitting(landmarks: list[Landmark]) -> bool:
-    """Check if the person is sitting based on hip-knee-ankle angles."""
-    left_hip = get_landmark_by_name(landmarks, "left hip")
-    left_knee = get_landmark_by_name(landmarks, "left knee")
-    left_ankle = get_landmark_by_name(landmarks, "left ankle")
-
-    right_hip = get_landmark_by_name(landmarks, "right hip")
-    right_knee = get_landmark_by_name(landmarks, "right knee")
-    right_ankle = get_landmark_by_name(landmarks, "right ankle")
-
-    # Check if we have enough landmarks
-    if not all([left_hip, left_knee, right_hip, right_knee]):
-        return False
-
-    # Calculate knee angles (hip-knee-ankle)
-    angles = []
-    if left_ankle and left_hip and left_knee:
-        left_angle = calculate_angle(left_hip, left_knee, left_ankle)
-        if left_angle:
-            angles.append(left_angle)
-
-    if right_ankle and right_hip and right_knee:
-        right_angle = calculate_angle(right_hip, right_knee, right_ankle)
-        if right_angle:
-            angles.append(right_angle)
-
-    # Sitting typically has knee angles between 60 and 120 degrees
-    if angles:
-        avg_angle = sum(angles) / len(angles)
-        return 50 <= avg_angle <= 130
-
-    return False
-
-
-def is_standing(landmarks: list[Landmark]) -> bool:
-    """Check if the person is standing (legs relatively straight)."""
-    left_hip = get_landmark_by_name(landmarks, "left hip")
-    left_knee = get_landmark_by_name(landmarks, "left knee")
-    left_ankle = get_landmark_by_name(landmarks, "left ankle")
-
-    right_hip = get_landmark_by_name(landmarks, "right hip")
-    right_knee = get_landmark_by_name(landmarks, "right knee")
-    right_ankle = get_landmark_by_name(landmarks, "right ankle")
-
-    # Check if we have enough landmarks
-    if not all([left_hip, left_knee, right_hip, right_knee]):
-        return False
-
-    # Calculate knee angles
-    angles = []
-    if left_ankle and left_hip and left_knee:
-        left_angle = calculate_angle(left_hip, left_knee, left_ankle)
-        if left_angle:
-            angles.append(left_angle)
-
-    if right_ankle and right_hip and right_knee:
-        right_angle = calculate_angle(right_hip, right_knee, right_ankle)
-        if right_angle:
-            angles.append(right_angle)
-
-    # Standing typically has knee angles greater than 140 degrees (nearly straight)
-    if angles:
-        avg_angle = sum(angles) / len(angles)
-        return avg_angle > 140
-
-    return False
-
-
-def is_waving(landmarks: list[Landmark]) -> bool:
-    """Check if person is waving (hand raised and elbow bent)."""
+    # Calculate left elbow angle (shoulder-elbow-wrist)
     left_shoulder = get_landmark_by_name(landmarks, "left shoulder")
     left_elbow = get_landmark_by_name(landmarks, "left elbow")
     left_wrist = get_landmark_by_name(landmarks, "left wrist")
+    if left_shoulder and left_elbow and left_wrist:
+        angles["left_elbow"] = calculate_angle(left_shoulder, left_elbow, left_wrist)
 
+    # Calculate right elbow angle
     right_shoulder = get_landmark_by_name(landmarks, "right shoulder")
     right_elbow = get_landmark_by_name(landmarks, "right elbow")
     right_wrist = get_landmark_by_name(landmarks, "right wrist")
-
-    # Check left arm
-    if left_shoulder and left_elbow and left_wrist:
-        if left_wrist["y"] < left_shoulder["y"]:  # Hand above shoulder
-            elbow_angle = calculate_angle(left_shoulder, left_elbow, left_wrist)
-            if elbow_angle and 60 <= elbow_angle <= 150:
-                return True
-
-    # Check right arm
     if right_shoulder and right_elbow and right_wrist:
-        if right_wrist["y"] < right_shoulder["y"]:  # Hand above shoulder
-            elbow_angle = calculate_angle(right_shoulder, right_elbow, right_wrist)
-            if elbow_angle and 60 <= elbow_angle <= 150:
-                return True
+        angles["right_elbow"] = calculate_angle(right_shoulder, right_elbow, right_wrist)
 
-    return False
+    # Calculate left knee angle (hip-knee-ankle)
+    left_hip = get_landmark_by_name(landmarks, "left hip")
+    left_knee = get_landmark_by_name(landmarks, "left knee")
+    left_ankle = get_landmark_by_name(landmarks, "left ankle")
+    if left_hip and left_knee and left_ankle:
+        angles["left_knee"] = calculate_angle(left_hip, left_knee, left_ankle)
+
+    # Calculate right knee angle
+    right_hip = get_landmark_by_name(landmarks, "right hip")
+    right_knee = get_landmark_by_name(landmarks, "right knee")
+    right_ankle = get_landmark_by_name(landmarks, "right ankle")
+    if right_hip and right_knee and right_ankle:
+        angles["right_knee"] = calculate_angle(right_hip, right_knee, right_ankle)
+
+    # Calculate left hip angle (shoulder-hip-knee)
+    if left_shoulder and left_hip and left_knee:
+        angles["left_hip"] = calculate_angle(left_shoulder, left_hip, left_knee)
+
+    # Calculate right hip angle
+    if right_shoulder and right_hip and right_knee:
+        angles["right_hip"] = calculate_angle(right_shoulder, right_hip, right_knee)
+
+    # Calculate left shoulder angle (elbow-shoulder-hip)
+    if left_elbow and left_shoulder and left_hip:
+        angles["left_shoulder"] = calculate_angle(left_elbow, left_shoulder, left_hip)
+
+    # Calculate right shoulder angle
+    if right_elbow and right_shoulder and right_hip:
+        angles["right_shoulder"] = calculate_angle(right_elbow, right_shoulder, right_hip)
+
+    return angles
 
 
-def classify_image(image: np.ndarray, confidence_threshold: float = 0.3) -> tuple[Optional[str], float, str]:
+
+
+
+def get_image_predictions(image: np.ndarray) -> list[ImagePrediction]:
     """
-    Classify the activity in an image using YOLOv11 classification model.
+    Get raw image classification predictions from YOLOv11 model.
+    Returns top predictions without any inference or filtering.
 
     Args:
         image: The image to classify (numpy array)
-        confidence_threshold: Minimum confidence for classification
 
     Returns:
-        tuple: (class_name or None, confidence, details_string)
+        list[ImagePrediction]: List of top predictions with class names and confidence scores
     """
     if classification_model is None or image is None or image.size == 0:
-        return None, 0.0, "Image classification unavailable (model not loaded or invalid image)"
+        return []
 
     try:
         # Run inference
@@ -214,127 +158,52 @@ def classify_image(image: np.ndarray, confidence_threshold: float = 0.3) -> tupl
         
         if len(results) > 0:
             result = results[0]
-            # Get top prediction
             probs = result.probs
             if probs is not None:
-                class_idx = probs.top1
-                class_name = result.names[class_idx]
-                confidence = float(probs.top1conf)
+                # Get top N predictions
+                top_indices = probs.top5
+                top_conf = probs.top5conf
                 
-                # Get top predictions for details
-                top5_indices = probs.top5
-                top5_conf = probs.top5conf
-                details_list = []
-                for i in range(min(TOP_PREDICTIONS_COUNT, len(top5_indices))):
-                    idx = top5_indices[i]
-                    conf = top5_conf[i]
-                    details_list.append(f"{result.names[idx]}({conf:.2f})")
-                details = "Image-based: " + ", ".join(details_list)
-                
-                if confidence >= confidence_threshold:
-                    return class_name, confidence, details
-                else:
-                    return None, confidence, f"{details} (below threshold {confidence_threshold})"
+                predictions = []
+                for i in range(min(TOP_PREDICTIONS_COUNT, len(top_indices))):
+                    idx = top_indices[i]
+                    conf = top_conf[i]
+                    predictions.append({
+                        "class_name": result.names[idx],
+                        "confidence": float(conf)
+                    })
+                return predictions
     except Exception as e:
-        return None, 0.0, f"Image classification failed: {str(e)}"
+        print(f"Warning: Image classification failed: {e}")
+        return []
 
-    return None, 0.0, "Image classification returned no results"
+    return []
 
 
-def classify_activity(landmarks: list[Landmark], image: Optional[np.ndarray] = None) -> ActivityInfo:
+def collect_activity_data(landmarks: list[Landmark], image: Optional[np.ndarray] = None) -> ActivityRawData:
     """
-    Classify the activity based on pose landmarks and image classification.
-    Returns detailed information combining both methods for LLM processing.
+    Collect raw activity data from pose landmarks and image classification.
+    No inference or interpretation - just raw measurements for LLM processing.
 
     Args:
         landmarks: List of pose landmarks
         image: Optional image for image-based classification
 
     Returns:
-        dict: ActivityInfo with keys:
-            - label: Primary activity label
-            - pose_based: Activity from pose landmarks
-            - image_based: Activity from image classification (None if unavailable)
-            - confidence: Overall confidence score (0.0 to 1.0)
-            - details: Detailed information for LLM processing
+        ActivityRawData: Dictionary with raw pose and image data
     """
-    pose_activity = "unknown"
-    pose_confidence = 0.0
-    pose_details = []
+    # Collect pose data
+    pose_available = landmarks is not None and len(landmarks) > 0
+    pose_angles = calculate_all_joint_angles(landmarks if pose_available else [])
     
-    # First, try pose-based classification
-    if landmarks and len(landmarks) > 0:
-        # Priority order: more specific activities first
-        if is_waving(landmarks):
-            pose_activity = "waving"
-            pose_confidence = CONFIDENCE_WAVING
-            pose_details.append("Arms raised above shoulders with bent elbows")
-        elif is_arms_raised(landmarks):
-            pose_activity = "raising_hand"
-            pose_confidence = CONFIDENCE_RAISING_HAND
-            pose_details.append("One or both hands raised above shoulders")
-        elif is_sitting(landmarks):
-            pose_activity = "sitting"
-            pose_confidence = CONFIDENCE_SITTING
-            # Calculate knee angles for detail
-            left_hip = get_landmark_by_name(landmarks, "left hip")
-            left_knee = get_landmark_by_name(landmarks, "left knee")
-            left_ankle = get_landmark_by_name(landmarks, "left ankle")
-            if left_hip and left_knee and left_ankle:
-                angle = calculate_angle(left_hip, left_knee, left_ankle)
-                if angle:
-                    pose_details.append(f"Knee angle: {angle:.1f}° (sitting range: 50-130°)")
-        elif is_standing(landmarks):
-            pose_activity = "standing"
-            pose_confidence = CONFIDENCE_STANDING
-            pose_details.append("Legs relatively straight (knee angle > 140°)")
-        else:
-            pose_details.append("No specific pose pattern detected")
-    else:
-        pose_details.append("No pose landmarks available")
-
-    # Try image-based classification if available
-    image_activity = None
-    image_confidence = 0.0
-    image_details = ""
-    
-    if image is not None:
-        image_activity, image_confidence, image_details = classify_image(image)
-
-    # Combine results with detailed information
-    # Prioritize pose-based for known activities, blend with image-based info
-    if pose_activity != "unknown" and image_activity is not None:
-        # Both methods have results - provide blended information
-        if pose_activity == image_activity:
-            # Agreement between methods - high confidence
-            final_label = pose_activity
-            final_confidence = min(MAX_BLENDED_CONFIDENCE, (pose_confidence + image_confidence) / 2 + AGREEMENT_BONUS)
-            details = f"Pose-based: {pose_activity} ({pose_confidence:.2f}). {' '.join(pose_details)}. {image_details}. Both methods agree."
-        else:
-            # Disagreement - prefer pose but include both
-            final_label = pose_activity
-            final_confidence = pose_confidence * DISAGREEMENT_PENALTY
-            details = f"Pose-based: {pose_activity} ({pose_confidence:.2f}). {' '.join(pose_details)}. {image_details}. Methods disagree - using pose-based."
-    elif pose_activity != "unknown":
-        # Only pose-based available
-        final_label = pose_activity
-        final_confidence = pose_confidence
-        details = f"Pose-based: {pose_activity} ({pose_confidence:.2f}). {' '.join(pose_details)}. {image_details if image_details else 'No image classification available.'}"
-    elif image_activity is not None:
-        # Only image-based available
-        final_label = image_activity
-        final_confidence = image_confidence
-        details = f"Pose-based: unknown. {' '.join(pose_details)}. {image_details}. Using image-based classification."
-    else:
-        # No classification available
-        final_label = "unknown"
-        final_confidence = 0.0
-        details = f"Pose-based: unknown. {' '.join(pose_details)}. {image_details if image_details else 'No image classification available.'}"
+    # Collect image classification data
+    image_predictions = get_image_predictions(image) if image is not None else []
+    image_classification_available = len(image_predictions) > 0
 
     return {
-        "label": final_label,
-        "pose_based": pose_activity,
-        "image_based": image_activity,
-        "confidence": final_confidence,
-        "details": details
+        "pose_landmarks": landmarks if pose_available else [],
+        "pose_angles": pose_angles,
+        "image_predictions": image_predictions,
+        "pose_available": pose_available,
+        "image_classification_available": image_classification_available,
     }

@@ -13,12 +13,29 @@ class Pose(TypedDict):
     landmarks: list[Landmark]
 
 
-class ActivityInfo(TypedDict):
-    label: str  # Primary activity label (e.g., "standing", "sitting", "raising_hand", "unknown")
-    pose_based: str  # Activity detected from pose landmarks
-    image_based: str | None  # Activity detected from image classification (None if unavailable)
-    confidence: float  # Overall confidence score (0.0 to 1.0)
-    details: str  # Additional details for LLM processing
+class PoseAngles(TypedDict):
+    left_elbow: float | None  # Angle in degrees
+    right_elbow: float | None
+    left_knee: float | None
+    right_knee: float | None
+    left_hip: float | None
+    right_hip: float | None
+    left_shoulder: float | None
+    right_shoulder: float | None
+
+
+class ImagePrediction(TypedDict):
+    class_name: str
+    confidence: float
+
+
+class ActivityRawData(TypedDict):
+    """Raw data for LLM processing - no inference, just measurements"""
+    pose_landmarks: list[Landmark]  # Raw pose landmark data
+    pose_angles: PoseAngles  # Calculated joint angles
+    image_predictions: list[ImagePrediction]  # Top predictions from YOLO classifier
+    pose_available: bool  # Whether pose data is available
+    image_classification_available: bool  # Whether image classification ran successfully
 
 
 class PersonInfo(TypedDict):
@@ -32,7 +49,7 @@ class PersonInfo(TypedDict):
     image: ndarray  # cropped face image
     emotions: list[str]  # list of detected emotions
     pose: Pose  # body pose information
-    activity: str | ActivityInfo  # detected activity (legacy: str, enhanced: ActivityInfo dict)
+    activity: ActivityRawData  # Raw activity data for LLM processing
 
 
 class SceneObject(TypedDict):
