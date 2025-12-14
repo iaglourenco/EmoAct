@@ -325,14 +325,13 @@ def classify_activities(state: PipelineState):
     for frame_info in state["frames"]:
         image = frame_info["image"]
         for person in frame_info["persons"]:
-            # Get person's image crop if available
-            person_image = person.get("image")
-            
             # Classify using both pose landmarks and image
-            # Pass landmarks (may be empty) and image for dual-mode classification
+            # Pass landmarks (may be empty) and full frame for dual-mode classification
+            # Note: We pass the full frame, not just person["image"] (face crop),
+            # because activity classification needs full body context
             activity = classify_activity(
                 person["pose"]["landmarks"], 
-                image=person_image
+                image=image
             )
             person["activity"] = activity
 
