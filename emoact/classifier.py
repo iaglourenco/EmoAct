@@ -2,9 +2,23 @@
 
 import math
 from typing import Optional
-from emoact.types import Landmark
+from emoact.types import Landmark, ActivityInfo
 from ultralytics.models import YOLO
 import numpy as np
+
+# Classification confidence constants
+CONFIDENCE_WAVING = 0.9  # High confidence for specific gestures
+CONFIDENCE_RAISING_HAND = 0.85
+CONFIDENCE_SITTING = 0.8
+CONFIDENCE_STANDING = 0.75
+
+# Blending constants
+MAX_BLENDED_CONFIDENCE = 0.95  # Maximum confidence when methods agree
+AGREEMENT_BONUS = 0.1  # Bonus added when both methods agree
+DISAGREEMENT_PENALTY = 0.8  # Penalty factor when methods disagree
+
+# Image classification constants
+TOP_PREDICTIONS_COUNT = 3  # Number of top predictions to include in details
 
 # Load YOLOv11 classification model for image-based activity classification
 # Model path follows the same pattern as pose.py and objects.py
@@ -207,11 +221,11 @@ def classify_image(image: np.ndarray, confidence_threshold: float = 0.3) -> tupl
                 class_name = result.names[class_idx]
                 confidence = float(probs.top1conf)
                 
-                # Get top 3 predictions for details
+                # Get top predictions for details
                 top5_indices = probs.top5
                 top5_conf = probs.top5conf
                 details_list = []
-                for i in range(min(3, len(top5_indices))):
+                for i in range(min(TOP_PREDICTIONS_COUNT, len(top5_indices))):
                     idx = top5_indices[i]
                     conf = top5_conf[i]
                     details_list.append(f"{result.names[idx]}({conf:.2f})")
@@ -227,7 +241,7 @@ def classify_image(image: np.ndarray, confidence_threshold: float = 0.3) -> tupl
     return None, 0.0, "Image classification returned no results"
 
 
-def classify_activity(landmarks: list[Landmark], image: Optional[np.ndarray] = None) -> dict:
+def classify_activity(landmarks: list[Landmark], image: Optional[np.ndarray] = None) -> ActivityInfo:
     """
     Classify the activity based on pose landmarks and image classification.
     Returns detailed information combining both methods for LLM processing.
@@ -253,15 +267,15 @@ def classify_activity(landmarks: list[Landmark], image: Optional[np.ndarray] = N
         # Priority order: more specific activities first
         if is_waving(landmarks):
             pose_activity = "waving"
-            pose_confidence = 0.9  # High confidence for specific gestures
+            pose_confidence = CONFIDENCE_WAVING
             pose_details.append("Arms raised above shoulders with bent elbows")
         elif is_arms_raised(landmarks):
             pose_activity = "raising_hand"
-            pose_confidence = 0.85
+            pose_confidence = CONFIDENCE_RAISING_HAND
             pose_details.append("One or both hands raised above shoulders")
         elif is_sitting(landmarks):
             pose_activity = "sitting"
-            pose_confidence = 0.8
+            pose_confidence = CONFIDENCE_SITTING
             # Calculate knee angles for detail
             left_hip = get_landmark_by_name(landmarks, "left hip")
             left_knee = get_landmark_by_name(landmarks, "left knee")
@@ -272,7 +286,7 @@ def classify_activity(landmarks: list[Landmark], image: Optional[np.ndarray] = N
                     pose_details.append(f"Knee angle: {angle:.1f}° (sitting range: 50-130°)")
         elif is_standing(landmarks):
             pose_activity = "standing"
-            pose_confidence = 0.75
+            pose_confidence = CONFIDENCE_STANDING
             pose_details.append("Legs relatively straight (knee angle > 140°)")
         else:
             pose_details.append("No specific pose pattern detected")
@@ -294,12 +308,12 @@ def classify_activity(landmarks: list[Landmark], image: Optional[np.ndarray] = N
         if pose_activity == image_activity:
             # Agreement between methods - high confidence
             final_label = pose_activity
-            final_confidence = min(0.95, (pose_confidence + image_confidence) / 2 + 0.1)
+            final_confidence = min(MAX_BLENDED_CONFIDENCE, (pose_confidence + image_confidence) / 2 + AGREEMENT_BONUS)
             details = f"Pose-based: {pose_activity} ({pose_confidence:.2f}). {' '.join(pose_details)}. {image_details}. Both methods agree."
         else:
             # Disagreement - prefer pose but include both
             final_label = pose_activity
-            final_confidence = pose_confidence * 0.8  # Reduce confidence due to disagreement
+            final_confidence = pose_confidence * DISAGREEMENT_PENALTY
             details = f"Pose-based: {pose_activity} ({pose_confidence:.2f}). {' '.join(pose_details)}. {image_details}. Methods disagree - using pose-based."
     elif pose_activity != "unknown":
         # Only pose-based available
