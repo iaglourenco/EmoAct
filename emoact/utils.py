@@ -6,12 +6,6 @@ def cosine_similarity(emb1: np.ndarray, emb2: np.ndarray) -> float:
     """
     Calculate cosine similarity between two embeddings.
 
-    Args:
-        emb1: First embedding vector
-        emb2: Second embedding vector
-
-    Returns:
-        Cosine similarity score between 0 and 1
     """
     if emb1 is None or emb2 is None:
         return 0.0
@@ -44,15 +38,7 @@ def draw_graph(graph, filename="graph"):
 
 
 def draw_bounding_boxes(image, boxes, color=(0, 255, 0), thickness=2):
-    """Draw bounding boxes on the image.
-    Args:
-        image: The image to draw on.
-        boxes: List of bounding boxes, each defined as (left, top, right, bottom).
-        color: Color of the bounding box.
-        thickness: Thickness of the bounding box lines.
-    Returns:
-        The image with bounding boxes drawn.
-    """
+    """Draw bounding boxes on the image."""
     for left, top, right, bottom in boxes:
         cv2.rectangle(image, (left, top), (right, bottom), color, thickness)
     return image
@@ -66,16 +52,7 @@ def draw_landmarks(image, landmarks, color=(0, 0, 255), radius=3):
 
 
 def draw_pose_skeleton(image, landmarks, confidence_threshold=0.5):
-    """Draw pose skeleton with connections between landmarks.
-
-    Args:
-        image: The image to draw on.
-        landmarks: List of landmarks with 'x', 'y', 'confidence', and 'name' fields.
-        confidence_threshold: Minimum confidence to draw landmarks and connections.
-
-    Returns:
-        The image with pose skeleton drawn.
-    """
+    """Draw pose skeleton with connections between landmarks."""
     # Define pose connections (COCO-style keypoint connections)
     connections = [
         # Face

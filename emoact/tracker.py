@@ -49,15 +49,6 @@ class FaceTracker:
         """
         Calculate overall match score combining embedding similarity and spatial proximity.
 
-        Args:
-            face_embedding: Current face embedding
-            face_location: Current face bounding box
-            tracked_embedding: Tracked person's embedding
-            tracked_location: Tracked person's last known location
-            embedding_weight: Weight for embedding similarity (0-1)
-
-        Returns:
-            Combined match score between 0 and 1
         """
         # Calculate embedding similarity
         emb_similarity = cosine_similarity(face_embedding, tracked_embedding)
@@ -79,13 +70,6 @@ class FaceTracker:
         """
         Find the best matching tracked person for a detected face.
 
-        Args:
-            face_embedding: Face embedding vector
-            face_location: Face bounding box
-            frame_number: Current frame number
-
-        Returns:
-            Person ID of best match, or None if no good match found
         """
         best_person_id = None
         best_score = 0.0
@@ -121,13 +105,6 @@ class FaceTracker:
         """
         Create a new tracked person with a unique ID.
 
-        Args:
-            face_embedding: Face embedding vector
-            face_location: Face bounding box
-            frame_number: Current frame number
-
-        Returns:
-            New person ID
         """
         person_id = f"P{self.next_person_id:03d}"
         self.next_person_id += 1
@@ -153,12 +130,6 @@ class FaceTracker:
         """
         Update tracked person information with new detection.
 
-        Args:
-            person_id: ID of person to update
-            face_embedding: New face embedding
-            face_location: New face location
-            frame_number: Current frame number
-            embedding_update_rate: Rate to blend new embedding (0-1)
         """
         person_data = self.tracked_persons[person_id]
 
@@ -181,12 +152,6 @@ class FaceTracker:
         """
         Track persons in a single frame and assign consistent IDs.
 
-        Args:
-            persons: List of detected persons in the frame
-            frame_number: Current frame number
-
-        Returns:
-            List of persons with assigned person_id
         """
         for person in persons:
             if person["face_embedding"] is None or person["face_location"] is None:
@@ -220,8 +185,6 @@ class FaceTracker:
         """
         Remove tracked persons that haven't been seen recently.
 
-        Args:
-            current_frame: Current frame number
         """
         to_remove = []
         for person_id, person_data in self.tracked_persons.items():
@@ -252,12 +215,6 @@ def track_faces_in_video(frames: List[FrameInfo], **tracker_params) -> List[Fram
     """
     Track faces across all frames in a video.
 
-    Args:
-        frames: List of frame dictionaries containing detected persons
-        **tracker_params: Additional parameters for FaceTracker
-
-    Returns:
-        Frames with person_id assigned to each person
     """
     tracker = FaceTracker(**tracker_params)
 
@@ -266,9 +223,5 @@ def track_faces_in_video(frames: List[FrameInfo], **tracker_params) -> List[Fram
             frame_info["persons"] = tracker.track_frame(
                 frame_info["persons"], frame_idx
             )
-
-        # Cleanup old tracks periodically
-        if frame_idx % 100 == 0:
-            tracker.cleanup_old_tracks(frame_idx)
 
     return frames

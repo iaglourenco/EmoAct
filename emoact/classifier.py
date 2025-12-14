@@ -68,11 +68,6 @@ def calculate_all_joint_angles(landmarks: list[Landmark]) -> PoseAngles:
     Calculate all major joint angles from pose landmarks.
     Returns raw angle measurements without any interpretation.
 
-    Args:
-        landmarks: List of pose landmarks
-
-    Returns:
-        PoseAngles: Dictionary of joint angles in degrees (None if cannot be calculated)
     """
     angles: PoseAngles = {
         "left_elbow": None,
@@ -144,11 +139,6 @@ def get_image_predictions(image: np.ndarray) -> list[ImagePrediction]:
     Get raw image classification predictions from YOLOv11 model.
     Returns top predictions without any inference or filtering.
 
-    Args:
-        image: The image to classify (numpy array)
-
-    Returns:
-        list[ImagePrediction]: List of top predictions with class names and confidence scores
     """
     if classification_model is None or image is None or image.size == 0:
         return []
@@ -187,12 +177,6 @@ def collect_activity_data(
     Collect raw activity data from pose landmarks and image classification.
     No inference or interpretation - just raw measurements for LLM processing.
 
-    Args:
-        landmarks: List of pose landmarks
-        image: Optional image for image-based classification
-
-    Returns:
-        ActivityRawData: Dictionary with raw pose and image data
     """
     # Collect pose data
     pose_available = landmarks is not None and len(landmarks) > 0

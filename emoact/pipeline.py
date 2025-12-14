@@ -441,12 +441,16 @@ graph_builder.add_edge("draw", "summarize")
 graph_builder.add_edge("summarize", "save_video")
 graph_builder.add_edge("save_video", "export_summary")
 
+
+print()
 graph = graph_builder.compile()
 draw_graph(graph)
 
 if __name__ == "__main__":
+    from tqdm import tqdm
+
     initial_state: PipelineState = {
-        "video_path": "input_video.mp4",
+        "video_path": "input/cropped.mp4",
         "output_path": "output.mp4",
         "fps": 0.0,
         "transcription": "",
@@ -455,8 +459,64 @@ if __name__ == "__main__":
         "object_conf_threshold": 0.5,
         "pose_conf_threshold": 0.3,
     }
-    for event in graph.stream(initial_state):
-        if event:
-            node_name = list(event.keys())[0]
-            state = event[node_name]
-            print(f"Node '{node_name}' completed.")
+
+    # Create progress bar
+    with tqdm(
+        total=len(graph.nodes),
+        desc="Processing video",
+        unit="step",
+    ) as pbar:
+        for event in graph.stream(initial_state):
+            if event:
+                node_name = list(event.keys())[0]
+                state = event[node_name]
+
+                # Update progress bar with current node
+                pbar.update(1)
+
+                # Show additional info for certain nodes
+                if node_name == "load_video":
+                    frames_count = len(state.get("frames", []))
+                    pbar.write(
+                        f"  → Loaded {frames_count} frames at {state['fps']:.1f} FPS"
+                    )
+                if node_name == "detect_poses":
+                    total_poses = sum(
+                        1
+                        for f in state["frames"]
+                        for p in f["persons"]
+                        if p["pose"]["landmarks"]
+                    )
+                    pbar.write(f"  → Detected {total_poses} poses across all frames")
+                if node_name == "detect_emotions":
+                    total_emotions = sum(
+                        len(p["emotions"])
+                        for f in state["frames"]
+                        for p in f["persons"]
+                    )
+                    pbar.write(
+                        f"  → Detected {total_emotions} emotions across all faces"
+                    )
+                elif node_name == "detect_faces":
+                    total_faces = sum(len(f["persons"]) for f in state["frames"])
+                    pbar.write(f"  → Detected {total_faces} faces across all frames")
+                elif node_name == "track_faces":
+                    unique_persons = len(
+                        set(
+                            p["person_id"]
+                            for f in state["frames"]
+                            for p in f["persons"]
+                            if p.get("person_id")
+                        )
+                    )
+                    pbar.write(f"  → Tracked {unique_persons} unique person(s)")
+                elif node_name == "transcribe_audio":
+                    if state.get("transcription"):
+                        words = len(state["transcription"].split())
+                        pbar.write(f"  → Transcribed {words} words")
+                elif node_name == "save_video":
+                    pbar.write(f"  → Saved video to {state['output_path']}")
+                elif node_name == "export_summary":
+                    pbar.write(f"  → Summary exported successfully")
+
+    print("\n✓ Pipeline completed successfully!")

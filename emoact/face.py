@@ -1,10 +1,24 @@
 import numpy as np
 import insightface
+import sys, os
 
-app = insightface.app.FaceAnalysis(
-    "buffalo_l", root="./", providers=["CUDAExecutionProvider"]
-)
-app.prepare(ctx_id=0, det_size=(640, 640))
+
+class SuppressStdout:
+    def __enter__(self):
+        self._stdout = sys.stdout
+        sys.stdout = open(os.devnull, "w")
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        sys.stdout.close()
+        sys.stdout = self._stdout
+
+
+# Supress insightface loading messages
+with SuppressStdout():
+    app = insightface.app.FaceAnalysis(
+        "buffalo_l", root="./", providers=["CUDAExecutionProvider"]
+    )
+    app.prepare(ctx_id=0, det_size=(640, 640))
 
 
 def detect_faces(frame: np.ndarray, threshold: float = 0.5):

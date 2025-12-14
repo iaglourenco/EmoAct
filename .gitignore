@@ -1,5 +1,6 @@
 venv/
 __pycache__/
+input/*theoffice*
 output.mp4
 output_summary.txt
 models/

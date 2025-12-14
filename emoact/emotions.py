@@ -3,10 +3,10 @@ from transformers import AutoImageProcessor, AutoModelForImageClassification
 import numpy as np
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Usando o dispositivo: {device}")
 
 processor = AutoImageProcessor.from_pretrained(
-    "dima806/facial_emotions_image_detection"
+    "dima806/facial_emotions_image_detection",
+    use_fast=True,
 )
 model = AutoModelForImageClassification.from_pretrained(
     "dima806/facial_emotions_image_detection",

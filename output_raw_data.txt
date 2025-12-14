@@ -1,0 +1,1766 @@
+RAW VIDEO ANALYSIS DATA
+================================================================================
+
+NOTA: Os dados abaixo excederam o limite de 8000 tokens do LLM.
+Este arquivo contém os dados brutos que seriam enviados ao modelo.
+================================================================================
+
+TRANSCRIÇÃO DE ÁUDIO:
+--------------------------------------------------------------------------------
+ to the fascinating world of video analysis for facial recognition and activities. Picture this, watch full eye of advanced technology. As you watch, notice how some are engrossed and reading. Their faces illuminated by the soft glow of the pages. Others engage in lively conversations, expressions animated and gestures expressive. The natural flow of movement as people walk around creates a dynamic environment adding to the complexity of facial recognition algorithms. What's truly captivating is the range of emotional expressions on display, from genuine smiles that radiate happiness to widened eyes that betray surprise. In the intense concentration etched on the...
+
+================================================================================
+
+ANÁLISE VISUAL:
+--------------------------------------------------------------------------------
+Total frames analyzed: 1259
+Unique persons detected: 15
+Person IDs: P001, P002, P003, P004, P005, P006, P007, P008, P009, P010, P011, P012, P013, P014, P015
+
+Emotion Distribution:
+  - happy: 381 occurrences
+  - surprise: 250 occurrences
+  - sad: 212 occurrences
+  - neutral: 201 occurrences
+  - fear: 96 occurrences
+  - angry: 45 occurrences
+  - disgust: 5 occurrences
+
+Objects Detected:
+  - potted plant: 231 occurrences
+  - couch: 20 occurrences
+  - airplane: 3 occurrences
+  - cell phone: 2 occurrences
+  - bottle: 1 occurrences
+
+Activity Data (sampled frames):
+
+Person P001:
+  Gender: Male
+  Age: 31
+  Frame 0: shower_cap (0.17), bath_towel (0.15), academic_gown (0.14), sweatshirt (0.04), Band_Aid (0.03)
+  Frame 1: shower_cap (0.17), bath_towel (0.15), academic_gown (0.14), sweatshirt (0.03), Band_Aid (0.03)
+  Frame 2: academic_gown (0.13), shower_cap (0.12), bath_towel (0.10), sweatshirt (0.05), Band_Aid (0.03)
+  Frame 3: bath_towel (0.12), shower_cap (0.08), shower_curtain (0.04), Band_Aid (0.04), academic_gown (0.03)
+  Frame 4: sunscreen (0.15), syringe (0.09), Band_Aid (0.07), lighter (0.06), beaker (0.05)
+  Frame 5: sunscreen (0.11), syringe (0.09), Band_Aid (0.05), academic_gown (0.05), sweatshirt (0.04)
+  Frame 6: sunscreen (0.09), syringe (0.09), cleaver (0.08), Band_Aid (0.06), spatula (0.05)
+    Ângulos: left_elbow=71.0°
+  Frame 7: sunscreen (0.10), syringe (0.09), cleaver (0.07), Band_Aid (0.06), seat_belt (0.05)
+    Ângulos: left_elbow=70.7°
+  Frame 8: seat_belt (0.14), cleaver (0.08), sunscreen (0.07), shower_cap (0.04), spatula (0.04)
+    Ângulos: left_elbow=67.8°
+  Frame 9: seat_belt (0.17), cleaver (0.07), sunscreen (0.04), syringe (0.03), paintbrush (0.03)
+    Ângulos: left_elbow=70.5°
+  Frame 10: seat_belt (0.20), cleaver (0.06), academic_gown (0.04), paintbrush (0.03), spatula (0.03)
+    Ângulos: left_elbow=68.1°
+  Frame 11: seat_belt (0.21), spatula (0.11), cleaver (0.05), wooden_spoon (0.05), paintbrush (0.03)
+  Frame 12: cleaver (0.08), seat_belt (0.07), beaker (0.05), spatula (0.05), wooden_spoon (0.05)
+    Ângulos: left_elbow=76.1°
+  Frame 13: cleaver (0.08), seat_belt (0.06), beaker (0.06), spatula (0.05), wooden_spoon (0.05)
+    Ângulos: left_elbow=75.6°
+  Frame 14: shower_cap (0.04), syringe (0.04), beaker (0.04), stethoscope (0.03), cleaver (0.03)
+    Ângulos: left_elbow=81.7°
+  Frame 15: syringe (0.09), sunscreen (0.04), beaker (0.04), cleaver (0.04), Band_Aid (0.04)
+    Ângulos: left_elbow=85.9°
+  Frame 16: syringe (0.11), wooden_spoon (0.05), beaker (0.05), paintbrush (0.04), sunscreen (0.04)
+    Ângulos: left_elbow=89.3°
+  Frame 17: beaker (0.14), syringe (0.07), lab_coat (0.04), wooden_spoon (0.04), Petri_dish (0.03)
+  Frame 18: beaker (0.14), syringe (0.07), lab_coat (0.04), wooden_spoon (0.04), stethoscope (0.03)
+  Frame 19: cleaver (0.10), spatula (0.06), wooden_spoon (0.06), plunger (0.06), paintbrush (0.04)
+  Frame 20: seat_belt (0.08), cleaver (0.05), bath_towel (0.03), spatula (0.03), Band_Aid (0.03)
+  Frame 21: cleaver (0.10), spatula (0.10), wooden_spoon (0.06), paintbrush (0.04), bath_towel (0.04)
+  Frame 22: refrigerator (0.04), shower_cap (0.04), syringe (0.04), cleaver (0.04), spatula (0.04)
+    Ângulos: left_elbow=76.2°
+  Frame 23: cleaver (0.19), spatula (0.08), hand_blower (0.06), syringe (0.04), shower_cap (0.03)
+    Ângulos: left_elbow=88.9°
+  Frame 24: cleaver (0.19), spatula (0.08), hand_blower (0.06), syringe (0.04), shower_cap (0.03)
+    Ângulos: left_elbow=89.0°
+  Frame 25: cleaver (0.14), hand_blower (0.05), spatula (0.05), wooden_spoon (0.04), tub (0.03)
+  Frame 26: cleaver (0.16), spatula (0.10), wooden_spoon (0.05), refrigerator (0.05), shoe_shop (0.04)
+    Ângulos: left_elbow=78.0°
+  Frame 27: cleaver (0.21), spatula (0.12), wooden_spoon (0.05), syringe (0.03), seat_belt (0.03)
+    Ângulos: left_elbow=87.5°
+  Frame 28: cleaver (0.14), spatula (0.12), wooden_spoon (0.05), seat_belt (0.03), Windsor_tie (0.03)
+    Ângulos: left_elbow=72.9°
+  Frame 29: cleaver (0.07), barbershop (0.07), syringe (0.04), lab_coat (0.04), beaker (0.04)
+  Frame 30: cleaver (0.10), spatula (0.04), beaker (0.04), syringe (0.03), coffee_mug (0.03)
+  Frame 31: cleaver (0.09), spatula (0.05), beaker (0.04), syringe (0.03), barbershop (0.03)
+  Frame 32: syringe (0.10), cleaver (0.09), seat_belt (0.05), barbershop (0.04), spatula (0.03)
+    Ângulos: left_elbow=82.2°
+  Frame 33: cleaver (0.07), barbershop (0.05), seat_belt (0.04), hand_blower (0.04), spatula (0.04)
+    Ângulos: left_elbow=83.6°
+  Frame 34: barbershop (0.11), cleaver (0.05), seat_belt (0.05), beaker (0.04), lab_coat (0.03)
+    Ângulos: left_elbow=90.0°
+  Frame 35: cleaver (0.09), seat_belt (0.09), academic_gown (0.04), barbershop (0.04), hand_blower (0.03)
+    Ângulos: left_elbow=88.1°
+  Frame 36: torch (0.09), syringe (0.09), cleaver (0.07), hand_blower (0.04), barbershop (0.04)
+  Frame 37: syringe (0.09), torch (0.09), cleaver (0.08), hand_blower (0.05), barbershop (0.05)
+  Frame 38: cleaver (0.17), academic_gown (0.04), sunscreen (0.04), Windsor_tie (0.04), spatula (0.03)
+  Frame 39: sunscreen (0.13), seat_belt (0.10), cleaver (0.10), Band_Aid (0.06), spatula (0.05)
+  Frame 40: seat_belt (0.15), tub (0.05), beaker (0.05), sunscreen (0.04), bathtub (0.03)
+  Frame 41: seat_belt (0.26), prison (0.05), military_uniform (0.03), academic_gown (0.03), torch (0.03)
+  Frame 42: seat_belt (0.24), prison (0.04), academic_gown (0.04), torch (0.03), military_uniform (0.02)
+  Frame 43: seat_belt (0.25), prison (0.04), academic_gown (0.03), torch (0.03), military_uniform (0.02)
+  Frame 44: seat_belt (0.14), military_uniform (0.03), cleaver (0.03), dishwasher (0.03), academic_gown (0.02)
+  Frame 45: seat_belt (0.13), cleaver (0.03), military_uniform (0.03), dishwasher (0.02), spatula (0.02)
+  Frame 46: seat_belt (0.15), dishwasher (0.03), cleaver (0.03), military_uniform (0.03), academic_gown (0.02)
+  Frame 47: seat_belt (0.18), cleaver (0.03), academic_gown (0.03), military_uniform (0.03), torch (0.03)
+  Frame 48: seat_belt (0.17), cleaver (0.03), academic_gown (0.03), military_uniform (0.03), torch (0.03)
+  Frame 49: seat_belt (0.28), spatula (0.03), dishwasher (0.03), cleaver (0.03), military_uniform (0.02)
+  Frame 50: seat_belt (0.27), cleaver (0.03), eggnog (0.03), dishwasher (0.02), spatula (0.02)
+  Frame 51: seat_belt (0.14), dishwasher (0.04), eggnog (0.03), beaker (0.02), spatula (0.02)
+  Frame 52: seat_belt (0.18), dishwasher (0.04), cleaver (0.03), wooden_spoon (0.03), eggnog (0.03)
+  Frame 53: seat_belt (0.28), cleaver (0.05), spatula (0.03), academic_gown (0.03), shower_cap (0.03)
+  Frame 54: seat_belt (0.28), cleaver (0.05), spatula (0.03), academic_gown (0.03), shower_cap (0.03)
+  Frame 55: seat_belt (0.19), academic_gown (0.08), cleaver (0.05), military_uniform (0.04), mortarboard (0.04)
+  Frame 56: seat_belt (0.09), military_uniform (0.08), cleaver (0.08), academic_gown (0.08), mortarboard (0.04)
+  Frame 57: cleaver (0.07), academic_gown (0.07), seat_belt (0.06), military_uniform (0.06), coffee_mug (0.04)
+  Frame 58: seat_belt (0.05), cleaver (0.05), shower_cap (0.04), military_uniform (0.04), academic_gown (0.04)
+  Frame 59: cleaver (0.10), academic_gown (0.05), shower_cap (0.04), Band_Aid (0.04), seat_belt (0.04)
+  Frame 60: cleaver (0.10), shower_cap (0.06), Band_Aid (0.05), sunscreen (0.04), academic_gown (0.04)
+  Frame 61: cleaver (0.09), shower_cap (0.06), Band_Aid (0.05), academic_gown (0.04), sunscreen (0.04)
+  Frame 62: military_uniform (0.05), cleaver (0.05), shower_cap (0.04), academic_gown (0.04), Band_Aid (0.04)
+  Frame 63: military_uniform (0.06), shower_cap (0.06), cleaver (0.05), Band_Aid (0.04), academic_gown (0.04)
+  Frame 64: military_uniform (0.09), academic_gown (0.07), Band_Aid (0.06), shower_cap (0.05), cleaver (0.04)
+  Frame 65: academic_gown (0.10), Band_Aid (0.06), military_uniform (0.06), shower_cap (0.05), mortarboard (0.04)
+  Frame 66: academic_gown (0.10), Band_Aid (0.06), military_uniform (0.06), shower_cap (0.05), mortarboard (0.04)
+  Frame 67: Band_Aid (0.09), military_uniform (0.08), shower_cap (0.05), academic_gown (0.05), red_wine (0.04)
+  Frame 68: military_uniform (0.08), academic_gown (0.07), shower_cap (0.06), Band_Aid (0.06), red_wine (0.03)
+  Frame 69: academic_gown (0.09), military_uniform (0.07), shower_cap (0.04), bathing_cap (0.04), Band_Aid (0.04)
+  Frame 70: academic_gown (0.07), Band_Aid (0.06), military_uniform (0.06), shower_cap (0.06), bathing_cap (0.05)
+  Frame 71: military_uniform (0.08), shower_cap (0.08), Band_Aid (0.06), bathing_cap (0.05), academic_gown (0.04)
+  Frame 72: shower_cap (0.12), military_uniform (0.07), Band_Aid (0.04), bathing_cap (0.04), academic_gown (0.04)
+  Frame 73: shower_cap (0.13), military_uniform (0.07), Band_Aid (0.04), bathing_cap (0.04), academic_gown (0.04)
+  Frame 74: shower_cap (0.12), military_uniform (0.07), academic_gown (0.04), bathing_cap (0.04), beaker (0.04)
+  Frame 75: shower_cap (0.25), bathing_cap (0.07), bath_towel (0.05), academic_gown (0.04), military_uniform (0.04)
+  Frame 76: shower_cap (0.32), bathing_cap (0.06), academic_gown (0.05), bath_towel (0.04), military_uniform (0.04)
+  Frame 77: shower_cap (0.33), academic_gown (0.06), military_uniform (0.05), bathing_cap (0.04), Band_Aid (0.03)
+  Frame 78: shower_cap (0.34), academic_gown (0.05), military_uniform (0.05), bathing_cap (0.04), Band_Aid (0.03)
+  Frame 79: shower_cap (0.39), academic_gown (0.05), Band_Aid (0.04), bathing_cap (0.03), military_uniform (0.03)
+  Frame 80: shower_cap (0.31), academic_gown (0.06), bathing_cap (0.04), military_uniform (0.04), Band_Aid (0.04)
+  Frame 81: shower_cap (0.24), academic_gown (0.06), military_uniform (0.05), bathing_cap (0.05), lab_coat (0.04)
+  Frame 82: shower_cap (0.26), lab_coat (0.05), academic_gown (0.05), syringe (0.04), military_uniform (0.04)
+  Frame 83: shower_cap (0.25), bath_towel (0.04), academic_gown (0.04), military_uniform (0.03), Band_Aid (0.03)
+  Frame 84: shower_cap (0.18), academic_gown (0.05), bath_towel (0.05), Band_Aid (0.04), bathing_cap (0.04)
+  Frame 85: shower_cap (0.18), bath_towel (0.05), academic_gown (0.05), Band_Aid (0.05), bathing_cap (0.04)
+  Frame 86: shower_cap (0.16), academic_gown (0.04), lab_coat (0.04), military_uniform (0.04), Band_Aid (0.04)
+  Frame 87: shower_cap (0.17), academic_gown (0.04), military_uniform (0.04), Band_Aid (0.04), bathing_cap (0.04)
+  Frame 88: shower_cap (0.21), military_uniform (0.06), bathing_cap (0.05), academic_gown (0.04), Band_Aid (0.04)
+  Frame 89: shower_cap (0.31), Band_Aid (0.05), bathing_cap (0.05), military_uniform (0.04), bath_towel (0.03)
+  Frame 90: shower_cap (0.30), Band_Aid (0.05), military_uniform (0.04), bathing_cap (0.03), bath_towel (0.03)
+  Frame 91: shower_cap (0.29), Band_Aid (0.05), military_uniform (0.04), bathing_cap (0.03), bath_towel (0.03)
+  Frame 92: shower_cap (0.23), military_uniform (0.07), Band_Aid (0.05), bathing_cap (0.04), lab_coat (0.03)
+  Frame 93: shower_cap (0.17), military_uniform (0.06), Band_Aid (0.05), bathing_cap (0.04), lab_coat (0.04)
+  Frame 94: shower_cap (0.18), Band_Aid (0.06), military_uniform (0.05), academic_gown (0.03), lab_coat (0.03)
+  Frame 95: shower_cap (0.21), military_uniform (0.05), Band_Aid (0.05), prison (0.04), academic_gown (0.03)
+  Frame 96: shower_cap (0.21), military_uniform (0.05), Band_Aid (0.05), prison (0.04), academic_gown (0.03)
+  Frame 97: shower_cap (0.14), military_uniform (0.06), prison (0.06), academic_gown (0.05), Band_Aid (0.04)
+  Frame 98: shower_cap (0.10), military_uniform (0.08), prison (0.06), academic_gown (0.04), lab_coat (0.04)
+  Frame 99: shower_cap (0.13), military_uniform (0.04), prison (0.04), lab_coat (0.04), academic_gown (0.04)
+  Frame 100: shower_cap (0.16), academic_gown (0.05), bath_towel (0.04), military_uniform (0.04), Band_Aid (0.03)
+  Frame 101: shower_cap (0.15), bath_towel (0.05), Band_Aid (0.04), academic_gown (0.04), bathing_cap (0.04)
+  Frame 102: shower_cap (0.18), bath_towel (0.04), Band_Aid (0.04), lab_coat (0.04), syringe (0.04)
+  Frame 103: shower_cap (0.18), bath_towel (0.04), Band_Aid (0.04), lab_coat (0.04), syringe (0.04)
+  Frame 104: shower_cap (0.19), Band_Aid (0.04), lab_coat (0.04), bath_towel (0.04), bathing_cap (0.03)
+  Frame 105: shower_cap (0.18), Band_Aid (0.05), bath_towel (0.04), bathing_cap (0.04), lab_coat (0.04)
+  Frame 106: shower_cap (0.14), Band_Aid (0.05), lab_coat (0.04), bathing_cap (0.04), bath_towel (0.03)
+  Frame 107: shower_cap (0.15), bathing_cap (0.05), Band_Aid (0.05), lab_coat (0.04), military_uniform (0.04)
+  Frame 108: shower_cap (0.16), bathing_cap (0.05), Band_Aid (0.05), lab_coat (0.04), military_uniform (0.04)
+  Frame 109: shower_cap (0.14), academic_gown (0.06), military_uniform (0.06), bathing_cap (0.05), Band_Aid (0.05)
+  Frame 110: shower_cap (0.15), academic_gown (0.06), military_uniform (0.06), Band_Aid (0.06), prison (0.04)
+  Frame 111: shower_cap (0.11), Band_Aid (0.07), prison (0.07), military_uniform (0.06), academic_gown (0.04)
+  Frame 112: shower_cap (0.09), Band_Aid (0.07), prison (0.06), military_uniform (0.05), lab_coat (0.03)
+  Frame 113: shower_cap (0.12), Band_Aid (0.07), military_uniform (0.05), prison (0.04), bathing_cap (0.02)
+  Frame 114: shower_cap (0.13), Band_Aid (0.08), military_uniform (0.07), prison (0.05), bathing_cap (0.04)
+  Frame 115: shower_cap (0.13), Band_Aid (0.08), military_uniform (0.07), prison (0.05), bathing_cap (0.04)
+  Frame 116: shower_cap (0.15), Band_Aid (0.09), military_uniform (0.07), bathing_cap (0.06), prison (0.05)
+  Frame 117: shower_cap (0.16), Band_Aid (0.10), military_uniform (0.08), bathing_cap (0.06), prison (0.04)
+  Frame 118: shower_cap (0.16), Band_Aid (0.09), military_uniform (0.07), bathing_cap (0.05), lab_coat (0.03)
+  Frame 119: shower_cap (0.18), Band_Aid (0.08), bathing_cap (0.05), military_uniform (0.04), prison (0.04)
+  Frame 120: shower_cap (0.10), Band_Aid (0.08), military_uniform (0.05), bathing_cap (0.05), prison (0.04)
+  Frame 121: shower_cap (0.10), Band_Aid (0.08), military_uniform (0.05), bathing_cap (0.05), prison (0.04)
+  Frame 122: shower_cap (0.11), Band_Aid (0.10), bathing_cap (0.07), prison (0.06), military_uniform (0.04)
+  Frame 123: Band_Aid (0.11), shower_cap (0.10), prison (0.06), bathing_cap (0.05), military_uniform (0.04)
+  Frame 124: Band_Aid (0.11), shower_cap (0.08), military_uniform (0.05), bathing_cap (0.05), prison (0.03)
+  Frame 125: Band_Aid (0.10), shower_cap (0.09), sunscreen (0.04), military_uniform (0.03), sweatshirt (0.03)
+  Frame 126: Band_Aid (0.10), shower_cap (0.09), sunscreen (0.04), military_uniform (0.03), sweatshirt (0.03)
+  Frame 127: shower_cap (0.10), Band_Aid (0.08), prison (0.04), sweatshirt (0.04), military_uniform (0.04)
+  Frame 128: shower_cap (0.08), prison (0.07), Band_Aid (0.07), military_uniform (0.05), sweatshirt (0.04)
+  Frame 129: shower_cap (0.08), Band_Aid (0.07), sweatshirt (0.04), military_uniform (0.04), prison (0.04)
+  Frame 130: Band_Aid (0.07), shower_cap (0.07), prison (0.06), sweatshirt (0.04), military_uniform (0.04)
+  Frame 131: Band_Aid (0.07), shower_cap (0.06), military_uniform (0.05), sweatshirt (0.04), bathing_cap (0.03)
+  Frame 132: Band_Aid (0.08), shower_cap (0.06), sweatshirt (0.05), prison (0.04), military_uniform (0.04)
+  Frame 133: Band_Aid (0.08), shower_cap (0.06), sweatshirt (0.04), prison (0.04), military_uniform (0.04)
+  Frame 134: Band_Aid (0.08), shower_cap (0.06), sunscreen (0.04), sweatshirt (0.04), bathing_cap (0.04)
+  Frame 135: Band_Aid (0.08), military_uniform (0.04), shower_cap (0.04), sweatshirt (0.04), sunscreen (0.03)
+  Frame 136: Band_Aid (0.08), shower_cap (0.06), sunscreen (0.05), military_uniform (0.04), bathing_cap (0.03)
+  Frame 137: Band_Aid (0.05), shower_cap (0.05), sunscreen (0.04), seat_belt (0.04), military_uniform (0.04)
+  Frame 138: Band_Aid (0.09), sunscreen (0.06), military_uniform (0.05), bathing_cap (0.04), shower_cap (0.03)
+  Frame 139: Band_Aid (0.09), sunscreen (0.06), military_uniform (0.05), bathing_cap (0.04), shower_cap (0.03)
+  Frame 140: Band_Aid (0.09), sunscreen (0.07), bathing_cap (0.05), shower_cap (0.04), military_uniform (0.03)
+  Frame 141: Band_Aid (0.09), sunscreen (0.06), shower_cap (0.04), bathing_cap (0.04), military_uniform (0.04)
+  Frame 142: Band_Aid (0.07), sunscreen (0.05), military_uniform (0.04), cellular_telephone (0.04), bathing_cap (0.04)
+  Frame 143: Band_Aid (0.07), sunscreen (0.05), seat_belt (0.04), military_uniform (0.04), bathing_cap (0.04)
+  Frame 144: Band_Aid (0.07), sunscreen (0.05), military_uniform (0.05), bathing_cap (0.04), shower_cap (0.04)
+  Frame 145: Band_Aid (0.07), sunscreen (0.05), military_uniform (0.04), bathing_cap (0.04), shower_cap (0.04)
+  Frame 146: Band_Aid (0.07), military_uniform (0.05), shower_cap (0.04), sunscreen (0.04), bathing_cap (0.04)
+  Frame 147: military_uniform (0.06), Band_Aid (0.06), shower_cap (0.05), sunscreen (0.04), seat_belt (0.03)
+  Frame 148: Band_Aid (0.07), shower_cap (0.06), military_uniform (0.05), prison (0.05), torch (0.03)
+  Frame 149: prison (0.07), Band_Aid (0.07), torch (0.06), shower_cap (0.05), military_uniform (0.04)
+  Frame 150: Band_Aid (0.06), military_uniform (0.05), shower_cap (0.05), torch (0.04), prison (0.03)
+  Frame 151: Band_Aid (0.06), military_uniform (0.05), shower_cap (0.05), torch (0.04), sweatshirt (0.03)
+  Frame 152: shower_cap (0.05), Band_Aid (0.05), torch (0.05), military_uniform (0.05), prison (0.03)
+  Frame 153: seat_belt (0.07), torch (0.05), shower_cap (0.04), military_uniform (0.04), Band_Aid (0.04)
+  Frame 154: seat_belt (0.09), torch (0.05), shower_cap (0.05), Band_Aid (0.04), military_uniform (0.03)
+  Frame 155: seat_belt (0.09), torch (0.07), shower_cap (0.05), prison (0.04), military_uniform (0.03)
+  Frame 156: seat_belt (0.09), torch (0.07), shower_cap (0.05), prison (0.04), military_uniform (0.03)
+  Frame 157: seat_belt (0.09), shower_cap (0.07), torch (0.07), prison (0.04), Band_Aid (0.03)
+  Frame 158: seat_belt (0.09), torch (0.08), shower_cap (0.06), military_uniform (0.04), Band_Aid (0.04)
+  Frame 159: seat_belt (0.13), torch (0.07), shower_cap (0.04), Band_Aid (0.04), military_uniform (0.04)
+  Frame 160: seat_belt (0.06), shower_cap (0.05), Band_Aid (0.05), prison (0.04), torch (0.03)
+  Frame 161: seat_belt (0.06), Band_Aid (0.05), shower_cap (0.03), prison (0.03), torch (0.03)
+  Frame 162: seat_belt (0.08), Band_Aid (0.05), sunscreen (0.03), shower_cap (0.03), sweatshirt (0.03)
+  Frame 163: seat_belt (0.08), Band_Aid (0.05), sunscreen (0.03), shower_cap (0.03), sweatshirt (0.03)
+  Frame 164: seat_belt (0.11), Band_Aid (0.05), sunscreen (0.04), shower_cap (0.03), prison (0.03)
+  Frame 165: seat_belt (0.09), Band_Aid (0.05), shower_cap (0.04), sunscreen (0.04), torch (0.03)
+  Frame 166: seat_belt (0.11), shower_cap (0.06), Band_Aid (0.04), prison (0.03), torch (0.03)
+  Frame 167: seat_belt (0.11), shower_cap (0.05), Band_Aid (0.04), torch (0.03), sunscreen (0.03)
+  Frame 168: seat_belt (0.09), shower_cap (0.05), torch (0.05), Band_Aid (0.04), sweatshirt (0.03)
+  Frame 169: seat_belt (0.09), shower_cap (0.05), torch (0.05), Band_Aid (0.04), sweatshirt (0.03)
+  Frame 170: seat_belt (0.09), shower_cap (0.06), torch (0.04), sunscreen (0.04), Band_Aid (0.04)
+  Frame 171: seat_belt (0.09), shower_cap (0.07), sunscreen (0.04), torch (0.04), academic_gown (0.04)
+  Frame 172: seat_belt (0.09), shower_cap (0.06), sweatshirt (0.04), Band_Aid (0.04), sunscreen (0.04)
+  Frame 173: seat_belt (0.08), torch (0.04), academic_gown (0.04), sweatshirt (0.04), shower_cap (0.04)
+  Frame 174: seat_belt (0.07), torch (0.05), shower_cap (0.04), sweatshirt (0.04), academic_gown (0.04)
+  Frame 175: seat_belt (0.07), torch (0.04), shower_cap (0.04), sweatshirt (0.04), prison (0.04)
+  Frame 176: seat_belt (0.06), shower_cap (0.05), torch (0.04), Band_Aid (0.04), sweatshirt (0.03)
+  Frame 177: shower_cap (0.07), Band_Aid (0.04), seat_belt (0.04), sweatshirt (0.04), sunscreen (0.03)
+  Frame 178: shower_cap (0.07), prison (0.06), seat_belt (0.05), Band_Aid (0.04), academic_gown (0.04)
+
+Person P002:
+  Gender: Female
+  Age: 31
+  Frame 192: dumbbell (0.28), parallel_bars (0.10), balance_beam (0.10), horizontal_bar (0.08), barbell (0.06)
+  Frame 193: dumbbell (0.17), parallel_bars (0.08), swimming_trunks (0.07), brassiere (0.06), balance_beam (0.06)
+    Ângulos: right_elbow=140.6°
+
+Person P003:
+  Gender: Female
+  Age: 22
+  Frame 194: nipple (0.23), ocarina (0.08), saltshaker (0.04), dumbbell (0.03), bubble (0.03)
+    Ângulos: left_elbow=116.8°
+  Frame 195: bubble (0.52), ocarina (0.04), lipstick (0.03), nipple (0.03), brassiere (0.03)
+    Ângulos: left_elbow=89.8°, right_elbow=4.3°
+  Frame 196: bubble (0.63), military_uniform (0.05), brassiere (0.04), maillot_(tights) (0.04), bathing_cap (0.01)
+    Ângulos: right_elbow=1.4°
+  Frame 197: bubble (0.83), ping-pong_ball (0.03), lipstick (0.01), military_uniform (0.01), microphone (0.01)
+    Ângulos: right_elbow=12.3°
+  Frame 198: bubble (0.43), ping-pong_ball (0.12), bathing_cap (0.05), microphone (0.05), lipstick (0.04)
+    Ângulos: right_elbow=6.2°
+  Frame 199: bubble (0.35), bathing_cap (0.19), brassiere (0.07), ping-pong_ball (0.05), maillot_(tights) (0.03)
+    Ângulos: right_elbow=3.8°
+  Frame 200: brassiere (0.24), bubble (0.14), bathing_cap (0.11), ping-pong_ball (0.07), maillot_(tights) (0.06)
+    Ângulos: right_elbow=14.3°
+  Frame 201: bubble (0.26), bathing_cap (0.22), brassiere (0.10), ping-pong_ball (0.09), maillot_(tights) (0.05)
+    Ângulos: right_elbow=7.2°
+  Frame 202: bathing_cap (0.27), bubble (0.22), brassiere (0.11), ping-pong_ball (0.08), maillot_(tights) (0.05)
+    Ângulos: left_elbow=12.5°, right_elbow=4.7°
+  Frame 203: bathing_cap (0.24), bubble (0.22), brassiere (0.16), maillot_(tights) (0.08), ping-pong_ball (0.08)
+    Ângulos: right_elbow=1.2°
+  Frame 204: bubble (0.28), brassiere (0.19), bathing_cap (0.12), maillot_(tights) (0.08), ping-pong_ball (0.06)
+    Ângulos: right_elbow=10.2°
+  Frame 205: brassiere (0.22), bathing_cap (0.19), bubble (0.17), maillot_(tights) (0.13), ping-pong_ball (0.03)
+    Ângulos: right_elbow=84.6°
+  Frame 206: brassiere (0.30), maillot_(tights) (0.14), bubble (0.12), bathing_cap (0.12), bikini (0.03)
+    Ângulos: right_elbow=76.5°
+  Frame 207: bathing_cap (0.41), maillot_(tights) (0.16), bubble (0.14), brassiere (0.10), military_uniform (0.04)
+    Ângulos: left_elbow=142.7°
+  Frame 208: bathing_cap (0.23), bubble (0.16), military_uniform (0.15), maillot_(tights) (0.10), brassiere (0.05)
+  Frame 209: bubble (0.18), maillot_(tights) (0.15), brassiere (0.13), bathing_cap (0.10), microphone (0.10)
+    Ângulos: right_elbow=105.5°
+  Frame 210: bubble (0.43), microphone (0.11), ocarina (0.10), bathing_cap (0.09), military_uniform (0.06)
+    Ângulos: left_elbow=75.8°, right_elbow=139.7°
+  Frame 211: bubble (0.65), ocarina (0.10), microphone (0.06), bathing_cap (0.03), brassiere (0.03)
+    Ângulos: left_elbow=114.2°, right_elbow=125.3°
+  Frame 212: bubble (0.88), bathing_cap (0.02), microphone (0.02), ocarina (0.01), sunglass (0.01)
+    Ângulos: left_elbow=141.6°
+  Frame 213: bubble (0.74), microphone (0.12), bathing_cap (0.03), stage (0.01), hand_blower (0.01)
+    Ângulos: left_elbow=140.3°
+  Frame 214: bubble (0.90), microphone (0.04), ocarina (0.02), bathing_cap (0.01), oxygen_mask (0.01)
+    Ângulos: left_elbow=153.7°
+  Frame 215: bubble (0.90), bathing_cap (0.02), microphone (0.02), ocarina (0.01), sunglass (0.01)
+  Frame 216: bubble (0.61), ocarina (0.08), bathing_cap (0.06), microphone (0.06), sunglass (0.03)
+  Frame 217: bubble (0.48), sunglass (0.08), military_uniform (0.05), microphone (0.05), sunscreen (0.04)
+    Ângulos: left_elbow=131.6°
+  Frame 218: bubble (0.59), ocarina (0.10), bathing_cap (0.04), sunglass (0.03), maillot_(tights) (0.01)
+  Frame 219: bubble (0.43), military_uniform (0.08), ocarina (0.07), bathing_cap (0.06), microphone (0.04)
+  Frame 220: bubble (0.31), parallel_bars (0.08), ballplayer (0.08), bathing_cap (0.08), balance_beam (0.05)
+  Frame 221: bathing_cap (0.14), basketball (0.13), barbell (0.09), ballplayer (0.07), military_uniform (0.06)
+    Ângulos: left_elbow=114.0°
+  Frame 222: bathing_cap (0.24), dumbbell (0.07), barbell (0.06), bikini (0.06), bubble (0.05)
+    Ângulos: left_elbow=108.5°
+  Frame 223: bathing_cap (0.20), dumbbell (0.18), swimming_trunks (0.10), parallel_bars (0.06), barbell (0.05)
+    Ângulos: left_elbow=102.6°
+  Frame 224: bathing_cap (0.14), bubble (0.13), maillot_(tights) (0.08), military_uniform (0.08), dumbbell (0.06)
+  Frame 225: bathing_cap (0.18), swimming_trunks (0.12), dumbbell (0.10), bubble (0.08), balance_beam (0.05)
+    Ângulos: left_elbow=76.8°
+  Frame 226: sunglass (0.20), swimming_trunks (0.13), brassiere (0.09), maillot_(tights) (0.05), barbell (0.05)
+  Frame 227: sunglass (0.10), swimming_trunks (0.09), Italian_greyhound (0.08), hammerhead (0.07), king_penguin (0.07)
+  Frame 228: hammerhead (0.40), king_penguin (0.04), sunglass (0.04), Italian_greyhound (0.03), snorkel (0.03)
+  Frame 229: cuirass (0.12), ocarina (0.06), saltshaker (0.06), revolver (0.05), breastplate (0.05)
+    Ângulos: left_elbow=11.1°
+  Frame 230: ocarina (0.16), saltshaker (0.08), violin (0.06), mask (0.05), cuirass (0.04)
+    Ângulos: left_elbow=11.5°
+  Frame 231: chocolate_sauce (0.15), breastplate (0.11), rhinoceros_beetle (0.08), cuirass (0.07), holster (0.04)
+
+Person P004:
+  Gender: Male
+  Age: 36
+  Frame 235: swimming_trunks (0.30), bathing_cap (0.15), bikini (0.10), maillot_(tights) (0.10), brassiere (0.09)
+    Ângulos: left_elbow=48.1°
+  Frame 236: bikini (0.27), maillot_(tights) (0.15), snorkel (0.09), brassiere (0.09), maillot_(tank_suit) (0.08)
+    Ângulos: left_elbow=113.8°, right_elbow=172.2°
+  Frame 237: bikini (0.38), maillot_(tights) (0.19), maillot_(tank_suit) (0.16), brassiere (0.06), rhinoceros_beetle (0.03)
+    Ângulos: left_elbow=118.4°, right_elbow=155.5°
+  Frame 238: maillot_(tights) (0.29), bikini (0.20), maillot_(tank_suit) (0.08), swimming_trunks (0.07), snorkel (0.04)
+    Ângulos: left_elbow=113.4°, right_elbow=159.3°
+
+Person P005:
+  Gender: Male
+  Age: 32
+  Frame 243: balance_beam (0.23), dumbbell (0.13), bathing_cap (0.11), maillot_(tights) (0.08), swimming_trunks (0.05)
+
+Person P006:
+  Gender: Male
+  Age: 34
+  Frame 243: balance_beam (0.23), dumbbell (0.13), bathing_cap (0.11), maillot_(tights) (0.08), swimming_trunks (0.05)
+    Ângulos: left_elbow=125.5°, right_elbow=114.1°
+
+Person P007:
+  Gender: Male
+  Age: 30
+  Frame 244: maillot_(tights) (0.20), bikini (0.13), balance_beam (0.09), sunscreen (0.06), maillot_(tank_suit) (0.05)
+    Ângulos: left_elbow=155.9°, right_elbow=107.1°
+
+Person P008:
+  Gender: Male
+  Age: 27
+  Frame 245: bathing_cap (0.16), ocarina (0.06), bubble (0.05), hair_slide (0.05), balance_beam (0.05)
+    Ângulos: left_elbow=96.3°, right_elbow=131.0°
+  Frame 246: balance_beam (0.10), ocarina (0.07), maillot_(tights) (0.05), sunscreen (0.05), bikini (0.05)
+    Ângulos: left_elbow=94.1°, right_elbow=108.8°
+  Frame 247: microphone (0.08), ocarina (0.06), maillot_(tights) (0.06), balance_beam (0.05), hair_slide (0.05)
+    Ângulos: left_elbow=94.7°, right_elbow=98.2°
+  Frame 248: cuirass (0.13), shield (0.11), maillot_(tights) (0.10), oxygen_mask (0.07), pickelhaube (0.05)
+    Ângulos: left_elbow=92.6°, right_elbow=103.0°
+  Frame 249: bathing_cap (0.25), maillot_(tights) (0.11), balance_beam (0.11), bikini (0.06), snorkel (0.04)
+    Ângulos: left_elbow=89.7°, right_elbow=113.8°
+  Frame 250: bathing_cap (0.32), balance_beam (0.15), maillot_(tights) (0.10), bikini (0.09), brassiere (0.03)
+    Ângulos: left_elbow=80.7°, right_elbow=104.4°
+  Frame 251: bathing_cap (0.28), bubble (0.08), maillot_(tights) (0.07), balance_beam (0.07), bikini (0.03)
+    Ângulos: left_elbow=76.5°, right_elbow=114.2°
+  Frame 252: bathing_cap (0.62), bikini (0.04), maillot_(tights) (0.03), hair_spray (0.03), brassiere (0.03)
+    Ângulos: left_elbow=71.4°, right_elbow=132.8°
+  Frame 253: bathing_cap (0.32), hair_spray (0.10), bikini (0.08), military_uniform (0.08), sunscreen (0.05)
+    Ângulos: left_elbow=70.8°
+  Frame 254: bathing_cap (0.34), ocarina (0.08), hair_spray (0.07), military_uniform (0.05), sunscreen (0.04)
+    Ângulos: left_elbow=65.1°
+  Frame 255: bathing_cap (0.25), hair_spray (0.12), bubble (0.11), ping-pong_ball (0.07), military_uniform (0.05)
+    Ângulos: left_elbow=74.7°, right_elbow=116.8°
+  Frame 256: military_uniform (0.49), ping-pong_ball (0.11), bubble (0.06), bathing_cap (0.04), hair_spray (0.02)
+    Ângulos: left_elbow=85.5°
+  Frame 257: ping-pong_ball (0.19), bubble (0.13), bathing_cap (0.11), military_uniform (0.11), hair_spray (0.05)
+    Ângulos: left_elbow=93.2°
+  Frame 258: bubble (0.23), bathing_cap (0.12), military_uniform (0.07), ping-pong_ball (0.06), sunscreen (0.03)
+  Frame 259: bathing_cap (0.25), bubble (0.11), military_uniform (0.07), sunglass (0.04), lipstick (0.04)
+  Frame 260: military_uniform (0.15), bathing_cap (0.12), bubble (0.09), sunglass (0.06), sunglasses (0.04)
+  Frame 261: bubble (0.14), ping-pong_ball (0.09), lipstick (0.09), military_uniform (0.05), sunglass (0.05)
+  Frame 262: bubble (0.11), lipstick (0.10), ping-pong_ball (0.09), bathing_cap (0.08), military_uniform (0.06)
+  Frame 263: bathing_cap (0.17), ping-pong_ball (0.10), bubble (0.09), lipstick (0.09), military_uniform (0.08)
+  Frame 264: bathing_cap (0.10), ping-pong_ball (0.08), Band_Aid (0.06), lipstick (0.06), military_uniform (0.06)
+  Frame 265: bathing_cap (0.17), ping-pong_ball (0.10), lipstick (0.05), military_uniform (0.05), remote_control (0.04)
+  Frame 266: bathing_cap (0.33), military_uniform (0.08), ping-pong_ball (0.05), sunglass (0.04), sunglasses (0.03)
+  Frame 267: bathing_cap (0.18), military_uniform (0.16), sunglass (0.08), ping-pong_ball (0.06), sunglasses (0.06)
+  Frame 268: military_uniform (0.17), bathing_cap (0.10), ping-pong_ball (0.06), bubble (0.05), lipstick (0.05)
+  Frame 269: military_uniform (0.13), bathing_cap (0.09), lipstick (0.07), sunglass (0.05), ping-pong_ball (0.05)
+  Frame 270: military_uniform (0.13), bathing_cap (0.12), lipstick (0.09), bikini (0.06), sunglass (0.06)
+  Frame 271: military_uniform (0.15), bikini (0.05), hair_spray (0.05), sunscreen (0.05), bathing_cap (0.05)
+  Frame 272: bathing_cap (0.28), military_uniform (0.27), sunglass (0.04), bubble (0.02), sunscreen (0.02)
+  Frame 273: bathing_cap (0.28), military_uniform (0.20), bikini (0.05), sunglass (0.04), hair_spray (0.02)
+  Frame 274: military_uniform (0.26), flute (0.11), ocarina (0.06), bathing_cap (0.04), bikini (0.04)
+  Frame 275: bathing_cap (0.29), military_uniform (0.13), bikini (0.07), brassiere (0.05), maillot_(tights) (0.04)
+  Frame 276: bathing_cap (0.10), brassiere (0.09), stethoscope (0.08), bikini (0.08), military_uniform (0.06)
+  Frame 277: military_uniform (0.29), bikini (0.07), brassiere (0.06), bathing_cap (0.05), stethoscope (0.02)
+  Frame 278: bathing_cap (0.15), military_uniform (0.07), brassiere (0.06), bearskin (0.05), stethoscope (0.05)
+  Frame 279: military_uniform (0.08), face_powder (0.07), bearskin (0.06), bathing_cap (0.04), hair_slide (0.04)
+  Frame 280: bearskin (0.08), hair_slide (0.08), face_powder (0.07), military_uniform (0.04), chocolate_sauce (0.03)
+  Frame 281: bearskin (0.24), military_uniform (0.11), bow_tie (0.04), brassiere (0.03), stethoscope (0.03)
+    Ângulos: right_elbow=2.9°
+  Frame 282: brassiere (0.14), bathing_cap (0.09), bearskin (0.07), maillot_(tights) (0.06), maillot_(tank_suit) (0.03)
+    Ângulos: right_elbow=18.7°
+  Frame 283: maillot_(tights) (0.34), maillot_(tank_suit) (0.13), brassiere (0.12), bikini (0.02), military_uniform (0.02)
+    Ângulos: left_elbow=17.4°
+  Frame 284: maillot_(tights) (0.46), maillot_(tank_suit) (0.14), brassiere (0.04), bikini (0.03), bathing_cap (0.02)
+    Ângulos: left_elbow=21.5°
+  Frame 285: maillot_(tights) (0.40), maillot_(tank_suit) (0.25), bow_tie (0.04), bathing_cap (0.03), brassiere (0.03)
+    Ângulos: right_elbow=27.3°
+  Frame 286: maillot_(tights) (0.56), maillot_(tank_suit) (0.21), bow_tie (0.05), brassiere (0.02), bikini (0.02)
+    Ângulos: right_elbow=29.1°
+  Frame 287: maillot_(tights) (0.63), maillot_(tank_suit) (0.23), bow_tie (0.03), brassiere (0.02), bikini (0.01)
+    Ângulos: right_elbow=34.3°
+  Frame 288: maillot_(tights) (0.68), maillot_(tank_suit) (0.18), bow_tie (0.03), brassiere (0.03), bikini (0.01)
+    Ângulos: right_elbow=62.6°
+  Frame 289: maillot_(tights) (0.60), maillot_(tank_suit) (0.22), bow_tie (0.03), brassiere (0.02), bathing_cap (0.02)
+    Ângulos: left_elbow=3.9°, right_elbow=55.8°
+  Frame 290: maillot_(tights) (0.65), maillot_(tank_suit) (0.20), brassiere (0.03), bathing_cap (0.02), bow_tie (0.01)
+    Ângulos: left_elbow=13.3°, right_elbow=60.6°
+  Frame 291: maillot_(tights) (0.58), maillot_(tank_suit) (0.26), bathing_cap (0.04), brassiere (0.04), swimming_trunks (0.01)
+    Ângulos: left_elbow=46.7°, right_elbow=41.8°
+  Frame 292: maillot_(tights) (0.58), maillot_(tank_suit) (0.27), brassiere (0.07), bathing_cap (0.02), bikini (0.01)
+    Ângulos: left_elbow=114.3°, right_elbow=80.0°
+  Frame 293: maillot_(tights) (0.59), maillot_(tank_suit) (0.26), brassiere (0.05), bathing_cap (0.03), bikini (0.01)
+    Ângulos: left_elbow=107.1°, right_elbow=62.6°
+  Frame 294: maillot_(tights) (0.57), maillot_(tank_suit) (0.17), brassiere (0.05), bathing_cap (0.05), bow_tie (0.02)
+    Ângulos: left_elbow=86.6°, right_elbow=43.6°
+  Frame 295: maillot_(tights) (0.50), maillot_(tank_suit) (0.14), bathing_cap (0.08), brassiere (0.06), swimming_trunks (0.02)
+    Ângulos: right_elbow=63.5°
+  Frame 296: maillot_(tights) (0.35), brassiere (0.11), maillot_(tank_suit) (0.09), bathing_cap (0.08), swimming_trunks (0.04)
+    Ângulos: left_elbow=106.9°
+  Frame 297: maillot_(tights) (0.33), maillot_(tank_suit) (0.15), brassiere (0.14), bathing_cap (0.06), dumbbell (0.05)
+    Ângulos: left_elbow=116.5°, right_elbow=103.3°
+  Frame 298: dumbbell (0.15), maillot_(tights) (0.13), brassiere (0.08), bathing_cap (0.08), maillot_(tank_suit) (0.07)
+    Ângulos: left_elbow=178.7°, right_elbow=141.2°
+  Frame 299: bathing_cap (0.21), piggy_bank (0.09), brassiere (0.06), maillot_(tights) (0.05), dumbbell (0.03)
+    Ângulos: right_elbow=140.8°
+  Frame 300: piggy_bank (0.12), bubble (0.10), bathing_cap (0.08), brassiere (0.07), military_uniform (0.05)
+    Ângulos: right_elbow=68.5°
+  Frame 301: saltshaker (0.13), nipple (0.08), bikini (0.07), brassiere (0.06), bubble (0.04)
+  Frame 302: bathing_cap (0.12), bikini (0.11), brassiere (0.10), lipstick (0.05), hair_spray (0.05)
+  Frame 303: bathing_cap (0.26), brassiere (0.10), maillot_(tights) (0.07), maillot_(tank_suit) (0.05), bow_tie (0.03)
+    Ângulos: right_elbow=127.6°
+  Frame 304: bathing_cap (0.17), brassiere (0.14), maillot_(tights) (0.12), balance_beam (0.05), swimming_trunks (0.04)
+    Ângulos: right_elbow=138.2°
+  Frame 305: brassiere (0.21), maillot_(tights) (0.11), bathing_cap (0.09), swimming_trunks (0.04), maillot_(tank_suit) (0.04)
+    Ângulos: right_elbow=9.9°
+  Frame 306: bathing_cap (0.20), maillot_(tights) (0.14), brassiere (0.12), maillot_(tank_suit) (0.05), ski_mask (0.04)
+    Ângulos: right_elbow=6.6°
+  Frame 307: bathing_cap (0.26), military_uniform (0.08), maillot_(tights) (0.07), brassiere (0.06), dumbbell (0.05)
+    Ângulos: right_elbow=25.2°
+  Frame 308: maillot_(tights) (0.14), bathing_cap (0.14), dumbbell (0.09), brassiere (0.09), maillot_(tank_suit) (0.09)
+    Ângulos: right_elbow=13.9°
+  Frame 309: bathing_cap (0.45), maillot_(tights) (0.15), brassiere (0.08), maillot_(tank_suit) (0.08), swimming_trunks (0.03)
+  Frame 310: bathing_cap (0.47), maillot_(tights) (0.13), military_uniform (0.07), maillot_(tank_suit) (0.05), brassiere (0.04)
+  Frame 311: military_uniform (0.36), bathing_cap (0.13), dumbbell (0.06), maillot_(tights) (0.05), bubble (0.03)
+  Frame 312: military_uniform (0.56), bathing_cap (0.10), maillot_(tights) (0.06), brassiere (0.05), maillot_(tank_suit) (0.02)
+  Frame 313: military_uniform (0.24), bathing_cap (0.09), brassiere (0.05), sunscreen (0.05), maillot_(tights) (0.04)
+    Ângulos: left_elbow=47.0°
+  Frame 314: bathing_cap (0.07), lipstick (0.07), military_uniform (0.07), swimming_trunks (0.07), maillot_(tights) (0.06)
+    Ângulos: left_elbow=39.6°, right_elbow=13.7°
+  Frame 315: bathing_cap (0.37), swimming_trunks (0.10), maillot_(tights) (0.08), brassiere (0.07), lipstick (0.03)
+    Ângulos: left_elbow=36.4°
+  Frame 316: ocarina (0.17), cuirass (0.12), brassiere (0.09), hammerhead (0.05), bathing_cap (0.04)
+    Ângulos: left_elbow=37.7°, right_elbow=4.1°
+  Frame 317: brassiere (0.21), ocarina (0.15), bikini (0.07), violin (0.05), saltshaker (0.04)
+    Ângulos: left_elbow=40.1°, right_elbow=11.5°
+  Frame 318: ocarina (0.08), maillot_(tank_suit) (0.08), brassiere (0.07), swimming_trunks (0.06), maillot_(tights) (0.04)
+    Ângulos: left_elbow=94.8°, right_elbow=17.6°, right_shoulder=41.8°
+  Frame 319: ocarina (0.16), swimming_trunks (0.06), bubble (0.06), maillot_(tights) (0.05), mask (0.04)
+    Ângulos: left_elbow=55.1°, right_elbow=40.0°, right_shoulder=65.6°
+  Frame 320: maillot_(tank_suit) (0.22), bathing_cap (0.13), maillot_(tights) (0.11), brassiere (0.04), parallel_bars (0.04)
+    Ângulos: left_elbow=57.6°, right_elbow=31.9°
+  Frame 321: bathing_cap (0.25), maillot_(tights) (0.15), maillot_(tank_suit) (0.09), swimming_trunks (0.09), bikini (0.06)
+    Ângulos: left_elbow=66.7°, right_elbow=46.7°
+  Frame 322: bathing_cap (0.45), maillot_(tights) (0.14), maillot_(tank_suit) (0.13), brassiere (0.06), parallel_bars (0.03)
+    Ângulos: left_elbow=65.1°, right_elbow=45.8°, right_shoulder=87.0°
+  Frame 323: bathing_cap (0.28), parallel_bars (0.12), balance_beam (0.12), maillot_(tank_suit) (0.09), maillot_(tights) (0.07)
+    Ângulos: left_elbow=68.6°, right_elbow=51.7°, left_shoulder=84.6°
+  Frame 324: balance_beam (0.11), bathing_cap (0.10), parallel_bars (0.09), chain (0.07), maillot_(tights) (0.06)
+    Ângulos: left_elbow=74.4°, right_elbow=51.9°, left_shoulder=84.0°, right_shoulder=86.6°
+  Frame 325: balance_beam (0.19), bathing_cap (0.13), maillot_(tights) (0.09), swimming_trunks (0.07), parallel_bars (0.07)
+    Ângulos: left_elbow=95.3°, right_elbow=54.4°, left_shoulder=85.2°, right_shoulder=91.2°
+  Frame 326: balance_beam (0.18), maillot_(tights) (0.14), bathing_cap (0.14), maillot_(tank_suit) (0.11), brassiere (0.09)
+    Ângulos: left_elbow=84.3°, right_elbow=62.8°, left_shoulder=90.7°
+  Frame 327: brassiere (0.14), balance_beam (0.14), bikini (0.07), maillot_(tights) (0.07), parallel_bars (0.07)
+    Ângulos: left_elbow=72.2°, right_elbow=49.8°, left_shoulder=97.3°
+  Frame 328: ocarina (0.15), brassiere (0.08), balance_beam (0.07), chain (0.07), maillot_(tights) (0.05)
+    Ângulos: left_elbow=80.4°, right_elbow=60.2°, left_shoulder=87.5°
+  Frame 329: brassiere (0.15), maillot_(tights) (0.15), ocarina (0.09), balance_beam (0.08), bikini (0.05)
+    Ângulos: left_elbow=75.6°, right_elbow=44.6°
+  Frame 330: maillot_(tights) (0.19), bathing_cap (0.10), balance_beam (0.08), brassiere (0.08), maillot_(tank_suit) (0.06)
+    Ângulos: left_elbow=96.3°, right_elbow=43.3°
+  Frame 331: maillot_(tights) (0.27), brassiere (0.13), maillot_(tank_suit) (0.11), bathing_cap (0.10), balance_beam (0.05)
+    Ângulos: left_elbow=80.4°, right_elbow=37.9°
+  Frame 332: maillot_(tights) (0.22), bathing_cap (0.20), maillot_(tank_suit) (0.17), brassiere (0.10), bikini (0.04)
+    Ângulos: left_elbow=81.1°, right_elbow=34.6°
+  Frame 333: bathing_cap (0.27), maillot_(tights) (0.18), maillot_(tank_suit) (0.10), brassiere (0.10), swimming_trunks (0.05)
+    Ângulos: left_elbow=75.2°, right_elbow=37.5°
+  Frame 334: bathing_cap (0.39), maillot_(tank_suit) (0.13), maillot_(tights) (0.11), brassiere (0.10), swimming_trunks (0.07)
+    Ângulos: left_elbow=67.8°, right_elbow=31.6°, left_shoulder=76.4°, right_shoulder=86.4°
+  Frame 335: bathing_cap (0.54), maillot_(tank_suit) (0.09), maillot_(tights) (0.06), swimming_trunks (0.06), brassiere (0.05)
+    Ângulos: left_elbow=55.9°, right_elbow=29.9°
+  Frame 336: bathing_cap (0.36), maillot_(tank_suit) (0.13), maillot_(tights) (0.11), brassiere (0.07), bikini (0.04)
+    Ângulos: left_elbow=47.1°, right_elbow=22.3°
+  Frame 337: bathing_cap (0.33), maillot_(tights) (0.16), maillot_(tank_suit) (0.12), brassiere (0.05), bikini (0.05)
+    Ângulos: left_elbow=52.3°, right_elbow=33.6°
+  Frame 338: maillot_(tights) (0.19), bathing_cap (0.14), maillot_(tank_suit) (0.12), ocarina (0.07), brassiere (0.05)
+    Ângulos: left_elbow=61.6°, right_elbow=37.8°
+  Frame 339: ocarina (0.27), sea_slug (0.09), bathing_cap (0.06), piggy_bank (0.06), maillot_(tights) (0.03)
+    Ângulos: left_elbow=96.7°, right_elbow=42.9°
+  Frame 341: brassiere (0.08), ocarina (0.07), bathing_cap (0.07), bubble (0.07), sunscreen (0.06)
+    Ângulos: left_elbow=50.2°, right_elbow=27.0°
+
+Person P009:
+  Gender: Male
+  Age: 27
+  Frame 340: ocarina (0.16), brassiere (0.09), maillot_(tights) (0.09), scuba_diver (0.07), bubble (0.06)
+    Ângulos: left_elbow=46.7°
+
+Person P010:
+  Gender: Female
+  Age: 27
+  Frame 342: piggy_bank (0.14), ocarina (0.11), bubble (0.08), oxygen_mask (0.05), revolver (0.04)
+    Ângulos: left_elbow=46.2°, right_elbow=2.0°
+  Frame 343: ocarina (0.19), piggy_bank (0.16), bubble (0.06), oxygen_mask (0.05), sea_slug (0.03)
+    Ângulos: left_elbow=37.0°, right_elbow=8.4°
+  Frame 344: ocarina (0.19), piggy_bank (0.16), bubble (0.07), sea_slug (0.05), oxygen_mask (0.04)
+    Ângulos: left_elbow=44.5°, right_elbow=9.2°
+  Frame 345: ocarina (0.12), snorkel (0.11), bubble (0.08), piggy_bank (0.05), oxygen_mask (0.03)
+    Ângulos: left_elbow=43.1°, right_elbow=11.5°
+  Frame 346: bubble (0.31), bathing_cap (0.11), ocarina (0.08), snorkel (0.08), sunscreen (0.06)
+    Ângulos: left_elbow=45.6°, right_elbow=5.7°
+  Frame 347: bubble (0.59), ocarina (0.13), sunglass (0.03), microphone (0.02), jellyfish (0.02)
+    Ângulos: left_elbow=50.2°, right_elbow=6.9°
+  Frame 348: bubble (0.70), ocarina (0.06), sunglass (0.05), sunscreen (0.05), maillot_(tights) (0.02)
+    Ângulos: left_elbow=51.4°, right_elbow=11.1°
+  Frame 349: bubble (0.36), bathing_cap (0.28), sunglass (0.06), sunscreen (0.04), military_uniform (0.03)
+    Ângulos: left_elbow=52.1°, right_elbow=11.3°
+  Frame 350: ocarina (0.30), bubble (0.21), bathing_cap (0.09), military_uniform (0.05), sunscreen (0.03)
+    Ângulos: left_elbow=54.6°
+  Frame 351: bubble (0.47), ocarina (0.22), bathing_cap (0.06), microphone (0.04), sunscreen (0.02)
+    Ângulos: left_elbow=59.9°
+  Frame 352: bubble (0.54), ocarina (0.19), bathing_cap (0.03), jellyfish (0.02), trombone (0.02)
+  Frame 353: ocarina (0.18), sunscreen (0.15), bubble (0.15), bathing_cap (0.06), military_uniform (0.06)
+  Frame 354: bubble (0.36), ocarina (0.15), sunscreen (0.12), bathing_cap (0.07), military_uniform (0.04)
+  Frame 355: bubble (0.27), ocarina (0.10), sunscreen (0.07), military_uniform (0.07), kimono (0.04)
+  Frame 356: bathing_cap (0.31), ocarina (0.10), bubble (0.09), military_uniform (0.09), sunscreen (0.04)
+  Frame 357: bubble (0.72), ocarina (0.06), bathing_cap (0.03), military_uniform (0.02), microphone (0.02)
+  Frame 358: bubble (0.91), ocarina (0.02), bathing_cap (0.02), military_uniform (0.01), football_helmet (0.01)
+
+Person P011:
+  Gender: Male
+  Age: 29
+  Frame 359: suit (0.32), trench_coat (0.27), military_uniform (0.14), bow_tie (0.06), bulletproof_vest (0.03)
+  Frame 360: suit (0.32), trench_coat (0.27), military_uniform (0.14), bow_tie (0.06), bulletproof_vest (0.03)
+  Frame 361: suit (0.33), trench_coat (0.26), military_uniform (0.12), bow_tie (0.06), bulletproof_vest (0.03)
+  Frame 362: suit (0.33), trench_coat (0.27), military_uniform (0.12), bow_tie (0.05), bulletproof_vest (0.03)
+  Frame 363: suit (0.35), trench_coat (0.24), military_uniform (0.13), bow_tie (0.06), bulletproof_vest (0.03)
+  Frame 364: suit (0.36), trench_coat (0.22), military_uniform (0.12), bow_tie (0.06), bulletproof_vest (0.04)
+  Frame 365: suit (0.35), trench_coat (0.23), military_uniform (0.12), bow_tie (0.06), bulletproof_vest (0.04)
+  Frame 366: suit (0.36), trench_coat (0.23), military_uniform (0.11), bow_tie (0.06), bulletproof_vest (0.04)
+  Frame 367: suit (0.34), trench_coat (0.23), military_uniform (0.11), bow_tie (0.06), bulletproof_vest (0.05)
+  Frame 368: suit (0.36), trench_coat (0.24), military_uniform (0.10), bow_tie (0.05), bulletproof_vest (0.05)
+  Frame 369: suit (0.36), trench_coat (0.24), military_uniform (0.10), bulletproof_vest (0.05), bow_tie (0.05)
+  Frame 370: suit (0.35), trench_coat (0.23), military_uniform (0.11), bulletproof_vest (0.05), bow_tie (0.05)
+  Frame 371: suit (0.35), trench_coat (0.23), military_uniform (0.11), bulletproof_vest (0.05), bow_tie (0.05)
+  Frame 372: suit (0.33), trench_coat (0.24), military_uniform (0.12), bow_tie (0.05), bulletproof_vest (0.05)
+  Frame 373: suit (0.33), trench_coat (0.24), military_uniform (0.12), bow_tie (0.06), bulletproof_vest (0.05)
+  Frame 374: suit (0.32), trench_coat (0.21), military_uniform (0.12), bow_tie (0.06), bulletproof_vest (0.06)
+  Frame 375: suit (0.32), trench_coat (0.23), military_uniform (0.13), bow_tie (0.06), bulletproof_vest (0.06)
+  Frame 376: suit (0.29), trench_coat (0.24), military_uniform (0.13), bulletproof_vest (0.07), bow_tie (0.06)
+  Frame 377: suit (0.30), trench_coat (0.22), military_uniform (0.13), bulletproof_vest (0.07), bow_tie (0.06)
+  Frame 378: suit (0.29), trench_coat (0.24), military_uniform (0.13), bulletproof_vest (0.07), bow_tie (0.06)
+  Frame 379: suit (0.30), trench_coat (0.24), military_uniform (0.13), bulletproof_vest (0.06), bow_tie (0.06)
+  Frame 380: suit (0.29), trench_coat (0.22), military_uniform (0.11), bulletproof_vest (0.07), bow_tie (0.06)
+  Frame 381: suit (0.29), trench_coat (0.22), military_uniform (0.10), bulletproof_vest (0.08), bow_tie (0.07)
+  Frame 382: suit (0.29), trench_coat (0.20), military_uniform (0.10), bulletproof_vest (0.08), bow_tie (0.07)
+  Frame 383: suit (0.30), trench_coat (0.21), military_uniform (0.11), bow_tie (0.07), bulletproof_vest (0.07)
+  Frame 384: suit (0.30), trench_coat (0.19), military_uniform (0.11), bulletproof_vest (0.08), bow_tie (0.08)
+  Frame 385: suit (0.29), trench_coat (0.21), military_uniform (0.11), bulletproof_vest (0.08), bow_tie (0.07)
+  Frame 386: suit (0.26), trench_coat (0.23), military_uniform (0.11), bulletproof_vest (0.08), bow_tie (0.08)
+  Frame 387: suit (0.27), trench_coat (0.22), military_uniform (0.11), bow_tie (0.09), bulletproof_vest (0.07)
+  Frame 388: suit (0.23), trench_coat (0.22), military_uniform (0.11), bow_tie (0.11), bulletproof_vest (0.09)
+  Frame 389: suit (0.25), trench_coat (0.17), bow_tie (0.15), military_uniform (0.09), bulletproof_vest (0.08)
+  Frame 390: suit (0.27), trench_coat (0.18), bow_tie (0.13), military_uniform (0.09), bulletproof_vest (0.08)
+  Frame 391: suit (0.26), trench_coat (0.17), bow_tie (0.16), military_uniform (0.09), bulletproof_vest (0.08)
+  Frame 392: suit (0.26), trench_coat (0.18), bow_tie (0.14), military_uniform (0.09), bulletproof_vest (0.07)
+  Frame 393: suit (0.26), bow_tie (0.17), trench_coat (0.16), military_uniform (0.09), bulletproof_vest (0.07)
+  Frame 394: suit (0.24), bow_tie (0.17), trench_coat (0.16), military_uniform (0.09), bulletproof_vest (0.09)
+  Frame 395: suit (0.24), bow_tie (0.17), trench_coat (0.16), military_uniform (0.09), bulletproof_vest (0.08)
+  Frame 396: suit (0.25), bow_tie (0.18), trench_coat (0.16), military_uniform (0.08), bulletproof_vest (0.08)
+  Frame 397: suit (0.24), bow_tie (0.20), trench_coat (0.15), military_uniform (0.08), bulletproof_vest (0.08)
+  Frame 398: suit (0.24), bow_tie (0.22), trench_coat (0.13), bulletproof_vest (0.08), military_uniform (0.08)
+  Frame 399: suit (0.25), bow_tie (0.20), trench_coat (0.13), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 400: suit (0.25), bow_tie (0.19), trench_coat (0.13), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 401: suit (0.25), bow_tie (0.19), trench_coat (0.14), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 402: suit (0.25), bow_tie (0.18), trench_coat (0.14), bulletproof_vest (0.10), military_uniform (0.07)
+  Frame 403: suit (0.25), bow_tie (0.18), trench_coat (0.13), bulletproof_vest (0.11), military_uniform (0.06)
+  Frame 404: suit (0.24), bow_tie (0.17), trench_coat (0.14), bulletproof_vest (0.12), military_uniform (0.07)
+  Frame 405: suit (0.24), bow_tie (0.19), trench_coat (0.14), bulletproof_vest (0.11), military_uniform (0.06)
+  Frame 406: suit (0.23), bow_tie (0.19), trench_coat (0.15), bulletproof_vest (0.12), military_uniform (0.07)
+  Frame 407: suit (0.22), bow_tie (0.17), trench_coat (0.16), bulletproof_vest (0.12), military_uniform (0.07)
+  Frame 408: suit (0.22), bow_tie (0.17), trench_coat (0.16), bulletproof_vest (0.12), military_uniform (0.07)
+  Frame 409: suit (0.23), bow_tie (0.16), trench_coat (0.16), bulletproof_vest (0.12), military_uniform (0.06)
+  Frame 410: suit (0.23), bow_tie (0.16), trench_coat (0.16), bulletproof_vest (0.12), military_uniform (0.06)
+  Frame 411: suit (0.23), bow_tie (0.16), trench_coat (0.15), bulletproof_vest (0.12), military_uniform (0.06)
+  Frame 412: suit (0.24), bow_tie (0.17), trench_coat (0.15), bulletproof_vest (0.12), military_uniform (0.06)
+  Frame 413: suit (0.24), trench_coat (0.16), bow_tie (0.16), bulletproof_vest (0.12), military_uniform (0.06)
+  Frame 414: suit (0.24), bow_tie (0.17), trench_coat (0.16), bulletproof_vest (0.12), military_uniform (0.06)
+  Frame 415: suit (0.24), trench_coat (0.17), bow_tie (0.16), bulletproof_vest (0.12), military_uniform (0.06)
+  Frame 416: suit (0.23), trench_coat (0.18), bow_tie (0.15), bulletproof_vest (0.12), military_uniform (0.07)
+  Frame 417: suit (0.24), trench_coat (0.18), bow_tie (0.16), bulletproof_vest (0.11), military_uniform (0.07)
+  Frame 418: suit (0.24), trench_coat (0.19), bow_tie (0.16), bulletproof_vest (0.11), military_uniform (0.07)
+  Frame 419: suit (0.23), trench_coat (0.18), bow_tie (0.15), bulletproof_vest (0.12), military_uniform (0.08)
+  Frame 420: suit (0.24), trench_coat (0.18), bow_tie (0.16), bulletproof_vest (0.11), military_uniform (0.08)
+  Frame 421: suit (0.24), bow_tie (0.17), trench_coat (0.17), bulletproof_vest (0.11), military_uniform (0.07)
+  Frame 422: suit (0.26), trench_coat (0.18), bow_tie (0.16), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 423: suit (0.25), trench_coat (0.18), bow_tie (0.16), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 424: suit (0.26), trench_coat (0.19), bow_tie (0.15), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 425: suit (0.26), trench_coat (0.18), bow_tie (0.15), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 426: suit (0.25), trench_coat (0.19), bow_tie (0.15), bulletproof_vest (0.08), military_uniform (0.07)
+  Frame 427: suit (0.25), trench_coat (0.20), bow_tie (0.15), bulletproof_vest (0.08), military_uniform (0.07)
+  Frame 428: suit (0.25), trench_coat (0.19), bow_tie (0.15), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 429: suit (0.26), trench_coat (0.20), bow_tie (0.15), bulletproof_vest (0.08), military_uniform (0.07)
+  Frame 430: suit (0.25), trench_coat (0.20), bow_tie (0.15), bulletproof_vest (0.08), military_uniform (0.07)
+  Frame 431: suit (0.25), trench_coat (0.20), bow_tie (0.15), bulletproof_vest (0.08), military_uniform (0.07)
+  Frame 432: suit (0.24), trench_coat (0.21), bow_tie (0.14), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 433: suit (0.24), trench_coat (0.21), bow_tie (0.14), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 434: suit (0.25), trench_coat (0.21), bow_tie (0.13), bulletproof_vest (0.09), military_uniform (0.07)
+  Frame 435: suit (0.26), trench_coat (0.22), bow_tie (0.13), bulletproof_vest (0.08), military_uniform (0.07)
+  Frame 436: suit (0.26), trench_coat (0.23), bow_tie (0.13), bulletproof_vest (0.08), military_uniform (0.07)
+  Frame 437: suit (0.27), trench_coat (0.24), bow_tie (0.12), bulletproof_vest (0.08), military_uniform (0.07)
+  Frame 438: suit (0.27), trench_coat (0.24), bow_tie (0.12), bulletproof_vest (0.07), military_uniform (0.07)
+  Frame 439: suit (0.27), trench_coat (0.25), bow_tie (0.11), bulletproof_vest (0.08), military_uniform (0.07)
+  Frame 440: suit (0.29), trench_coat (0.25), bow_tie (0.11), bulletproof_vest (0.06), military_uniform (0.06)
+  Frame 441: suit (0.27), trench_coat (0.26), bow_tie (0.11), military_uniform (0.07), bulletproof_vest (0.06)
+  Frame 442: suit (0.27), trench_coat (0.25), bow_tie (0.11), military_uniform (0.07), bulletproof_vest (0.06)
+  Frame 443: suit (0.26), trench_coat (0.25), bow_tie (0.11), military_uniform (0.07), bulletproof_vest (0.07)
+  Frame 444: suit (0.25), trench_coat (0.25), bow_tie (0.11), military_uniform (0.07), bulletproof_vest (0.07)
+  Frame 445: suit (0.26), trench_coat (0.25), bow_tie (0.10), bulletproof_vest (0.07), military_uniform (0.07)
+  Frame 446: suit (0.26), trench_coat (0.26), bow_tie (0.10), military_uniform (0.08), bulletproof_vest (0.07)
+  Frame 447: suit (0.27), trench_coat (0.26), bow_tie (0.09), military_uniform (0.08), bulletproof_vest (0.07)
+  Frame 448: trench_coat (0.28), suit (0.25), military_uniform (0.09), bow_tie (0.08), bulletproof_vest (0.08)
+  Frame 449: trench_coat (0.28), suit (0.25), military_uniform (0.09), bow_tie (0.08), bulletproof_vest (0.08)
+  Frame 450: trench_coat (0.31), suit (0.24), military_uniform (0.08), bow_tie (0.08), bulletproof_vest (0.05)
+  Frame 451: trench_coat (0.31), suit (0.25), military_uniform (0.08), bow_tie (0.08), bulletproof_vest (0.05)
+  Frame 452: trench_coat (0.30), suit (0.26), bow_tie (0.08), military_uniform (0.08), bulletproof_vest (0.05)
+  Frame 453: trench_coat (0.30), suit (0.24), bow_tie (0.09), military_uniform (0.08), bulletproof_vest (0.06)
+  Frame 454: trench_coat (0.29), suit (0.24), bow_tie (0.10), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 455: trench_coat (0.30), suit (0.24), bow_tie (0.09), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 456: trench_coat (0.33), suit (0.24), bow_tie (0.08), military_uniform (0.08), bulletproof_vest (0.05)
+  Frame 457: trench_coat (0.34), suit (0.23), military_uniform (0.08), bow_tie (0.08), bulletproof_vest (0.05)
+  Frame 458: trench_coat (0.33), suit (0.21), bow_tie (0.10), military_uniform (0.09), bulletproof_vest (0.05)
+  Frame 459: trench_coat (0.36), suit (0.20), military_uniform (0.09), bow_tie (0.09), bulletproof_vest (0.05)
+  Frame 460: trench_coat (0.38), suit (0.19), military_uniform (0.09), bow_tie (0.09), bulletproof_vest (0.06)
+  Frame 461: trench_coat (0.38), suit (0.20), military_uniform (0.09), bow_tie (0.09), bulletproof_vest (0.05)
+  Frame 462: trench_coat (0.38), suit (0.19), bow_tie (0.09), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 463: trench_coat (0.34), suit (0.19), bow_tie (0.10), military_uniform (0.08), bulletproof_vest (0.06)
+  Frame 464: trench_coat (0.35), suit (0.18), bow_tie (0.10), military_uniform (0.09), bulletproof_vest (0.07)
+  Frame 465: trench_coat (0.35), suit (0.16), bow_tie (0.10), military_uniform (0.09), bulletproof_vest (0.08)
+  Frame 466: trench_coat (0.37), suit (0.18), bow_tie (0.09), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 467: trench_coat (0.38), suit (0.18), military_uniform (0.09), bow_tie (0.08), bulletproof_vest (0.06)
+  Frame 468: trench_coat (0.39), suit (0.17), military_uniform (0.09), bow_tie (0.08), bulletproof_vest (0.06)
+  Frame 469: trench_coat (0.38), suit (0.18), military_uniform (0.10), bow_tie (0.09), bulletproof_vest (0.06)
+  Frame 470: trench_coat (0.38), suit (0.17), bow_tie (0.10), military_uniform (0.10), bulletproof_vest (0.06)
+  Frame 471: trench_coat (0.39), suit (0.16), bow_tie (0.11), military_uniform (0.11), bulletproof_vest (0.06)
+  Frame 472: trench_coat (0.41), suit (0.15), military_uniform (0.11), bow_tie (0.10), bulletproof_vest (0.05)
+  Frame 473: trench_coat (0.39), suit (0.16), military_uniform (0.11), bow_tie (0.11), bulletproof_vest (0.05)
+  Frame 474: trench_coat (0.39), suit (0.16), military_uniform (0.12), bow_tie (0.10), bulletproof_vest (0.05)
+  Frame 475: trench_coat (0.39), suit (0.16), military_uniform (0.11), bow_tie (0.11), bulletproof_vest (0.05)
+  Frame 476: trench_coat (0.39), suit (0.16), military_uniform (0.11), bow_tie (0.11), bulletproof_vest (0.05)
+  Frame 477: trench_coat (0.40), suit (0.16), bow_tie (0.11), military_uniform (0.11), bulletproof_vest (0.04)
+  Frame 478: trench_coat (0.38), suit (0.16), bow_tie (0.12), military_uniform (0.11), bulletproof_vest (0.05)
+  Frame 479: trench_coat (0.38), suit (0.16), bow_tie (0.13), military_uniform (0.11), bulletproof_vest (0.04)
+  Frame 480: trench_coat (0.39), suit (0.16), bow_tie (0.12), military_uniform (0.11), bulletproof_vest (0.04)
+  Frame 481: trench_coat (0.38), suit (0.16), bow_tie (0.13), military_uniform (0.11), bulletproof_vest (0.04)
+  Frame 482: trench_coat (0.36), suit (0.17), bow_tie (0.13), military_uniform (0.11), bulletproof_vest (0.05)
+  Frame 483: trench_coat (0.36), suit (0.17), bow_tie (0.13), military_uniform (0.11), bulletproof_vest (0.05)
+  Frame 484: trench_coat (0.35), suit (0.17), bow_tie (0.13), military_uniform (0.11), bulletproof_vest (0.05)
+  Frame 485: trench_coat (0.35), suit (0.17), bow_tie (0.13), military_uniform (0.10), bulletproof_vest (0.05)
+  Frame 486: trench_coat (0.33), suit (0.17), bow_tie (0.14), military_uniform (0.10), bulletproof_vest (0.06)
+  Frame 487: trench_coat (0.35), suit (0.16), bow_tie (0.13), military_uniform (0.11), bulletproof_vest (0.05)
+  Frame 488: trench_coat (0.33), suit (0.17), bow_tie (0.13), military_uniform (0.10), bulletproof_vest (0.05)
+  Frame 489: trench_coat (0.33), suit (0.16), bow_tie (0.14), military_uniform (0.10), bulletproof_vest (0.05)
+  Frame 490: trench_coat (0.33), suit (0.16), bow_tie (0.14), military_uniform (0.10), bulletproof_vest (0.05)
+  Frame 491: trench_coat (0.34), suit (0.16), bow_tie (0.14), military_uniform (0.10), bulletproof_vest (0.05)
+  Frame 492: trench_coat (0.34), suit (0.16), bow_tie (0.13), military_uniform (0.11), bulletproof_vest (0.05)
+  Frame 493: trench_coat (0.33), suit (0.16), bow_tie (0.14), military_uniform (0.10), bulletproof_vest (0.06)
+  Frame 494: trench_coat (0.32), suit (0.16), bow_tie (0.15), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 495: trench_coat (0.30), bow_tie (0.16), suit (0.16), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 496: trench_coat (0.27), bow_tie (0.17), suit (0.16), military_uniform (0.09), bulletproof_vest (0.07)
+  Frame 497: trench_coat (0.27), bow_tie (0.16), suit (0.16), military_uniform (0.09), bulletproof_vest (0.07)
+  Frame 498: trench_coat (0.27), bow_tie (0.16), suit (0.16), military_uniform (0.09), bulletproof_vest (0.07)
+  Frame 499: trench_coat (0.28), suit (0.17), bow_tie (0.15), military_uniform (0.09), bulletproof_vest (0.07)
+  Frame 500: trench_coat (0.28), suit (0.18), bow_tie (0.15), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 501: trench_coat (0.27), suit (0.17), bow_tie (0.16), military_uniform (0.09), bulletproof_vest (0.07)
+  Frame 502: trench_coat (0.25), suit (0.18), bow_tie (0.17), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 503: trench_coat (0.25), suit (0.18), bow_tie (0.16), military_uniform (0.10), bulletproof_vest (0.06)
+  Frame 504: trench_coat (0.26), suit (0.17), bow_tie (0.17), military_uniform (0.11), bulletproof_vest (0.06)
+  Frame 505: trench_coat (0.25), suit (0.17), bow_tie (0.17), military_uniform (0.10), bulletproof_vest (0.06)
+  Frame 506: trench_coat (0.25), bow_tie (0.17), suit (0.17), military_uniform (0.10), bulletproof_vest (0.06)
+  Frame 507: trench_coat (0.24), suit (0.17), bow_tie (0.17), military_uniform (0.10), bulletproof_vest (0.06)
+  Frame 508: trench_coat (0.25), suit (0.17), bow_tie (0.16), military_uniform (0.10), bulletproof_vest (0.07)
+  Frame 509: trench_coat (0.24), bow_tie (0.17), suit (0.17), military_uniform (0.10), bulletproof_vest (0.07)
+  Frame 510: trench_coat (0.24), bow_tie (0.18), suit (0.17), military_uniform (0.10), bulletproof_vest (0.06)
+  Frame 511: trench_coat (0.26), suit (0.17), bow_tie (0.16), military_uniform (0.10), bulletproof_vest (0.06)
+  Frame 512: trench_coat (0.27), suit (0.18), bow_tie (0.16), military_uniform (0.11), bulletproof_vest (0.06)
+  Frame 513: trench_coat (0.27), suit (0.17), bow_tie (0.16), military_uniform (0.11), bulletproof_vest (0.06)
+  Frame 514: trench_coat (0.27), bow_tie (0.16), suit (0.16), military_uniform (0.11), bulletproof_vest (0.06)
+  Frame 515: trench_coat (0.27), bow_tie (0.16), suit (0.16), military_uniform (0.11), bulletproof_vest (0.06)
+  Frame 516: trench_coat (0.28), suit (0.16), bow_tie (0.16), military_uniform (0.11), bulletproof_vest (0.06)
+  Frame 517: trench_coat (0.27), bow_tie (0.17), suit (0.16), military_uniform (0.11), bulletproof_vest (0.07)
+  Frame 518: trench_coat (0.26), bow_tie (0.17), suit (0.16), military_uniform (0.10), bulletproof_vest (0.07)
+  Frame 519: trench_coat (0.26), bow_tie (0.17), suit (0.16), military_uniform (0.11), bulletproof_vest (0.07)
+  Frame 520: trench_coat (0.24), bow_tie (0.18), suit (0.16), military_uniform (0.10), bulletproof_vest (0.08)
+  Frame 521: trench_coat (0.25), bow_tie (0.18), suit (0.16), military_uniform (0.10), bulletproof_vest (0.08)
+  Frame 522: trench_coat (0.25), bow_tie (0.18), suit (0.16), military_uniform (0.10), bulletproof_vest (0.07)
+  Frame 523: trench_coat (0.25), bow_tie (0.18), suit (0.16), military_uniform (0.10), bulletproof_vest (0.08)
+  Frame 524: trench_coat (0.26), bow_tie (0.19), suit (0.16), military_uniform (0.10), bulletproof_vest (0.07)
+  Frame 525: trench_coat (0.25), bow_tie (0.19), suit (0.16), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 526: trench_coat (0.27), suit (0.17), bow_tie (0.17), military_uniform (0.09), bulletproof_vest (0.06)
+  Frame 527: trench_coat (0.27), suit (0.18), bow_tie (0.17), military_uniform (0.10), bulletproof_vest (0.05)
+  Frame 528: trench_coat (0.25), bow_tie (0.18), suit (0.18), military_uniform (0.09), bulletproof_vest (0.05)
+  Frame 529: trench_coat (0.24), bow_tie (0.19), suit (0.18), military_uniform (0.09), bulletproof_vest (0.05)
+  Frame 530: trench_coat (0.25), suit (0.19), bow_tie (0.18), military_uniform (0.09), bulletproof_vest (0.05)
+  Frame 531: trench_coat (0.23), bow_tie (0.21), suit (0.18), military_uniform (0.09), bulletproof_vest (0.05)
+  Frame 532: trench_coat (0.22), bow_tie (0.20), suit (0.18), military_uniform (0.09), bulletproof_vest (0.05)
+  Frame 533: bow_tie (0.22), trench_coat (0.22), suit (0.18), military_uniform (0.09), bulletproof_vest (0.04)
+  Frame 534: bow_tie (0.23), trench_coat (0.20), suit (0.17), military_uniform (0.09), bulletproof_vest (0.05)
+  Frame 535: bow_tie (0.25), trench_coat (0.20), suit (0.16), military_uniform (0.09), bulletproof_vest (0.05)
+  Frame 536: bow_tie (0.25), trench_coat (0.21), suit (0.17), military_uniform (0.08), bulletproof_vest (0.05)
+  Frame 537: trench_coat (0.23), bow_tie (0.21), suit (0.17), military_uniform (0.09), bulletproof_vest (0.05)
+  Frame 538: bow_tie (0.23), trench_coat (0.22), suit (0.17), military_uniform (0.09), bulletproof_vest (0.05)
+
+Person P012:
+  Gender: Male
+  Age: 30
+  Frame 539: cellular_telephone (0.22), Band_Aid (0.14), sunscreen (0.08), wig (0.06), harmonica (0.03)
+  Frame 540: cellular_telephone (0.22), Band_Aid (0.14), sunscreen (0.08), wig (0.06), harmonica (0.03)
+  Frame 541: cellular_telephone (0.23), Band_Aid (0.12), sunscreen (0.09), wig (0.07), harmonica (0.04)
+  Frame 542: cellular_telephone (0.25), Band_Aid (0.12), sunscreen (0.07), wig (0.06), hair_spray (0.03)
+  Frame 543: cellular_telephone (0.22), Band_Aid (0.11), wig (0.06), sunscreen (0.06), hair_spray (0.03)
+  Frame 544: cellular_telephone (0.28), Band_Aid (0.10), sunscreen (0.06), wig (0.06), hair_spray (0.04)
+  Frame 545: cellular_telephone (0.30), Band_Aid (0.06), sunscreen (0.06), wig (0.04), hair_spray (0.03)
+  Frame 546: cellular_telephone (0.39), Band_Aid (0.05), sunscreen (0.05), whistle (0.03), wig (0.03)
+  Frame 547: cellular_telephone (0.41), sunscreen (0.06), Band_Aid (0.03), harmonica (0.03), whistle (0.03)
+  Frame 548: cellular_telephone (0.35), sunscreen (0.07), Band_Aid (0.04), harmonica (0.04), whistle (0.03)
+  Frame 549: cellular_telephone (0.36), sunscreen (0.06), harmonica (0.04), Band_Aid (0.03), whistle (0.03)
+  Frame 550: cellular_telephone (0.37), sunscreen (0.05), remote_control (0.04), Band_Aid (0.03), stopwatch (0.03)
+  Frame 551: cellular_telephone (0.39), sunscreen (0.06), Band_Aid (0.04), stopwatch (0.03), remote_control (0.03)
+  Frame 552: cellular_telephone (0.41), sunscreen (0.07), remote_control (0.03), Band_Aid (0.03), stopwatch (0.03)
+  Frame 553: cellular_telephone (0.41), sunscreen (0.06), Band_Aid (0.03), remote_control (0.03), stopwatch (0.03)
+  Frame 554: cellular_telephone (0.36), sunscreen (0.08), Band_Aid (0.03), wig (0.02), harmonica (0.02)
+  Frame 555: cellular_telephone (0.30), sunscreen (0.10), Band_Aid (0.04), wig (0.03), harmonica (0.02)
+  Frame 556: cellular_telephone (0.31), sunscreen (0.11), Band_Aid (0.04), wig (0.03), harmonica (0.03)
+  Frame 557: cellular_telephone (0.34), sunscreen (0.09), harmonica (0.03), Band_Aid (0.03), wig (0.02)
+  Frame 558: cellular_telephone (0.31), sunscreen (0.09), harmonica (0.04), Band_Aid (0.03), neck_brace (0.03)
+  Frame 559: cellular_telephone (0.26), sunscreen (0.12), Band_Aid (0.03), neck_brace (0.03), harmonica (0.03)
+  Frame 560: cellular_telephone (0.26), sunscreen (0.14), Band_Aid (0.05), wig (0.04), neck_brace (0.02)
+  Frame 561: cellular_telephone (0.26), sunscreen (0.11), Band_Aid (0.04), wig (0.04), hair_spray (0.02)
+  Frame 562: cellular_telephone (0.27), sunscreen (0.10), Band_Aid (0.04), wig (0.04), remote_control (0.02)
+  Frame 563: cellular_telephone (0.27), sunscreen (0.11), Band_Aid (0.04), wig (0.03), ice_lolly (0.02)
+  Frame 564: cellular_telephone (0.21), sunscreen (0.14), Band_Aid (0.05), wig (0.04), ice_lolly (0.03)
+  Frame 565: sunscreen (0.16), cellular_telephone (0.15), Band_Aid (0.07), wig (0.06), harmonica (0.03)
+  Frame 566: sunscreen (0.14), cellular_telephone (0.10), Band_Aid (0.08), wig (0.07), oboe (0.03)
+  Frame 567: sunscreen (0.13), Band_Aid (0.12), wig (0.09), cellular_telephone (0.08), harmonica (0.02)
+  Frame 568: Band_Aid (0.15), sunscreen (0.12), cellular_telephone (0.10), wig (0.06), tub (0.03)
+  Frame 569: Band_Aid (0.16), sunscreen (0.15), cellular_telephone (0.09), tub (0.04), wig (0.03)
+  Frame 570: sunscreen (0.16), Band_Aid (0.12), cellular_telephone (0.10), wig (0.04), tub (0.03)
+  Frame 571: sunscreen (0.16), Band_Aid (0.13), cellular_telephone (0.11), wig (0.06), harmonica (0.03)
+  Frame 572: sunscreen (0.15), cellular_telephone (0.11), Band_Aid (0.11), wig (0.04), tub (0.02)
+  Frame 573: sunscreen (0.18), cellular_telephone (0.13), Band_Aid (0.07), harmonica (0.04), ice_lolly (0.03)
+  Frame 574: sunscreen (0.15), cellular_telephone (0.12), harmonica (0.06), Band_Aid (0.05), microphone (0.05)
+  Frame 575: cellular_telephone (0.14), sunscreen (0.12), microphone (0.07), Band_Aid (0.05), harmonica (0.04)
+  Frame 576: sunscreen (0.11), cellular_telephone (0.11), microphone (0.09), ice_lolly (0.05), harmonica (0.05)
+  Frame 577: sunscreen (0.12), cellular_telephone (0.12), microphone (0.07), ice_lolly (0.07), whistle (0.05)
+  Frame 578: sunscreen (0.13), cellular_telephone (0.11), Band_Aid (0.06), microphone (0.05), wig (0.04)
+  Frame 579: sunscreen (0.11), cellular_telephone (0.08), Band_Aid (0.06), wig (0.05), bow_tie (0.05)
+  Frame 580: cellular_telephone (0.10), sunscreen (0.09), Band_Aid (0.06), wig (0.05), Windsor_tie (0.05)
+  Frame 581: cellular_telephone (0.11), sunscreen (0.10), Band_Aid (0.05), wig (0.04), whistle (0.04)
+  Frame 582: sunscreen (0.09), cellular_telephone (0.08), ice_lolly (0.06), Band_Aid (0.05), whistle (0.05)
+  Frame 583: cellular_telephone (0.10), ice_lolly (0.10), sunscreen (0.08), Band_Aid (0.06), whistle (0.05)
+  Frame 584: cellular_telephone (0.12), sunscreen (0.10), Band_Aid (0.08), ice_lolly (0.05), whistle (0.04)
+  Frame 585: cellular_telephone (0.11), sunscreen (0.10), Band_Aid (0.08), ice_lolly (0.04), harmonica (0.04)
+  Frame 586: cellular_telephone (0.12), sunscreen (0.09), Band_Aid (0.08), harmonica (0.05), Windsor_tie (0.03)
+  Frame 587: cellular_telephone (0.15), sunscreen (0.09), Band_Aid (0.08), harmonica (0.05), Windsor_tie (0.03)
+  Frame 588: cellular_telephone (0.17), Band_Aid (0.07), sunscreen (0.07), harmonica (0.06), stethoscope (0.03)
+  Frame 589: cellular_telephone (0.15), Band_Aid (0.07), sunscreen (0.07), harmonica (0.06), stethoscope (0.04)
+  Frame 590: cellular_telephone (0.14), Band_Aid (0.08), sunscreen (0.07), harmonica (0.06), stethoscope (0.04)
+  Frame 591: cellular_telephone (0.13), Band_Aid (0.09), sunscreen (0.07), harmonica (0.06), stethoscope (0.04)
+  Frame 592: cellular_telephone (0.13), Band_Aid (0.10), sunscreen (0.09), harmonica (0.06), ocarina (0.04)
+  Frame 593: cellular_telephone (0.12), Band_Aid (0.10), sunscreen (0.08), harmonica (0.07), ocarina (0.04)
+  Frame 594: cellular_telephone (0.13), Band_Aid (0.09), sunscreen (0.08), harmonica (0.07), ocarina (0.04)
+  Frame 595: cellular_telephone (0.13), Band_Aid (0.09), sunscreen (0.08), harmonica (0.07), ocarina (0.04)
+  Frame 596: cellular_telephone (0.13), Band_Aid (0.08), sunscreen (0.08), harmonica (0.07), ocarina (0.04)
+  Frame 597: cellular_telephone (0.14), Band_Aid (0.08), sunscreen (0.08), harmonica (0.07), ocarina (0.03)
+  Frame 598: cellular_telephone (0.15), harmonica (0.07), Band_Aid (0.07), sunscreen (0.07), ice_lolly (0.04)
+  Frame 599: cellular_telephone (0.15), harmonica (0.07), Band_Aid (0.07), sunscreen (0.06), ice_lolly (0.04)
+  Frame 600: cellular_telephone (0.15), harmonica (0.07), sunscreen (0.06), Band_Aid (0.06), ice_lolly (0.04)
+  Frame 601: cellular_telephone (0.14), harmonica (0.07), Band_Aid (0.06), sunscreen (0.05), ice_lolly (0.04)
+  Frame 602: cellular_telephone (0.14), harmonica (0.07), Band_Aid (0.06), sunscreen (0.05), ice_lolly (0.05)
+  Frame 603: cellular_telephone (0.12), Band_Aid (0.07), harmonica (0.06), sunscreen (0.06), ice_lolly (0.05)
+  Frame 604: cellular_telephone (0.12), Band_Aid (0.07), sunscreen (0.07), harmonica (0.07), ice_lolly (0.05)
+  Frame 605: cellular_telephone (0.12), sunscreen (0.07), Band_Aid (0.06), harmonica (0.06), ice_lolly (0.05)
+  Frame 606: cellular_telephone (0.13), sunscreen (0.07), Band_Aid (0.06), harmonica (0.06), ice_lolly (0.04)
+  Frame 607: cellular_telephone (0.13), sunscreen (0.08), Band_Aid (0.06), harmonica (0.06), wig (0.04)
+  Frame 608: cellular_telephone (0.13), sunscreen (0.08), harmonica (0.06), Band_Aid (0.06), wig (0.04)
+  Frame 609: cellular_telephone (0.13), sunscreen (0.09), harmonica (0.07), Band_Aid (0.05), ice_lolly (0.04)
+  Frame 610: cellular_telephone (0.12), sunscreen (0.08), Band_Aid (0.06), harmonica (0.06), microphone (0.04)
+  Frame 611: cellular_telephone (0.15), sunscreen (0.09), harmonica (0.06), Band_Aid (0.06), microphone (0.05)
+  Frame 612: cellular_telephone (0.14), sunscreen (0.09), harmonica (0.07), Band_Aid (0.06), microphone (0.05)
+  Frame 613: cellular_telephone (0.15), sunscreen (0.09), Band_Aid (0.07), harmonica (0.06), microphone (0.04)
+  Frame 614: cellular_telephone (0.16), sunscreen (0.10), harmonica (0.07), Band_Aid (0.06), microphone (0.04)
+  Frame 615: cellular_telephone (0.16), sunscreen (0.09), harmonica (0.06), Band_Aid (0.05), microphone (0.04)
+  Frame 616: cellular_telephone (0.15), sunscreen (0.08), Windsor_tie (0.06), Band_Aid (0.05), harmonica (0.04)
+  Frame 617: cellular_telephone (0.16), sunscreen (0.09), Band_Aid (0.06), Windsor_tie (0.05), harmonica (0.05)
+  Frame 618: cellular_telephone (0.14), sunscreen (0.11), Band_Aid (0.07), harmonica (0.05), Windsor_tie (0.04)
+  Frame 619: cellular_telephone (0.12), sunscreen (0.12), Band_Aid (0.09), harmonica (0.04), Windsor_tie (0.03)
+  Frame 620: sunscreen (0.11), cellular_telephone (0.11), Band_Aid (0.11), harmonica (0.05), ocarina (0.03)
+  Frame 621: Band_Aid (0.13), sunscreen (0.12), cellular_telephone (0.10), harmonica (0.05), ocarina (0.03)
+  Frame 622: Band_Aid (0.14), sunscreen (0.10), cellular_telephone (0.09), harmonica (0.05), ocarina (0.04)
+  Frame 623: Band_Aid (0.14), sunscreen (0.12), cellular_telephone (0.07), harmonica (0.05), stethoscope (0.03)
+  Frame 624: Band_Aid (0.13), sunscreen (0.12), cellular_telephone (0.08), harmonica (0.06), ocarina (0.03)
+  Frame 625: Band_Aid (0.12), sunscreen (0.10), cellular_telephone (0.09), harmonica (0.08), ocarina (0.05)
+  Frame 626: harmonica (0.12), cellular_telephone (0.11), Band_Aid (0.11), sunscreen (0.10), ocarina (0.06)
+  Frame 627: cellular_telephone (0.12), Band_Aid (0.11), sunscreen (0.11), harmonica (0.10), ocarina (0.05)
+  Frame 628: cellular_telephone (0.12), Band_Aid (0.11), sunscreen (0.10), harmonica (0.10), ocarina (0.05)
+  Frame 629: sunscreen (0.12), harmonica (0.11), Band_Aid (0.10), cellular_telephone (0.09), ocarina (0.05)
+  Frame 630: harmonica (0.20), cellular_telephone (0.10), sunscreen (0.09), Band_Aid (0.08), ocarina (0.06)
+  Frame 631: harmonica (0.21), cellular_telephone (0.09), Band_Aid (0.09), sunscreen (0.09), ocarina (0.05)
+  Frame 632: harmonica (0.28), cellular_telephone (0.10), sunscreen (0.08), Band_Aid (0.07), ocarina (0.05)
+  Frame 633: harmonica (0.25), cellular_telephone (0.10), Band_Aid (0.07), sunscreen (0.07), ocarina (0.05)
+  Frame 634: harmonica (0.21), cellular_telephone (0.11), Band_Aid (0.08), sunscreen (0.06), ocarina (0.05)
+  Frame 635: harmonica (0.18), cellular_telephone (0.11), Band_Aid (0.08), sunscreen (0.06), ocarina (0.04)
+  Frame 636: harmonica (0.15), cellular_telephone (0.10), Band_Aid (0.09), sunscreen (0.08), ocarina (0.03)
+  Frame 637: harmonica (0.11), sunscreen (0.09), Band_Aid (0.09), cellular_telephone (0.09), ocarina (0.03)
+  Frame 638: sunscreen (0.10), harmonica (0.10), cellular_telephone (0.08), Band_Aid (0.08), microphone (0.03)
+  Frame 639: sunscreen (0.12), harmonica (0.08), cellular_telephone (0.08), Band_Aid (0.08), microphone (0.03)
+  Frame 640: sunscreen (0.12), cellular_telephone (0.09), Band_Aid (0.08), harmonica (0.08), microphone (0.03)
+  Frame 641: sunscreen (0.12), cellular_telephone (0.09), harmonica (0.09), Band_Aid (0.08), microphone (0.03)
+  Frame 642: cellular_telephone (0.11), sunscreen (0.10), harmonica (0.10), Band_Aid (0.08), microphone (0.03)
+  Frame 643: harmonica (0.12), cellular_telephone (0.11), sunscreen (0.09), Band_Aid (0.09), ocarina (0.03)
+  Frame 644: harmonica (0.14), cellular_telephone (0.13), sunscreen (0.08), Band_Aid (0.08), ocarina (0.03)
+  Frame 645: cellular_telephone (0.16), harmonica (0.14), sunscreen (0.09), Band_Aid (0.08), ocarina (0.04)
+  Frame 646: cellular_telephone (0.13), harmonica (0.12), sunscreen (0.11), Band_Aid (0.09), ocarina (0.03)
+  Frame 647: harmonica (0.13), sunscreen (0.11), cellular_telephone (0.11), Band_Aid (0.10), ocarina (0.03)
+  Frame 648: harmonica (0.13), Band_Aid (0.12), sunscreen (0.10), cellular_telephone (0.08), ocarina (0.04)
+  Frame 649: harmonica (0.13), Band_Aid (0.13), sunscreen (0.10), cellular_telephone (0.08), ocarina (0.04)
+  Frame 650: Band_Aid (0.12), sunscreen (0.11), harmonica (0.09), cellular_telephone (0.08), ocarina (0.03)
+  Frame 651: Band_Aid (0.11), sunscreen (0.11), harmonica (0.09), cellular_telephone (0.08), ocarina (0.03)
+  Frame 652: cellular_telephone (0.11), sunscreen (0.10), Band_Aid (0.10), harmonica (0.09), ocarina (0.04)
+  Frame 653: cellular_telephone (0.11), sunscreen (0.11), Band_Aid (0.11), harmonica (0.08), ocarina (0.03)
+  Frame 654: Band_Aid (0.14), sunscreen (0.13), cellular_telephone (0.11), harmonica (0.06), ocarina (0.03)
+  Frame 655: Band_Aid (0.16), sunscreen (0.14), cellular_telephone (0.09), harmonica (0.06), ocarina (0.03)
+  Frame 656: Band_Aid (0.15), sunscreen (0.14), cellular_telephone (0.09), harmonica (0.05), ocarina (0.03)
+  Frame 657: Band_Aid (0.13), cellular_telephone (0.12), sunscreen (0.12), harmonica (0.08), ocarina (0.03)
+  Frame 658: cellular_telephone (0.14), sunscreen (0.13), Band_Aid (0.12), harmonica (0.07), ocarina (0.03)
+  Frame 659: sunscreen (0.13), harmonica (0.11), Band_Aid (0.11), cellular_telephone (0.10), ocarina (0.04)
+  Frame 660: cellular_telephone (0.13), harmonica (0.13), sunscreen (0.11), Band_Aid (0.09), ocarina (0.03)
+  Frame 661: cellular_telephone (0.17), harmonica (0.15), sunscreen (0.08), Band_Aid (0.06), ice_lolly (0.03)
+  Frame 662: cellular_telephone (0.17), harmonica (0.13), sunscreen (0.07), Band_Aid (0.05), microphone (0.03)
+  Frame 663: cellular_telephone (0.20), harmonica (0.10), sunscreen (0.08), Band_Aid (0.06), Windsor_tie (0.03)
+  Frame 664: cellular_telephone (0.16), harmonica (0.09), sunscreen (0.08), Band_Aid (0.06), Windsor_tie (0.04)
+  Frame 665: cellular_telephone (0.16), sunscreen (0.08), harmonica (0.08), Band_Aid (0.06), Windsor_tie (0.03)
+  Frame 666: cellular_telephone (0.14), sunscreen (0.10), harmonica (0.09), Band_Aid (0.07), wig (0.03)
+  Frame 667: cellular_telephone (0.15), sunscreen (0.10), harmonica (0.08), Band_Aid (0.07), wig (0.03)
+  Frame 668: cellular_telephone (0.15), sunscreen (0.10), Band_Aid (0.07), harmonica (0.07), wig (0.03)
+  Frame 669: cellular_telephone (0.16), sunscreen (0.10), Band_Aid (0.07), harmonica (0.06), wig (0.03)
+  Frame 670: cellular_telephone (0.13), sunscreen (0.09), Band_Aid (0.07), harmonica (0.05), Windsor_tie (0.03)
+  Frame 671: cellular_telephone (0.12), sunscreen (0.09), Band_Aid (0.06), harmonica (0.04), Windsor_tie (0.04)
+  Frame 672: cellular_telephone (0.14), sunscreen (0.10), Band_Aid (0.06), harmonica (0.04), Windsor_tie (0.03)
+  Frame 673: cellular_telephone (0.13), sunscreen (0.12), Band_Aid (0.06), harmonica (0.04), Windsor_tie (0.03)
+  Frame 674: sunscreen (0.14), cellular_telephone (0.12), Band_Aid (0.06), harmonica (0.05), wig (0.03)
+  Frame 675: sunscreen (0.14), cellular_telephone (0.12), Band_Aid (0.07), harmonica (0.04), wig (0.03)
+  Frame 676: sunscreen (0.14), cellular_telephone (0.13), Band_Aid (0.06), harmonica (0.04), wig (0.03)
+  Frame 677: cellular_telephone (0.13), sunscreen (0.13), Band_Aid (0.06), harmonica (0.03), wig (0.03)
+  Frame 678: sunscreen (0.14), cellular_telephone (0.14), Band_Aid (0.06), wig (0.03), harmonica (0.03)
+  Frame 679: cellular_telephone (0.16), sunscreen (0.13), Band_Aid (0.06), harmonica (0.03), wig (0.03)
+  Frame 680: cellular_telephone (0.15), sunscreen (0.12), Band_Aid (0.06), harmonica (0.03), wig (0.03)
+  Frame 681: cellular_telephone (0.14), sunscreen (0.12), Band_Aid (0.07), wig (0.03), Windsor_tie (0.03)
+  Frame 682: sunscreen (0.13), cellular_telephone (0.12), Band_Aid (0.08), wig (0.04), bow_tie (0.03)
+  Frame 683: sunscreen (0.12), cellular_telephone (0.12), Band_Aid (0.08), wig (0.04), bow_tie (0.03)
+  Frame 684: cellular_telephone (0.12), sunscreen (0.11), Band_Aid (0.07), wig (0.04), bow_tie (0.03)
+  Frame 685: cellular_telephone (0.13), sunscreen (0.10), Band_Aid (0.06), wig (0.05), bow_tie (0.03)
+  Frame 686: cellular_telephone (0.14), sunscreen (0.10), Band_Aid (0.06), wig (0.04), bow_tie (0.04)
+  Frame 687: cellular_telephone (0.13), sunscreen (0.10), Band_Aid (0.06), wig (0.05), bow_tie (0.04)
+  Frame 688: cellular_telephone (0.13), sunscreen (0.10), Band_Aid (0.06), wig (0.05), bow_tie (0.03)
+  Frame 689: cellular_telephone (0.12), sunscreen (0.11), Band_Aid (0.06), wig (0.05), Windsor_tie (0.03)
+  Frame 690: cellular_telephone (0.12), sunscreen (0.11), Band_Aid (0.06), wig (0.04), Windsor_tie (0.03)
+  Frame 691: sunscreen (0.12), cellular_telephone (0.12), Band_Aid (0.06), wig (0.04), Windsor_tie (0.03)
+  Frame 692: sunscreen (0.13), cellular_telephone (0.12), Band_Aid (0.06), wig (0.04), microphone (0.04)
+  Frame 693: cellular_telephone (0.14), sunscreen (0.13), Band_Aid (0.06), wig (0.04), harmonica (0.04)
+  Frame 694: cellular_telephone (0.14), sunscreen (0.13), Band_Aid (0.06), harmonica (0.04), microphone (0.04)
+  Frame 695: cellular_telephone (0.14), sunscreen (0.12), Band_Aid (0.05), harmonica (0.05), microphone (0.04)
+  Frame 696: sunscreen (0.14), cellular_telephone (0.13), harmonica (0.05), Band_Aid (0.05), microphone (0.05)
+  Frame 697: sunscreen (0.15), cellular_telephone (0.13), harmonica (0.06), Band_Aid (0.05), microphone (0.05)
+  Frame 698: sunscreen (0.14), cellular_telephone (0.13), harmonica (0.07), Band_Aid (0.05), microphone (0.04)
+  Frame 699: sunscreen (0.14), cellular_telephone (0.12), harmonica (0.06), Band_Aid (0.05), microphone (0.03)
+  Frame 700: sunscreen (0.14), cellular_telephone (0.11), harmonica (0.07), Band_Aid (0.04), microphone (0.03)
+  Frame 701: sunscreen (0.12), harmonica (0.11), cellular_telephone (0.10), Band_Aid (0.04), microphone (0.03)
+  Frame 702: harmonica (0.12), sunscreen (0.11), cellular_telephone (0.11), Band_Aid (0.04), microphone (0.03)
+  Frame 703: sunscreen (0.13), cellular_telephone (0.11), harmonica (0.11), Band_Aid (0.04), microphone (0.03)
+  Frame 704: sunscreen (0.13), cellular_telephone (0.13), harmonica (0.09), Band_Aid (0.04), microphone (0.03)
+  Frame 705: cellular_telephone (0.13), sunscreen (0.13), harmonica (0.09), Band_Aid (0.04), microphone (0.03)
+  Frame 706: cellular_telephone (0.13), sunscreen (0.12), harmonica (0.09), Band_Aid (0.04), microphone (0.03)
+  Frame 707: sunscreen (0.12), cellular_telephone (0.12), harmonica (0.09), Band_Aid (0.04), microphone (0.03)
+  Frame 708: sunscreen (0.13), cellular_telephone (0.11), harmonica (0.08), Band_Aid (0.05), microphone (0.03)
+  Frame 709: sunscreen (0.13), cellular_telephone (0.12), harmonica (0.08), Band_Aid (0.05), microphone (0.03)
+  Frame 710: sunscreen (0.13), cellular_telephone (0.12), harmonica (0.08), Band_Aid (0.05), wig (0.03)
+  Frame 711: cellular_telephone (0.14), sunscreen (0.12), harmonica (0.08), Band_Aid (0.05), wig (0.03)
+  Frame 712: cellular_telephone (0.13), sunscreen (0.12), harmonica (0.10), Band_Aid (0.05), wig (0.03)
+  Frame 713: harmonica (0.14), cellular_telephone (0.13), sunscreen (0.11), Band_Aid (0.04), microphone (0.03)
+  Frame 714: harmonica (0.17), cellular_telephone (0.12), sunscreen (0.11), Band_Aid (0.04), microphone (0.04)
+  Frame 715: harmonica (0.18), cellular_telephone (0.13), sunscreen (0.13), Band_Aid (0.04), microphone (0.04)
+  Frame 716: harmonica (0.19), cellular_telephone (0.14), sunscreen (0.14), Band_Aid (0.04), microphone (0.04)
+  Frame 717: harmonica (0.19), cellular_telephone (0.13), sunscreen (0.12), Band_Aid (0.04), microphone (0.04)
+  Frame 718: harmonica (0.18), cellular_telephone (0.14), sunscreen (0.11), Band_Aid (0.05), microphone (0.04)
+
+Person P013:
+  Gender: Male
+  Age: 36
+  Frame 719: nipple (0.27), Band_Aid (0.08), diaper (0.06), ping-pong_ball (0.03), cradle (0.03)
+    Ângulos: left_elbow=109.7°, right_elbow=172.7°
+  Frame 720: nipple (0.27), Band_Aid (0.08), diaper (0.06), cradle (0.03), ping-pong_ball (0.03)
+    Ângulos: left_elbow=110.4°, right_elbow=172.0°
+  Frame 721: nipple (0.25), Band_Aid (0.07), ping-pong_ball (0.06), diaper (0.05), cradle (0.03)
+    Ângulos: left_elbow=116.5°, right_elbow=161.0°
+  Frame 722: nipple (0.27), Band_Aid (0.07), neck_brace (0.06), ping-pong_ball (0.04), cradle (0.03)
+    Ângulos: left_elbow=103.6°, right_elbow=172.3°
+  Frame 723: nipple (0.35), cradle (0.07), crib (0.06), Band_Aid (0.05), diaper (0.04)
+    Ângulos: left_elbow=100.2°, right_elbow=178.7°
+  Frame 724: nipple (0.37), cradle (0.07), crib (0.06), Band_Aid (0.05), diaper (0.05)
+    Ângulos: left_elbow=103.7°, right_elbow=170.8°
+  Frame 725: nipple (0.39), crib (0.06), Band_Aid (0.05), cradle (0.05), diaper (0.03)
+    Ângulos: left_elbow=115.2°, right_elbow=167.4°
+  Frame 726: nipple (0.37), crib (0.06), Band_Aid (0.06), cradle (0.04), diaper (0.03)
+    Ângulos: left_elbow=102.7°, right_elbow=173.6°
+  Frame 727: nipple (0.33), Band_Aid (0.08), crib (0.08), cradle (0.05), diaper (0.03)
+    Ângulos: left_elbow=105.4°, right_elbow=167.0°
+  Frame 728: nipple (0.32), crib (0.08), Band_Aid (0.07), cradle (0.05), diaper (0.03)
+    Ângulos: left_elbow=113.1°, right_elbow=158.8°
+  Frame 729: nipple (0.31), crib (0.08), Band_Aid (0.07), cradle (0.06), diaper (0.03)
+    Ângulos: left_elbow=112.3°, right_elbow=160.5°
+  Frame 730: nipple (0.25), crib (0.10), cradle (0.06), Band_Aid (0.06), remote_control (0.03)
+    Ângulos: left_elbow=107.7°, right_elbow=164.7°
+  Frame 731: nipple (0.20), crib (0.09), Band_Aid (0.07), cradle (0.07), neck_brace (0.03)
+    Ângulos: left_elbow=110.4°, right_elbow=159.4°
+  Frame 732: nipple (0.18), crib (0.07), Band_Aid (0.06), cradle (0.05), remote_control (0.03)
+    Ângulos: left_elbow=110.9°, right_elbow=159.2°
+  Frame 733: nipple (0.19), crib (0.07), Band_Aid (0.06), cradle (0.05), remote_control (0.03)
+    Ângulos: left_elbow=112.9°, right_elbow=156.6°
+  Frame 734: nipple (0.21), crib (0.07), Band_Aid (0.05), cradle (0.05), remote_control (0.03)
+    Ângulos: left_elbow=110.8°, right_elbow=155.9°
+  Frame 735: nipple (0.21), crib (0.07), Band_Aid (0.06), cradle (0.04), remote_control (0.03)
+    Ângulos: left_elbow=114.4°, right_elbow=158.1°
+  Frame 736: nipple (0.27), crib (0.07), Band_Aid (0.06), cradle (0.04), remote_control (0.03)
+    Ângulos: left_elbow=114.6°, right_elbow=158.1°
+  Frame 737: nipple (0.26), crib (0.07), Band_Aid (0.06), cradle (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=116.0°, right_elbow=156.5°
+  Frame 738: nipple (0.29), Band_Aid (0.06), crib (0.06), cradle (0.04), diaper (0.03)
+    Ângulos: left_elbow=114.0°, right_elbow=158.4°
+  Frame 739: nipple (0.29), Band_Aid (0.07), crib (0.06), cradle (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=114.1°, right_elbow=157.8°
+  Frame 740: nipple (0.31), Band_Aid (0.06), crib (0.05), cradle (0.05), diaper (0.03)
+    Ângulos: left_elbow=118.2°, right_elbow=151.8°
+  Frame 741: nipple (0.26), cradle (0.08), crib (0.08), diaper (0.05), Band_Aid (0.04)
+    Ângulos: left_elbow=117.6°, right_elbow=150.6°
+  Frame 742: nipple (0.22), cradle (0.12), crib (0.11), diaper (0.05), remote_control (0.04)
+    Ângulos: left_elbow=122.1°, right_elbow=144.9°
+  Frame 743: nipple (0.25), cradle (0.10), crib (0.10), diaper (0.05), neck_brace (0.03)
+    Ângulos: left_elbow=123.3°, right_elbow=144.4°
+  Frame 744: nipple (0.26), cradle (0.10), crib (0.09), diaper (0.05), remote_control (0.03)
+    Ângulos: left_elbow=124.2°, right_elbow=143.8°
+  Frame 745: nipple (0.27), cradle (0.08), crib (0.07), diaper (0.05), Band_Aid (0.04)
+    Ângulos: left_elbow=124.9°, right_elbow=142.5°
+  Frame 746: nipple (0.28), cradle (0.08), crib (0.06), diaper (0.05), neck_brace (0.03)
+    Ângulos: left_elbow=127.3°, right_elbow=136.7°
+  Frame 747: nipple (0.34), cradle (0.07), diaper (0.05), crib (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=125.8°, right_elbow=141.0°
+  Frame 748: nipple (0.31), cradle (0.06), remote_control (0.04), diaper (0.04), crib (0.04)
+    Ângulos: left_elbow=126.9°, right_elbow=138.5°
+  Frame 749: nipple (0.31), cradle (0.05), diaper (0.04), remote_control (0.04), crib (0.03)
+    Ângulos: left_elbow=126.4°, right_elbow=139.2°
+  Frame 750: nipple (0.33), cradle (0.05), remote_control (0.04), crib (0.03), diaper (0.03)
+    Ângulos: left_elbow=125.0°, right_elbow=140.1°
+  Frame 751: nipple (0.32), cradle (0.04), neck_brace (0.03), crib (0.03), diaper (0.03)
+    Ângulos: left_elbow=127.2°, right_elbow=137.6°
+  Frame 752: nipple (0.32), cradle (0.04), diaper (0.03), bath_towel (0.03), crib (0.03)
+    Ângulos: left_elbow=126.6°, right_elbow=138.1°
+  Frame 753: nipple (0.40), cradle (0.04), diaper (0.03), bath_towel (0.03), crib (0.03)
+    Ângulos: left_elbow=123.4°, right_elbow=140.7°
+  Frame 754: nipple (0.40), cradle (0.04), diaper (0.03), bath_towel (0.03), barbershop (0.03)
+    Ângulos: left_elbow=125.7°, right_elbow=139.1°
+  Frame 755: nipple (0.40), diaper (0.04), cradle (0.04), bath_towel (0.03), Band_Aid (0.03)
+    Ângulos: left_elbow=123.8°, right_elbow=139.7°
+  Frame 756: nipple (0.31), Band_Aid (0.07), cradle (0.05), crib (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=124.2°, right_elbow=143.1°
+  Frame 757: nipple (0.34), Band_Aid (0.06), cradle (0.06), crib (0.05), diaper (0.04)
+    Ângulos: left_elbow=126.7°, right_elbow=142.0°
+  Frame 758: nipple (0.33), cradle (0.06), Band_Aid (0.05), diaper (0.04), crib (0.04)
+    Ângulos: left_elbow=123.1°, right_elbow=138.0°
+  Frame 759: nipple (0.33), cradle (0.06), Band_Aid (0.06), diaper (0.04), crib (0.04)
+    Ângulos: left_elbow=122.7°, right_elbow=138.9°
+  Frame 760: nipple (0.33), Band_Aid (0.04), cradle (0.04), diaper (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=121.7°, right_elbow=139.1°
+  Frame 761: nipple (0.36), cradle (0.05), diaper (0.04), neck_brace (0.04), Band_Aid (0.04)
+    Ângulos: left_elbow=124.4°, right_elbow=133.6°
+  Frame 762: nipple (0.36), cradle (0.05), diaper (0.05), neck_brace (0.04), Band_Aid (0.03)
+    Ângulos: left_elbow=124.6°, right_elbow=134.7°
+  Frame 763: nipple (0.37), diaper (0.05), cradle (0.04), neck_brace (0.04), Band_Aid (0.02)
+    Ângulos: left_elbow=125.7°, right_elbow=130.1°
+  Frame 764: nipple (0.36), diaper (0.05), cradle (0.05), neck_brace (0.04), crib (0.02)
+    Ângulos: left_elbow=126.1°, right_elbow=131.1°
+  Frame 765: nipple (0.31), neck_brace (0.04), diaper (0.04), cradle (0.04), barbershop (0.02)
+    Ângulos: left_elbow=124.4°, right_elbow=133.8°
+  Frame 766: nipple (0.31), neck_brace (0.05), diaper (0.04), cradle (0.04), barbershop (0.03)
+    Ângulos: left_elbow=125.5°, right_elbow=132.9°
+  Frame 767: nipple (0.32), neck_brace (0.04), diaper (0.04), cradle (0.04), Band_Aid (0.02)
+    Ângulos: left_elbow=126.5°, right_elbow=133.8°
+  Frame 768: nipple (0.30), neck_brace (0.05), diaper (0.04), cradle (0.03), face_powder (0.03)
+    Ângulos: left_elbow=122.9°, right_elbow=135.6°
+  Frame 769: nipple (0.31), neck_brace (0.05), diaper (0.04), cradle (0.04), face_powder (0.03)
+    Ângulos: left_elbow=123.1°, right_elbow=135.6°
+  Frame 770: nipple (0.32), diaper (0.04), neck_brace (0.04), cradle (0.03), barbershop (0.03)
+    Ângulos: left_elbow=125.2°, right_elbow=135.0°
+  Frame 771: nipple (0.36), diaper (0.04), neck_brace (0.04), cradle (0.03), dumbbell (0.03)
+    Ângulos: left_elbow=120.9°, right_elbow=136.5°
+  Frame 772: nipple (0.34), diaper (0.04), neck_brace (0.03), dumbbell (0.03), cradle (0.03)
+    Ângulos: left_elbow=124.2°, right_elbow=134.2°
+  Frame 773: nipple (0.30), neck_brace (0.04), diaper (0.04), barbershop (0.03), dumbbell (0.03)
+    Ângulos: left_elbow=120.9°, right_elbow=132.8°
+  Frame 774: nipple (0.30), neck_brace (0.04), diaper (0.04), barbershop (0.03), Band_Aid (0.03)
+    Ângulos: left_elbow=118.4°, right_elbow=135.0°
+  Frame 775: nipple (0.32), diaper (0.04), neck_brace (0.03), barbershop (0.03), cradle (0.03)
+    Ângulos: left_elbow=119.1°, right_elbow=136.0°
+  Frame 776: nipple (0.34), neck_brace (0.03), diaper (0.03), remote_control (0.02), barbershop (0.02)
+    Ângulos: left_elbow=121.9°, right_elbow=132.3°
+  Frame 777: nipple (0.38), diaper (0.06), neck_brace (0.03), bath_towel (0.03), cradle (0.03)
+    Ângulos: left_elbow=122.4°, right_elbow=131.0°
+  Frame 778: nipple (0.39), diaper (0.06), neck_brace (0.03), cradle (0.03), bath_towel (0.02)
+    Ângulos: left_elbow=126.1°, right_elbow=130.1°
+  Frame 779: nipple (0.39), diaper (0.06), neck_brace (0.03), cradle (0.02), bath_towel (0.02)
+    Ângulos: left_elbow=124.3°, right_elbow=131.3°
+  Frame 780: nipple (0.43), diaper (0.06), neck_brace (0.03), bath_towel (0.02), cradle (0.02)
+    Ângulos: left_elbow=127.3°, right_elbow=128.4°
+  Frame 781: nipple (0.43), diaper (0.05), neck_brace (0.03), cradle (0.03), bath_towel (0.02)
+    Ângulos: left_elbow=130.8°, right_elbow=126.9°
+  Frame 782: nipple (0.43), diaper (0.04), neck_brace (0.03), cradle (0.03), bath_towel (0.03)
+    Ângulos: left_elbow=132.8°, right_elbow=122.7°
+  Frame 783: nipple (0.40), diaper (0.04), dumbbell (0.03), neck_brace (0.03), bath_towel (0.03)
+    Ângulos: left_elbow=131.5°, right_elbow=123.9°
+  Frame 784: nipple (0.41), diaper (0.04), neck_brace (0.03), bath_towel (0.03), cradle (0.03)
+    Ângulos: left_elbow=130.5°, right_elbow=124.6°
+  Frame 785: nipple (0.45), diaper (0.05), bath_towel (0.03), neck_brace (0.03), cradle (0.03)
+    Ângulos: left_elbow=130.7°, right_elbow=123.9°
+  Frame 786: nipple (0.46), diaper (0.05), bath_towel (0.03), neck_brace (0.03), cradle (0.03)
+    Ângulos: left_elbow=131.8°, right_elbow=121.9°
+  Frame 787: nipple (0.43), diaper (0.05), bath_towel (0.04), cradle (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=130.9°, right_elbow=119.8°
+  Frame 788: nipple (0.40), diaper (0.07), cradle (0.05), bath_towel (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=129.3°, right_elbow=120.7°
+  Frame 789: nipple (0.40), diaper (0.07), cradle (0.05), bath_towel (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=128.7°, right_elbow=122.0°
+  Frame 790: nipple (0.38), diaper (0.09), cradle (0.06), bath_towel (0.05), neck_brace (0.03)
+    Ângulos: left_elbow=129.4°, right_elbow=122.6°
+  Frame 791: nipple (0.40), diaper (0.08), cradle (0.05), bath_towel (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=127.5°, right_elbow=125.9°
+  Frame 792: nipple (0.34), diaper (0.07), bath_towel (0.05), cradle (0.05), neck_brace (0.03)
+    Ângulos: left_elbow=129.8°, right_elbow=122.6°
+  Frame 793: nipple (0.31), diaper (0.06), cradle (0.05), bath_towel (0.05), neck_brace (0.03)
+    Ângulos: left_elbow=128.4°, right_elbow=123.6°
+  Frame 794: nipple (0.31), diaper (0.05), bath_towel (0.04), cradle (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=129.2°, right_elbow=123.5°
+  Frame 795: nipple (0.29), bath_towel (0.06), diaper (0.05), cradle (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=129.5°, right_elbow=123.3°
+  Frame 796: nipple (0.31), bath_towel (0.06), diaper (0.05), cradle (0.04), neck_brace (0.03)
+    Ângulos: left_elbow=130.1°, right_elbow=126.7°
+  Frame 797: nipple (0.30), bath_towel (0.06), diaper (0.06), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=132.0°, right_elbow=123.9°
+  Frame 798: nipple (0.27), bath_towel (0.07), diaper (0.06), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=130.5°, right_elbow=127.1°
+  Frame 799: nipple (0.27), bath_towel (0.06), diaper (0.06), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=129.9°, right_elbow=126.9°
+  Frame 800: nipple (0.26), bath_towel (0.06), diaper (0.06), cradle (0.05), crib (0.04)
+    Ângulos: left_elbow=130.0°, right_elbow=128.5°
+  Frame 801: nipple (0.30), bath_towel (0.06), diaper (0.06), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=132.5°, right_elbow=126.8°
+  Frame 802: nipple (0.33), diaper (0.05), bath_towel (0.05), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=132.3°, right_elbow=128.4°
+  Frame 803: nipple (0.32), diaper (0.06), bath_towel (0.05), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=130.6°, right_elbow=128.3°
+  Frame 804: nipple (0.32), diaper (0.06), bath_towel (0.05), cradle (0.04), neck_brace (0.04)
+    Ângulos: left_elbow=131.1°, right_elbow=127.4°
+  Frame 805: nipple (0.31), bath_towel (0.06), diaper (0.05), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=130.6°, right_elbow=129.3°
+  Frame 806: nipple (0.30), bath_towel (0.06), diaper (0.05), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=131.1°, right_elbow=127.5°
+  Frame 807: nipple (0.30), bath_towel (0.06), diaper (0.05), neck_brace (0.05), cradle (0.05)
+    Ângulos: left_elbow=129.9°, right_elbow=129.0°
+  Frame 808: nipple (0.32), bath_towel (0.06), diaper (0.05), cradle (0.04), neck_brace (0.04)
+    Ângulos: left_elbow=130.6°, right_elbow=128.0°
+  Frame 809: nipple (0.31), bath_towel (0.07), diaper (0.04), cradle (0.04), neck_brace (0.04)
+    Ângulos: left_elbow=130.5°, right_elbow=128.1°
+  Frame 810: nipple (0.30), bath_towel (0.07), diaper (0.05), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=132.2°, right_elbow=128.4°
+  Frame 811: nipple (0.32), bath_towel (0.06), cradle (0.05), neck_brace (0.05), diaper (0.05)
+    Ângulos: left_elbow=129.3°, right_elbow=129.8°
+  Frame 812: nipple (0.32), bath_towel (0.07), diaper (0.06), cradle (0.06), neck_brace (0.04)
+    Ângulos: left_elbow=132.7°, right_elbow=127.9°
+  Frame 813: nipple (0.32), bath_towel (0.07), diaper (0.07), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=132.9°, right_elbow=127.2°
+  Frame 814: nipple (0.33), bath_towel (0.07), diaper (0.07), cradle (0.06), neck_brace (0.04)
+    Ângulos: left_elbow=133.8°, right_elbow=126.9°
+  Frame 815: nipple (0.31), diaper (0.06), bath_towel (0.06), cradle (0.06), neck_brace (0.04)
+    Ângulos: left_elbow=133.7°, right_elbow=126.1°
+  Frame 816: nipple (0.34), bath_towel (0.06), diaper (0.06), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=132.1°, right_elbow=126.1°
+  Frame 817: nipple (0.38), bath_towel (0.07), diaper (0.07), cradle (0.05), neck_brace (0.03)
+    Ângulos: left_elbow=133.0°, right_elbow=125.0°
+  Frame 818: nipple (0.37), bath_towel (0.07), diaper (0.06), cradle (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=132.9°, right_elbow=126.4°
+  Frame 819: nipple (0.35), bath_towel (0.07), diaper (0.07), cradle (0.06), neck_brace (0.04)
+    Ângulos: left_elbow=133.7°, right_elbow=125.8°
+  Frame 820: nipple (0.34), bath_towel (0.08), diaper (0.07), cradle (0.06), neck_brace (0.03)
+    Ângulos: left_elbow=133.2°, right_elbow=127.2°
+  Frame 821: nipple (0.36), diaper (0.07), bath_towel (0.07), cradle (0.06), neck_brace (0.03)
+    Ângulos: left_elbow=135.3°, right_elbow=126.0°
+  Frame 822: nipple (0.38), diaper (0.07), cradle (0.07), bath_towel (0.06), neck_brace (0.04)
+    Ângulos: left_elbow=131.3°, right_elbow=125.2°
+  Frame 823: nipple (0.43), diaper (0.07), cradle (0.06), bath_towel (0.06), neck_brace (0.03)
+    Ângulos: left_elbow=130.5°, right_elbow=127.3°
+  Frame 824: nipple (0.42), diaper (0.07), cradle (0.06), bath_towel (0.06), neck_brace (0.03)
+    Ângulos: left_elbow=129.1°, right_elbow=127.1°
+  Frame 825: nipple (0.37), diaper (0.08), cradle (0.07), bath_towel (0.06), neck_brace (0.03)
+    Ângulos: left_elbow=129.3°, right_elbow=122.7°
+  Frame 826: nipple (0.40), diaper (0.09), cradle (0.08), bath_towel (0.05), neck_brace (0.03)
+    Ângulos: left_elbow=127.3°, right_elbow=125.9°
+  Frame 827: nipple (0.35), diaper (0.10), cradle (0.10), bath_towel (0.06), neck_brace (0.03)
+    Ângulos: left_elbow=127.8°, right_elbow=124.8°
+  Frame 828: nipple (0.37), diaper (0.10), cradle (0.09), bath_towel (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=128.7°, right_elbow=122.6°
+  Frame 829: nipple (0.35), diaper (0.10), cradle (0.09), bath_towel (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=128.3°, right_elbow=122.0°
+  Frame 830: nipple (0.29), diaper (0.10), cradle (0.10), bath_towel (0.06), neck_brace (0.04)
+    Ângulos: left_elbow=126.1°, right_elbow=122.1°
+  Frame 831: nipple (0.26), cradle (0.13), diaper (0.11), bath_towel (0.06), neck_brace (0.04)
+    Ângulos: left_elbow=125.0°, right_elbow=121.7°
+  Frame 832: nipple (0.29), diaper (0.13), cradle (0.12), bath_towel (0.06), neck_brace (0.04)
+    Ângulos: left_elbow=125.0°, right_elbow=122.8°
+  Frame 833: nipple (0.29), cradle (0.10), diaper (0.07), neck_brace (0.06), Band_Aid (0.06)
+    Ângulos: left_elbow=124.9°, right_elbow=120.9°
+  Frame 834: nipple (0.29), cradle (0.09), diaper (0.08), neck_brace (0.06), Band_Aid (0.06)
+    Ângulos: left_elbow=124.0°, right_elbow=121.0°
+  Frame 835: nipple (0.32), cradle (0.09), diaper (0.08), neck_brace (0.06), Band_Aid (0.05)
+    Ângulos: left_elbow=130.8°, right_elbow=119.4°
+  Frame 836: nipple (0.32), diaper (0.07), cradle (0.06), neck_brace (0.06), Band_Aid (0.06)
+    Ângulos: left_elbow=128.2°, right_elbow=125.8°
+  Frame 837: nipple (0.36), neck_brace (0.09), diaper (0.06), oxygen_mask (0.05), cradle (0.05)
+    Ângulos: left_elbow=131.9°, right_elbow=123.6°
+  Frame 838: nipple (0.32), diaper (0.08), neck_brace (0.08), cradle (0.07), bath_towel (0.05)
+    Ângulos: left_elbow=127.4°, right_elbow=127.2°
+  Frame 839: nipple (0.32), diaper (0.09), neck_brace (0.07), cradle (0.07), bath_towel (0.05)
+    Ângulos: left_elbow=128.5°, right_elbow=126.5°
+  Frame 840: nipple (0.31), diaper (0.10), cradle (0.09), neck_brace (0.08), bath_towel (0.06)
+    Ângulos: left_elbow=122.4°, right_elbow=128.9°
+  Frame 841: nipple (0.31), cradle (0.11), diaper (0.10), neck_brace (0.08), bath_towel (0.05)
+    Ângulos: left_elbow=117.2°, right_elbow=129.9°
+  Frame 842: nipple (0.27), cradle (0.12), neck_brace (0.10), diaper (0.09), bath_towel (0.05)
+    Ângulos: left_elbow=120.4°, right_elbow=125.8°
+  Frame 843: nipple (0.31), neck_brace (0.09), diaper (0.08), cradle (0.08), bath_towel (0.04)
+    Ângulos: left_elbow=122.9°, right_elbow=133.3°
+  Frame 844: nipple (0.32), neck_brace (0.09), cradle (0.08), diaper (0.08), bath_towel (0.04)
+    Ângulos: left_elbow=124.4°, right_elbow=130.7°
+  Frame 845: nipple (0.32), neck_brace (0.10), diaper (0.08), cradle (0.07), Band_Aid (0.03)
+    Ângulos: left_elbow=127.5°, right_elbow=131.1°
+  Frame 846: nipple (0.30), neck_brace (0.09), cradle (0.07), diaper (0.07), Band_Aid (0.03)
+    Ângulos: left_elbow=123.9°, right_elbow=134.8°
+  Frame 847: nipple (0.25), cradle (0.11), diaper (0.09), neck_brace (0.07), bath_towel (0.04)
+    Ângulos: left_elbow=117.0°, right_elbow=139.2°
+  Frame 848: nipple (0.34), cradle (0.10), diaper (0.08), neck_brace (0.08), bath_towel (0.03)
+    Ângulos: left_elbow=114.7°, right_elbow=141.4°
+  Frame 849: nipple (0.34), cradle (0.10), neck_brace (0.08), diaper (0.08), bath_towel (0.03)
+    Ângulos: left_elbow=114.6°, right_elbow=141.5°
+  Frame 850: nipple (0.31), cradle (0.13), diaper (0.08), neck_brace (0.08), bath_towel (0.03)
+    Ângulos: left_elbow=118.3°, right_elbow=138.8°
+  Frame 851: nipple (0.32), cradle (0.19), diaper (0.06), bath_towel (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=128.6°, right_elbow=135.9°
+  Frame 852: nipple (0.35), cradle (0.17), diaper (0.07), bath_towel (0.04), barbershop (0.04)
+    Ângulos: left_elbow=117.9°, right_elbow=137.9°
+  Frame 853: nipple (0.43), cradle (0.14), barbershop (0.10), diaper (0.05), bath_towel (0.04)
+    Ângulos: left_elbow=125.3°, right_elbow=140.1°
+  Frame 854: nipple (0.46), cradle (0.13), barbershop (0.09), diaper (0.05), bath_towel (0.04)
+    Ângulos: left_elbow=125.4°, right_elbow=140.7°
+  Frame 855: nipple (0.65), cradle (0.06), diaper (0.05), Band_Aid (0.03), barbershop (0.03)
+    Ângulos: left_elbow=127.3°, right_elbow=123.2°
+  Frame 856: nipple (0.49), barbershop (0.10), Band_Aid (0.06), diaper (0.04), oxygen_mask (0.03)
+    Ângulos: left_elbow=115.5°, right_elbow=138.3°
+  Frame 857: nipple (0.60), diaper (0.06), barbershop (0.04), cradle (0.03), Band_Aid (0.03)
+    Ângulos: left_elbow=116.0°, right_elbow=150.6°
+  Frame 858: nipple (0.60), diaper (0.04), Band_Aid (0.04), harmonica (0.03), oxygen_mask (0.03)
+    Ângulos: left_elbow=99.6°, right_elbow=174.8°
+  Frame 859: nipple (0.61), Band_Aid (0.04), diaper (0.04), oxygen_mask (0.03), harmonica (0.03)
+    Ângulos: left_elbow=99.2°, right_elbow=174.6°
+  Frame 860: nipple (0.35), Band_Aid (0.09), oxygen_mask (0.06), bath_towel (0.03), diaper (0.03)
+    Ângulos: left_elbow=105.5°, right_elbow=164.9°
+  Frame 861: nipple (0.19), Band_Aid (0.17), oxygen_mask (0.05), bath_towel (0.03), stethoscope (0.03)
+    Ângulos: left_elbow=84.1°, right_elbow=167.7°
+  Frame 862: nipple (0.33), oxygen_mask (0.14), Band_Aid (0.09), stethoscope (0.02), remote_control (0.02)
+    Ângulos: left_elbow=119.5°, right_elbow=145.2°
+  Frame 863: nipple (0.26), oxygen_mask (0.21), Band_Aid (0.08), muzzle (0.03), syringe (0.02)
+    Ângulos: left_elbow=114.8°, right_elbow=136.5°
+  Frame 864: nipple (0.27), oxygen_mask (0.20), Band_Aid (0.08), muzzle (0.03), syringe (0.02)
+    Ângulos: left_elbow=115.4°, right_elbow=135.4°
+  Frame 865: nipple (0.23), oxygen_mask (0.19), Band_Aid (0.08), muzzle (0.03), stethoscope (0.03)
+    Ângulos: left_elbow=116.5°, right_elbow=142.2°
+  Frame 866: nipple (0.20), oxygen_mask (0.16), Band_Aid (0.09), neck_brace (0.05), car_mirror (0.04)
+    Ângulos: left_elbow=119.5°, right_elbow=133.1°
+  Frame 867: nipple (0.20), oxygen_mask (0.16), Band_Aid (0.07), neck_brace (0.05), car_mirror (0.05)
+    Ângulos: left_elbow=117.1°, right_elbow=137.6°
+  Frame 868: nipple (0.19), oxygen_mask (0.14), Band_Aid (0.06), neck_brace (0.05), car_mirror (0.05)
+    Ângulos: left_elbow=116.1°, right_elbow=133.2°
+  Frame 869: nipple (0.20), oxygen_mask (0.14), Band_Aid (0.06), neck_brace (0.05), car_mirror (0.05)
+    Ângulos: left_elbow=115.9°, right_elbow=132.8°
+  Frame 870: oxygen_mask (0.21), nipple (0.15), car_mirror (0.06), neck_brace (0.05), Band_Aid (0.04)
+    Ângulos: left_elbow=112.2°, right_elbow=127.8°
+  Frame 871: oxygen_mask (0.16), nipple (0.15), muzzle (0.07), Band_Aid (0.05), neck_brace (0.04)
+    Ângulos: left_elbow=110.8°, right_elbow=113.1°
+  Frame 872: nipple (0.14), oxygen_mask (0.10), harmonica (0.07), Band_Aid (0.07), remote_control (0.03)
+    Ângulos: left_elbow=111.7°, right_elbow=115.7°
+  Frame 873: nipple (0.17), oxygen_mask (0.10), Band_Aid (0.07), harmonica (0.06), remote_control (0.03)
+    Ângulos: left_elbow=112.6°, right_elbow=125.2°
+  Frame 874: nipple (0.17), oxygen_mask (0.11), harmonica (0.07), Band_Aid (0.07), remote_control (0.03)
+    Ângulos: left_elbow=113.5°, right_elbow=124.8°
+  Frame 875: nipple (0.16), oxygen_mask (0.13), harmonica (0.08), muzzle (0.07), Band_Aid (0.06)
+    Ângulos: left_elbow=115.3°, right_elbow=108.0°
+  Frame 876: nipple (0.17), oxygen_mask (0.13), muzzle (0.10), harmonica (0.09), Band_Aid (0.05)
+    Ângulos: left_elbow=113.9°, right_elbow=106.0°
+  Frame 877: nipple (0.23), oxygen_mask (0.12), harmonica (0.09), muzzle (0.06), Band_Aid (0.05)
+    Ângulos: left_elbow=116.2°, right_elbow=104.8°
+  Frame 878: nipple (0.21), harmonica (0.17), oxygen_mask (0.09), Band_Aid (0.03), remote_control (0.03)
+    Ângulos: left_elbow=119.0°, right_elbow=96.7°
+  Frame 879: nipple (0.22), harmonica (0.17), oxygen_mask (0.09), Band_Aid (0.03), remote_control (0.03)
+    Ângulos: left_elbow=119.0°, right_elbow=97.1°
+  Frame 880: nipple (0.28), oxygen_mask (0.14), harmonica (0.10), Band_Aid (0.03), remote_control (0.03)
+    Ângulos: left_elbow=114.2°, right_elbow=100.5°
+  Frame 881: nipple (0.31), oxygen_mask (0.17), harmonica (0.08), Band_Aid (0.05), remote_control (0.04)
+    Ângulos: left_elbow=114.3°, right_elbow=101.6°
+  Frame 882: nipple (0.26), oxygen_mask (0.15), harmonica (0.11), Band_Aid (0.04), remote_control (0.04)
+    Ângulos: left_elbow=113.7°, right_elbow=99.8°
+  Frame 883: nipple (0.31), oxygen_mask (0.11), harmonica (0.10), Band_Aid (0.07), remote_control (0.03)
+    Ângulos: left_elbow=111.4°, right_elbow=87.0°
+  Frame 884: nipple (0.33), oxygen_mask (0.11), harmonica (0.09), Band_Aid (0.07), remote_control (0.03)
+    Ângulos: left_elbow=111.4°, right_elbow=85.6°
+  Frame 885: nipple (0.31), oxygen_mask (0.13), harmonica (0.12), Band_Aid (0.06), remote_control (0.03)
+    Ângulos: left_elbow=109.7°, right_elbow=83.0°
+  Frame 886: nipple (0.30), oxygen_mask (0.17), harmonica (0.13), Band_Aid (0.06), remote_control (0.02)
+    Ângulos: left_elbow=111.6°, right_elbow=87.1°
+  Frame 887: nipple (0.23), harmonica (0.21), oxygen_mask (0.12), Band_Aid (0.07), remote_control (0.02)
+    Ângulos: left_elbow=108.7°, right_elbow=97.1°
+  Frame 888: harmonica (0.24), nipple (0.23), oxygen_mask (0.10), Band_Aid (0.06), ocarina (0.02)
+    Ângulos: left_elbow=108.6°, right_elbow=96.9°
+  Frame 889: harmonica (0.22), nipple (0.22), oxygen_mask (0.10), Band_Aid (0.06), ocarina (0.02)
+    Ângulos: left_elbow=106.9°, right_elbow=100.0°
+  Frame 890: nipple (0.25), harmonica (0.16), oxygen_mask (0.11), Band_Aid (0.06), ocarina (0.03)
+    Ângulos: left_elbow=108.1°, right_elbow=97.2°
+  Frame 891: nipple (0.26), harmonica (0.16), oxygen_mask (0.12), Band_Aid (0.07), ocarina (0.03)
+    Ângulos: left_elbow=110.0°, right_elbow=101.3°
+  Frame 892: nipple (0.26), harmonica (0.18), oxygen_mask (0.15), Band_Aid (0.06), ocarina (0.03)
+    Ângulos: left_elbow=107.3°, right_elbow=94.6°
+  Frame 893: nipple (0.29), oxygen_mask (0.17), harmonica (0.15), Band_Aid (0.05), ocarina (0.03)
+    Ângulos: left_elbow=107.4°, right_elbow=96.6°
+  Frame 894: nipple (0.29), oxygen_mask (0.17), harmonica (0.16), Band_Aid (0.05), ocarina (0.03)
+    Ângulos: left_elbow=107.9°, right_elbow=97.7°
+  Frame 895: nipple (0.31), harmonica (0.15), oxygen_mask (0.14), Band_Aid (0.06), ocarina (0.03)
+    Ângulos: left_elbow=107.3°, right_elbow=99.7°
+  Frame 896: nipple (0.35), harmonica (0.15), oxygen_mask (0.14), Band_Aid (0.05), ocarina (0.03)
+    Ângulos: left_elbow=108.1°, right_elbow=101.4°
+  Frame 897: nipple (0.36), harmonica (0.14), oxygen_mask (0.13), Band_Aid (0.05), ocarina (0.03)
+    Ângulos: left_elbow=110.3°, right_elbow=99.3°
+  Frame 898: nipple (0.36), harmonica (0.13), oxygen_mask (0.13), Band_Aid (0.05), ocarina (0.02)
+    Ângulos: left_elbow=109.4°, right_elbow=98.3°
+
+Person P014:
+  Gender: Male
+  Age: 33
+  Frame 899: ski_mask (0.52), mask (0.12), bow_tie (0.05), bathing_cap (0.05), sunglasses (0.03)
+  Frame 900: ski_mask (0.48), mask (0.13), bow_tie (0.07), bathing_cap (0.06), sunglasses (0.04)
+  Frame 901: ski_mask (0.51), mask (0.14), bathing_cap (0.05), bow_tie (0.05), abaya (0.03)
+  Frame 902: ski_mask (0.57), mask (0.14), bow_tie (0.03), bathing_cap (0.03), sunglasses (0.03)
+  Frame 903: ski_mask (0.55), mask (0.12), abaya (0.04), sunglasses (0.03), bow_tie (0.03)
+  Frame 904: ski_mask (0.71), mask (0.12), sunglasses (0.02), abaya (0.02), bow_tie (0.01)
+  Frame 905: ski_mask (0.63), mask (0.16), sunglasses (0.03), bathing_cap (0.02), bow_tie (0.02)
+  Frame 906: ski_mask (0.64), mask (0.16), sunglasses (0.02), bathing_cap (0.02), bow_tie (0.02)
+  Frame 907: ski_mask (0.68), mask (0.15), bow_tie (0.02), sunglasses (0.02), bathing_cap (0.01)
+  Frame 908: ski_mask (0.65), mask (0.13), bow_tie (0.04), sunscreen (0.02), sunglasses (0.01)
+  Frame 909: ski_mask (0.72), mask (0.13), bow_tie (0.02), sunscreen (0.01), bathing_cap (0.01)
+  Frame 910: ski_mask (0.61), mask (0.15), bathing_cap (0.03), bow_tie (0.03), sunglasses (0.02)
+  Frame 911: ski_mask (0.61), mask (0.16), bathing_cap (0.03), bow_tie (0.03), sunglasses (0.02)
+  Frame 912: ski_mask (0.65), mask (0.12), bathing_cap (0.03), bow_tie (0.02), sunglasses (0.02)
+  Frame 913: ski_mask (0.66), mask (0.13), bathing_cap (0.03), bow_tie (0.02), sunglasses (0.02)
+  Frame 914: ski_mask (0.67), mask (0.14), bow_tie (0.03), bathing_cap (0.02), sunglasses (0.02)
+  Frame 915: ski_mask (0.62), mask (0.15), bathing_cap (0.03), bow_tie (0.03), sunglasses (0.02)
+  Frame 916: ski_mask (0.65), mask (0.12), bow_tie (0.03), sunglasses (0.03), bathing_cap (0.03)
+  Frame 917: ski_mask (0.62), mask (0.12), bathing_cap (0.04), sunglasses (0.03), bow_tie (0.03)
+  Frame 918: ski_mask (0.63), mask (0.12), bathing_cap (0.03), sunglasses (0.03), bow_tie (0.02)
+  Frame 919: ski_mask (0.58), mask (0.14), bathing_cap (0.06), sunglasses (0.04), bow_tie (0.03)
+  Frame 920: ski_mask (0.54), mask (0.14), bathing_cap (0.07), sunglasses (0.06), bow_tie (0.03)
+  Frame 921: ski_mask (0.55), mask (0.16), bathing_cap (0.06), sunglasses (0.05), bow_tie (0.03)
+  Frame 922: ski_mask (0.60), mask (0.16), bathing_cap (0.05), sunglasses (0.04), bow_tie (0.02)
+  Frame 923: ski_mask (0.61), mask (0.15), bathing_cap (0.05), sunglasses (0.04), bow_tie (0.02)
+  Frame 924: ski_mask (0.62), mask (0.14), bathing_cap (0.05), sunglasses (0.03), bow_tie (0.02)
+  Frame 925: ski_mask (0.58), mask (0.13), bathing_cap (0.05), sunglasses (0.04), bow_tie (0.02)
+  Frame 926: ski_mask (0.64), mask (0.12), sunglasses (0.04), bathing_cap (0.04), bow_tie (0.02)
+  Frame 927: ski_mask (0.64), mask (0.11), bathing_cap (0.04), sunglasses (0.03), bow_tie (0.02)
+  Frame 928: ski_mask (0.63), mask (0.14), bathing_cap (0.04), sunglasses (0.03), bow_tie (0.02)
+  Frame 929: ski_mask (0.55), mask (0.24), sunglasses (0.04), bathing_cap (0.03), abaya (0.01)
+  Frame 930: ski_mask (0.53), mask (0.25), sunglasses (0.04), bathing_cap (0.03), bow_tie (0.01)
+  Frame 931: ski_mask (0.47), mask (0.37), sunglasses (0.02), bow_tie (0.02), bathing_cap (0.02)
+  Frame 932: ski_mask (0.47), mask (0.41), sunglasses (0.02), bow_tie (0.02), bathing_cap (0.02)
+  Frame 933: ski_mask (0.55), mask (0.24), sunglasses (0.05), bathing_cap (0.03), bow_tie (0.02)
+  Frame 934: ski_mask (0.68), mask (0.17), sunglasses (0.03), bow_tie (0.02), Band_Aid (0.01)
+  Frame 935: ski_mask (0.71), mask (0.13), sunglasses (0.03), bow_tie (0.03), Band_Aid (0.01)
+  Frame 936: ski_mask (0.70), mask (0.14), sunglasses (0.03), bow_tie (0.03), Band_Aid (0.01)
+  Frame 937: ski_mask (0.58), mask (0.14), sunglasses (0.07), bow_tie (0.03), Band_Aid (0.02)
+  Frame 938: ski_mask (0.63), mask (0.17), sunglasses (0.04), bow_tie (0.02), bathing_cap (0.02)
+  Frame 939: ski_mask (0.56), mask (0.18), sunglasses (0.04), bow_tie (0.03), bathing_cap (0.02)
+  Frame 940: ski_mask (0.50), mask (0.18), sunglasses (0.07), bow_tie (0.03), snorkel (0.02)
+  Frame 941: ski_mask (0.51), mask (0.18), sunglasses (0.07), bow_tie (0.03), snorkel (0.02)
+  Frame 942: ski_mask (0.49), mask (0.15), sunglasses (0.08), bow_tie (0.04), bathing_cap (0.03)
+  Frame 943: ski_mask (0.41), mask (0.15), sunglasses (0.10), bathing_cap (0.05), bow_tie (0.05)
+  Frame 944: ski_mask (0.39), mask (0.15), sunglasses (0.09), bow_tie (0.08), bathing_cap (0.04)
+  Frame 945: ski_mask (0.38), sunglasses (0.11), mask (0.10), bow_tie (0.08), bathing_cap (0.03)
+  Frame 946: ski_mask (0.35), sunglasses (0.11), mask (0.09), bow_tie (0.08), neck_brace (0.04)
+  Frame 947: ski_mask (0.34), sunglasses (0.14), mask (0.08), bow_tie (0.08), sunglass (0.03)
+  Frame 948: ski_mask (0.33), sunglasses (0.14), mask (0.08), bow_tie (0.08), sunglass (0.03)
+  Frame 949: ski_mask (0.26), sunglasses (0.17), bow_tie (0.08), mask (0.07), loupe (0.04)
+  Frame 950: ski_mask (0.19), sunglasses (0.19), bow_tie (0.10), mask (0.05), sunglass (0.05)
+  Frame 951: sunglasses (0.21), ski_mask (0.18), bow_tie (0.10), sunglass (0.05), mask (0.05)
+  Frame 952: ski_mask (0.28), sunglasses (0.19), bow_tie (0.08), mask (0.05), sunglass (0.04)
+  Frame 953: ski_mask (0.29), sunglasses (0.19), bow_tie (0.08), mask (0.05), sunglass (0.04)
+  Frame 954: ski_mask (0.27), sunglasses (0.22), bow_tie (0.07), mask (0.07), sunglass (0.05)
+  Frame 955: sunglasses (0.22), ski_mask (0.21), mask (0.08), bow_tie (0.08), sunglass (0.05)
+  Frame 956: ski_mask (0.23), sunglasses (0.18), mask (0.10), bow_tie (0.08), sunglass (0.05)
+  Frame 957: sunglasses (0.24), ski_mask (0.21), mask (0.09), bow_tie (0.07), sunglass (0.06)
+  Frame 958: ski_mask (0.24), sunglasses (0.21), mask (0.12), bow_tie (0.07), sunglass (0.05)
+  Frame 959: ski_mask (0.34), sunglasses (0.18), mask (0.13), sunglass (0.05), bow_tie (0.04)
+  Frame 960: ski_mask (0.35), sunglasses (0.18), mask (0.13), sunglass (0.05), bow_tie (0.04)
+  Frame 961: ski_mask (0.52), sunglasses (0.17), mask (0.09), sunglass (0.04), bow_tie (0.03)
+  Frame 962: ski_mask (0.70), mask (0.12), sunglasses (0.05), bathing_cap (0.02), bow_tie (0.01)
+  Frame 963: ski_mask (0.64), mask (0.15), sunglasses (0.06), bathing_cap (0.03), sunglass (0.02)
+  Frame 964: ski_mask (0.69), mask (0.14), sunglasses (0.04), bathing_cap (0.02), sunglass (0.01)
+  Frame 965: ski_mask (0.61), mask (0.15), sunglasses (0.06), bathing_cap (0.05), sunglass (0.02)
+  Frame 966: ski_mask (0.61), mask (0.14), sunglasses (0.06), bathing_cap (0.05), sunglass (0.02)
+  Frame 967: ski_mask (0.58), sunglasses (0.10), mask (0.08), bathing_cap (0.03), bow_tie (0.03)
+  Frame 968: ski_mask (0.74), mask (0.08), sunglasses (0.04), bathing_cap (0.03), Band_Aid (0.02)
+  Frame 969: ski_mask (0.68), mask (0.07), sunglasses (0.06), bathing_cap (0.03), Band_Aid (0.02)
+  Frame 970: ski_mask (0.55), sunglasses (0.09), bathing_cap (0.07), mask (0.07), Band_Aid (0.04)
+  Frame 971: ski_mask (0.56), sunglasses (0.08), bathing_cap (0.07), mask (0.07), Band_Aid (0.04)
+  Frame 972: ski_mask (0.63), sunglasses (0.09), mask (0.06), bathing_cap (0.04), Band_Aid (0.03)
+  Frame 973: ski_mask (0.56), sunglasses (0.12), mask (0.07), bathing_cap (0.05), Band_Aid (0.03)
+  Frame 974: ski_mask (0.61), sunglasses (0.10), mask (0.09), bathing_cap (0.04), Band_Aid (0.03)
+  Frame 975: ski_mask (0.64), mask (0.11), sunglasses (0.07), bathing_cap (0.04), sunglass (0.02)
+  Frame 976: ski_mask (0.64), mask (0.11), sunglasses (0.06), bathing_cap (0.04), Band_Aid (0.02)
+  Frame 977: ski_mask (0.64), mask (0.13), sunglasses (0.05), bathing_cap (0.04), Band_Aid (0.02)
+  Frame 978: ski_mask (0.63), mask (0.12), sunglasses (0.06), bathing_cap (0.05), sunglass (0.02)
+  Frame 979: ski_mask (0.59), mask (0.14), sunglasses (0.06), bathing_cap (0.05), Band_Aid (0.03)
+  Frame 980: ski_mask (0.66), mask (0.11), bathing_cap (0.05), sunglasses (0.04), Band_Aid (0.03)
+  Frame 981: ski_mask (0.64), mask (0.12), bathing_cap (0.06), sunglasses (0.04), Band_Aid (0.03)
+  Frame 982: ski_mask (0.67), mask (0.13), bathing_cap (0.04), sunglasses (0.03), Band_Aid (0.02)
+  Frame 983: ski_mask (0.66), mask (0.14), bathing_cap (0.04), sunglasses (0.03), Band_Aid (0.02)
+  Frame 984: ski_mask (0.76), mask (0.09), bathing_cap (0.04), sunglasses (0.02), Band_Aid (0.02)
+  Frame 985: ski_mask (0.60), mask (0.14), sunglasses (0.06), bathing_cap (0.05), sunglass (0.02)
+  Frame 986: ski_mask (0.34), mask (0.14), bathing_cap (0.12), sunglasses (0.10), Band_Aid (0.04)
+  Frame 987: ski_mask (0.54), mask (0.16), bathing_cap (0.07), sunglasses (0.06), Band_Aid (0.02)
+  Frame 988: ski_mask (0.59), mask (0.14), sunglasses (0.06), bathing_cap (0.05), sunglass (0.02)
+  Frame 989: ski_mask (0.55), mask (0.23), bathing_cap (0.04), sunglasses (0.03), sweatshirt (0.02)
+  Frame 990: ski_mask (0.54), mask (0.23), bathing_cap (0.04), sunglasses (0.03), sweatshirt (0.02)
+  Frame 991: ski_mask (0.65), mask (0.17), sunglasses (0.03), bathing_cap (0.02), sweatshirt (0.01)
+  Frame 992: ski_mask (0.67), mask (0.17), sunglasses (0.03), bathing_cap (0.02), sweatshirt (0.01)
+  Frame 993: ski_mask (0.58), mask (0.20), bathing_cap (0.04), sunglasses (0.03), abaya (0.02)
+  Frame 994: ski_mask (0.60), mask (0.15), bathing_cap (0.04), sunglasses (0.03), sweatshirt (0.02)
+  Frame 995: ski_mask (0.61), mask (0.13), sunglasses (0.04), bathing_cap (0.04), abaya (0.02)
+  Frame 996: ski_mask (0.61), mask (0.13), bathing_cap (0.04), sunglasses (0.04), abaya (0.02)
+  Frame 997: ski_mask (0.61), mask (0.13), bathing_cap (0.04), sunglasses (0.04), sweatshirt (0.02)
+  Frame 998: ski_mask (0.41), mask (0.15), sunglasses (0.08), bathing_cap (0.07), abaya (0.03)
+  Frame 999: ski_mask (0.39), mask (0.13), sunglasses (0.08), bathing_cap (0.05), abaya (0.03)
+  Frame 1000: ski_mask (0.49), mask (0.08), sunglasses (0.07), bathing_cap (0.05), abaya (0.04)
+  Frame 1001: ski_mask (0.50), mask (0.08), sunglasses (0.07), bathing_cap (0.05), abaya (0.04)
+  Frame 1002: ski_mask (0.44), mask (0.09), sunglasses (0.07), bathing_cap (0.07), abaya (0.05)
+  Frame 1003: ski_mask (0.48), mask (0.10), sunglasses (0.07), bathing_cap (0.06), sunglass (0.03)
+  Frame 1004: ski_mask (0.63), mask (0.09), sunglasses (0.04), bathing_cap (0.04), Band_Aid (0.02)
+  Frame 1005: ski_mask (0.65), mask (0.12), bathing_cap (0.06), sunglasses (0.03), Band_Aid (0.02)
+  Frame 1006: ski_mask (0.68), mask (0.10), sunglasses (0.04), bathing_cap (0.03), sunglass (0.02)
+  Frame 1007: ski_mask (0.54), mask (0.16), bathing_cap (0.05), sunglasses (0.04), sunglass (0.02)
+  Frame 1008: ski_mask (0.54), mask (0.15), bathing_cap (0.05), sunglasses (0.04), sunglass (0.03)
+  Frame 1009: ski_mask (0.52), mask (0.25), bathing_cap (0.02), sunglasses (0.02), Band_Aid (0.02)
+  Frame 1010: ski_mask (0.58), mask (0.20), Band_Aid (0.03), bathing_cap (0.02), sunglasses (0.02)
+  Frame 1011: ski_mask (0.49), mask (0.23), bathing_cap (0.04), Band_Aid (0.03), sunglasses (0.02)
+  Frame 1012: ski_mask (0.55), mask (0.20), sunglasses (0.04), bathing_cap (0.03), Band_Aid (0.02)
+  Frame 1013: ski_mask (0.56), mask (0.20), sunglasses (0.04), bathing_cap (0.03), Band_Aid (0.02)
+  Frame 1014: ski_mask (0.67), mask (0.16), bathing_cap (0.03), Band_Aid (0.02), abaya (0.02)
+  Frame 1015: ski_mask (0.60), mask (0.16), bathing_cap (0.04), sunglasses (0.03), Band_Aid (0.02)
+  Frame 1016: ski_mask (0.57), mask (0.16), bathing_cap (0.04), Band_Aid (0.03), abaya (0.02)
+  Frame 1017: ski_mask (0.54), mask (0.16), abaya (0.04), bathing_cap (0.03), Band_Aid (0.03)
+  Frame 1018: ski_mask (0.58), mask (0.15), abaya (0.04), sunglasses (0.03), Band_Aid (0.03)
+  Frame 1019: ski_mask (0.56), mask (0.13), sunglasses (0.04), abaya (0.04), bathing_cap (0.04)
+  Frame 1020: ski_mask (0.57), mask (0.14), sunglasses (0.04), abaya (0.04), bathing_cap (0.03)
+  Frame 1021: ski_mask (0.65), mask (0.12), abaya (0.03), sunglasses (0.03), bathing_cap (0.03)
+  Frame 1022: ski_mask (0.63), mask (0.13), abaya (0.04), sunglasses (0.03), Band_Aid (0.02)
+  Frame 1023: ski_mask (0.53), mask (0.15), sunglasses (0.04), Band_Aid (0.04), abaya (0.04)
+  Frame 1024: ski_mask (0.44), mask (0.16), sunglasses (0.06), bathing_cap (0.04), abaya (0.03)
+  Frame 1025: ski_mask (0.38), mask (0.20), bathing_cap (0.05), sunglasses (0.05), Band_Aid (0.03)
+  Frame 1026: ski_mask (0.36), mask (0.20), bathing_cap (0.06), sunglasses (0.05), Band_Aid (0.03)
+  Frame 1027: ski_mask (0.37), mask (0.21), sunglasses (0.06), bathing_cap (0.05), sunglass (0.03)
+  Frame 1028: ski_mask (0.34), mask (0.19), sunglasses (0.08), bathing_cap (0.06), Band_Aid (0.03)
+  Frame 1029: ski_mask (0.68), mask (0.17), sunglasses (0.02), bathing_cap (0.02), Band_Aid (0.01)
+  Frame 1030: ski_mask (0.59), mask (0.15), sunglasses (0.04), bathing_cap (0.03), bow_tie (0.02)
+  Frame 1031: ski_mask (0.61), mask (0.15), sunglasses (0.04), bathing_cap (0.03), bow_tie (0.02)
+  Frame 1032: ski_mask (0.63), mask (0.10), sunglasses (0.04), bathing_cap (0.03), bow_tie (0.02)
+  Frame 1033: ski_mask (0.69), mask (0.09), sunglasses (0.04), bathing_cap (0.03), bow_tie (0.02)
+  Frame 1034: ski_mask (0.61), mask (0.12), sunglasses (0.07), bathing_cap (0.05), sunglass (0.02)
+  Frame 1035: ski_mask (0.57), mask (0.14), sunglasses (0.08), bathing_cap (0.05), sunglass (0.02)
+  Frame 1036: ski_mask (0.48), mask (0.15), sunglasses (0.10), bathing_cap (0.06), sunglass (0.02)
+  Frame 1037: ski_mask (0.40), sunglasses (0.14), mask (0.12), bathing_cap (0.07), sunglass (0.04)
+  Frame 1038: ski_mask (0.42), sunglasses (0.14), mask (0.12), bathing_cap (0.07), sunglass (0.04)
+  Frame 1039: ski_mask (0.31), mask (0.17), sunglasses (0.16), bathing_cap (0.07), sunglass (0.04)
+  Frame 1040: ski_mask (0.30), mask (0.22), sunglasses (0.10), bathing_cap (0.06), bow_tie (0.05)
+  Frame 1041: mask (0.31), ski_mask (0.22), bathing_cap (0.10), sunglasses (0.10), bow_tie (0.03)
+  Frame 1042: ski_mask (0.28), sunglasses (0.20), mask (0.20), sunglass (0.07), bathing_cap (0.04)
+  Frame 1043: ski_mask (0.27), sunglasses (0.20), mask (0.20), sunglass (0.07), bathing_cap (0.04)
+  Frame 1044: mask (0.36), ski_mask (0.26), sunglasses (0.09), sunglass (0.04), bow_tie (0.03)
+  Frame 1045: mask (0.36), ski_mask (0.27), sunglasses (0.06), Band_Aid (0.04), oxygen_mask (0.04)
+  Frame 1046: mask (0.24), ski_mask (0.24), sunglasses (0.18), sunglass (0.07), bow_tie (0.05)
+  Frame 1047: mask (0.24), ski_mask (0.24), sunglasses (0.19), sunglass (0.06), bow_tie (0.04)
+  Frame 1048: sunglasses (0.22), mask (0.18), oxygen_mask (0.14), ski_mask (0.12), sunglass (0.08)
+  Frame 1049: sunglasses (0.28), mask (0.15), sunglass (0.10), oxygen_mask (0.08), ski_mask (0.08)
+  Frame 1050: sunglasses (0.27), mask (0.16), sunglass (0.10), ski_mask (0.09), bow_tie (0.08)
+  Frame 1051: sunglasses (0.36), sunglass (0.13), mask (0.12), ski_mask (0.07), oxygen_mask (0.06)
+  Frame 1052: sunglasses (0.37), sunglass (0.15), mask (0.12), ski_mask (0.09), oxygen_mask (0.06)
+  Frame 1053: sunglasses (0.29), sunglass (0.14), mask (0.13), oxygen_mask (0.11), ski_mask (0.09)
+  Frame 1054: sunglasses (0.30), mask (0.14), sunglass (0.13), oxygen_mask (0.11), ski_mask (0.08)
+  Frame 1055: sunglasses (0.29), mask (0.14), sunglass (0.14), ski_mask (0.10), oxygen_mask (0.08)
+  Frame 1056: sunglasses (0.28), mask (0.16), sunglass (0.13), ski_mask (0.10), oxygen_mask (0.08)
+  Frame 1057: sunglasses (0.33), sunglass (0.15), mask (0.12), ski_mask (0.09), oxygen_mask (0.06)
+  Frame 1058: sunglasses (0.27), mask (0.15), sunglass (0.12), oxygen_mask (0.10), ski_mask (0.09)
+  Frame 1059: sunglasses (0.22), mask (0.19), ski_mask (0.17), oxygen_mask (0.12), sunglass (0.09)
+  Frame 1060: sunglasses (0.26), mask (0.18), ski_mask (0.16), sunglass (0.10), oxygen_mask (0.09)
+  Frame 1061: sunglasses (0.26), mask (0.18), ski_mask (0.17), sunglass (0.10), oxygen_mask (0.09)
+  Frame 1062: sunglasses (0.23), mask (0.20), ski_mask (0.13), oxygen_mask (0.11), sunglass (0.10)
+  Frame 1063: sunglasses (0.28), mask (0.17), ski_mask (0.10), sunglass (0.10), oxygen_mask (0.07)
+  Frame 1064: sunglasses (0.29), mask (0.12), sunglass (0.10), ski_mask (0.09), bow_tie (0.05)
+  Frame 1065: sunglasses (0.31), sunglass (0.11), mask (0.09), bow_tie (0.08), ski_mask (0.05)
+  Frame 1066: sunglasses (0.32), sunglass (0.09), mask (0.08), bow_tie (0.06), ski_mask (0.05)
+  Frame 1067: sunglasses (0.27), mask (0.10), sunglass (0.08), ski_mask (0.07), bow_tie (0.07)
+  Frame 1068: sunglasses (0.26), mask (0.11), ski_mask (0.08), sunglass (0.07), bow_tie (0.07)
+  Frame 1069: sunglasses (0.32), mask (0.09), ski_mask (0.09), sunglass (0.09), bow_tie (0.05)
+  Frame 1070: sunglasses (0.29), mask (0.12), ski_mask (0.11), sunglass (0.07), bow_tie (0.05)
+  Frame 1071: sunglasses (0.36), sunglass (0.10), mask (0.08), ski_mask (0.07), bow_tie (0.06)
+  Frame 1072: sunglasses (0.39), sunglass (0.11), ski_mask (0.09), mask (0.08), bow_tie (0.04)
+  Frame 1073: sunglasses (0.39), sunglass (0.11), ski_mask (0.09), mask (0.08), bow_tie (0.04)
+  Frame 1074: sunglasses (0.41), sunglass (0.13), ski_mask (0.12), mask (0.06), bow_tie (0.05)
+  Frame 1075: sunglasses (0.35), ski_mask (0.18), sunglass (0.11), mask (0.08), bow_tie (0.06)
+  Frame 1076: sunglasses (0.31), ski_mask (0.17), sunglass (0.10), mask (0.09), bow_tie (0.09)
+  Frame 1077: ski_mask (0.25), sunglasses (0.20), mask (0.14), bow_tie (0.11), sunglass (0.05)
+  Frame 1078: ski_mask (0.26), sunglasses (0.17), mask (0.15), bow_tie (0.08), sunglass (0.05)
+
+Person P015:
+  Gender: Male
+  Age: 32
+  Frame 1079: jersey (0.77), dumbbell (0.02), maillot_(tank_suit) (0.01), maillot_(tights) (0.01), crutch (0.01)
+  Frame 1080: jersey (0.77), dumbbell (0.02), maillot_(tank_suit) (0.01), maillot_(tights) (0.01), crutch (0.01)
+  Frame 1081: jersey (0.76), maillot_(tank_suit) (0.02), dumbbell (0.02), maillot_(tights) (0.02), crutch (0.01)
+  Frame 1082: jersey (0.76), dumbbell (0.02), maillot_(tank_suit) (0.02), maillot_(tights) (0.01), crutch (0.01)
+  Frame 1083: jersey (0.79), dumbbell (0.01), maillot_(tank_suit) (0.01), maillot_(tights) (0.01), crutch (0.01)
+  Frame 1084: jersey (0.78), dumbbell (0.01), maillot_(tank_suit) (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1085: jersey (0.79), maillot_(tank_suit) (0.01), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01)
+  Frame 1086: jersey (0.79), dumbbell (0.01), maillot_(tank_suit) (0.01), maillot_(tights) (0.01), crutch (0.01)
+  Frame 1087: jersey (0.78), dumbbell (0.01), maillot_(tank_suit) (0.01), maillot_(tights) (0.01), crutch (0.01)
+  Frame 1088: jersey (0.78), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1089: jersey (0.79), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1090: jersey (0.79), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1091: jersey (0.78), dumbbell (0.02), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1092: jersey (0.79), dumbbell (0.02), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1093: jersey (0.80), dumbbell (0.02), crutch (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1094: jersey (0.81), dumbbell (0.02), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1095: jersey (0.85), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1096: jersey (0.85), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1097: jersey (0.85), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), bulletproof_vest (0.01)
+  Frame 1098: jersey (0.84), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01), crutch (0.01)
+  Frame 1099: jersey (0.84), dumbbell (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01), bulletproof_vest (0.01)
+  Frame 1100: jersey (0.84), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1101: jersey (0.87), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), bulletproof_vest (0.01)
+  Frame 1102: jersey (0.87), maillot_(tights) (0.01), dumbbell (0.01), crutch (0.01), bulletproof_vest (0.01)
+  Frame 1103: jersey (0.86), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1104: jersey (0.87), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1105: jersey (0.88), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1106: jersey (0.87), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), stole (0.01)
+  Frame 1107: jersey (0.87), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), stole (0.01)
+  Frame 1108: jersey (0.85), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1109: jersey (0.85), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1110: jersey (0.84), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1111: jersey (0.83), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=95.9°
+  Frame 1112: jersey (0.86), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=97.1°
+  Frame 1113: jersey (0.88), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=95.2°
+  Frame 1114: jersey (0.87), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=96.2°
+  Frame 1115: jersey (0.87), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+  Frame 1116: jersey (0.87), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1117: jersey (0.86), maillot_(tights) (0.01), crutch (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01)
+  Frame 1118: jersey (0.87), maillot_(tights) (0.01), dumbbell (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=100.8°
+  Frame 1119: jersey (0.90), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01), crutch (0.01)
+    Ângulos: right_elbow=100.6°
+  Frame 1120: jersey (0.86), maillot_(tights) (0.01), dumbbell (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=98.1°
+  Frame 1121: jersey (0.86), dumbbell (0.01), crutch (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=98.5°
+  Frame 1122: jersey (0.87), dumbbell (0.01), crutch (0.01), maillot_(tights) (0.01), balance_beam (0.01)
+    Ângulos: right_elbow=97.1°
+  Frame 1123: jersey (0.88), dumbbell (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01), crutch (0.01)
+    Ângulos: right_elbow=97.0°
+  Frame 1124: jersey (0.87), dumbbell (0.01), maillot_(tights) (0.01), balance_beam (0.01), crutch (0.01)
+  Frame 1125: jersey (0.86), dumbbell (0.01), maillot_(tights) (0.01), balance_beam (0.01), maillot_(tank_suit) (0.01)
+  Frame 1126: jersey (0.89), dumbbell (0.01), maillot_(tights) (0.01), balance_beam (0.00), maillot_(tank_suit) (0.00)
+  Frame 1127: jersey (0.88), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01), balance_beam (0.00)
+  Frame 1128: jersey (0.85), dumbbell (0.01), maillot_(tights) (0.01), balance_beam (0.01), maillot_(tank_suit) (0.01)
+  Frame 1129: jersey (0.76), dumbbell (0.02), balance_beam (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+  Frame 1130: jersey (0.69), dumbbell (0.02), balance_beam (0.01), maillot_(tank_suit) (0.01), soccer_ball (0.01)
+  Frame 1131: jersey (0.56), balance_beam (0.02), dumbbell (0.02), Band_Aid (0.02), soccer_ball (0.02)
+  Frame 1132: jersey (0.51), balance_beam (0.03), soccer_ball (0.03), Band_Aid (0.02), dumbbell (0.02)
+  Frame 1133: jersey (0.39), soccer_ball (0.04), balance_beam (0.03), Band_Aid (0.03), maillot_(tank_suit) (0.02)
+  Frame 1134: jersey (0.36), soccer_ball (0.03), Band_Aid (0.03), neck_brace (0.03), balance_beam (0.02)
+  Frame 1135: jersey (0.34), soccer_ball (0.05), Band_Aid (0.03), balance_beam (0.02), maillot_(tank_suit) (0.02)
+  Frame 1136: jersey (0.40), Band_Aid (0.03), soccer_ball (0.03), neck_brace (0.02), maillot_(tank_suit) (0.02)
+  Frame 1137: jersey (0.31), Band_Aid (0.05), neck_brace (0.03), maillot_(tank_suit) (0.03), soccer_ball (0.03)
+  Frame 1138: jersey (0.23), Band_Aid (0.08), neck_brace (0.05), ping-pong_ball (0.02), soccer_ball (0.02)
+  Frame 1139: jersey (0.19), Band_Aid (0.09), neck_brace (0.03), soccer_ball (0.03), sunscreen (0.02)
+  Frame 1140: jersey (0.17), Band_Aid (0.06), neck_brace (0.03), soccer_ball (0.03), ping-pong_ball (0.02)
+  Frame 1141: jersey (0.08), Band_Aid (0.05), soccer_ball (0.04), crutch (0.02), neck_brace (0.02)
+  Frame 1142: jersey (0.08), Band_Aid (0.04), neck_brace (0.03), soccer_ball (0.03), sunscreen (0.02)
+  Frame 1143: jersey (0.06), neck_brace (0.05), Band_Aid (0.04), soccer_ball (0.03), sunscreen (0.03)
+  Frame 1144: jersey (0.05), neck_brace (0.04), Band_Aid (0.04), bow_tie (0.03), soccer_ball (0.03)
+  Frame 1145: jersey (0.06), soccer_ball (0.04), Band_Aid (0.04), sweatshirt (0.03), neck_brace (0.02)
+  Frame 1146: Band_Aid (0.05), soccer_ball (0.04), bow_tie (0.03), jersey (0.03), sweatshirt (0.03)
+  Frame 1147: Band_Aid (0.04), soccer_ball (0.04), jersey (0.03), sweatshirt (0.03), ping-pong_ball (0.02)
+  Frame 1148: Band_Aid (0.04), jersey (0.03), soccer_ball (0.03), sweatshirt (0.03), stole (0.02)
+  Frame 1149: jersey (0.05), Band_Aid (0.04), soccer_ball (0.03), sweatshirt (0.03), ping-pong_ball (0.02)
+  Frame 1150: jersey (0.05), Band_Aid (0.04), sweatshirt (0.03), soccer_ball (0.03), neck_brace (0.02)
+  Frame 1151: jersey (0.04), Band_Aid (0.04), soccer_ball (0.03), sweatshirt (0.03), stole (0.03)
+  Frame 1152: jersey (0.04), Band_Aid (0.04), soccer_ball (0.03), sweatshirt (0.03), stole (0.03)
+  Frame 1153: jersey (0.04), Band_Aid (0.04), sweatshirt (0.03), neck_brace (0.02), soccer_ball (0.02)
+  Frame 1154: Band_Aid (0.05), jersey (0.03), bow_tie (0.02), neck_brace (0.02), wig (0.02)
+  Frame 1155: Band_Aid (0.05), jersey (0.04), sweatshirt (0.03), soccer_ball (0.02), stole (0.02)
+  Frame 1156: jersey (0.04), Band_Aid (0.04), stole (0.03), soccer_ball (0.03), sweatshirt (0.03)
+  Frame 1157: jersey (0.06), neck_brace (0.05), Band_Aid (0.03), stole (0.03), soccer_ball (0.02)
+  Frame 1158: jersey (0.06), Band_Aid (0.04), neck_brace (0.03), ping-pong_ball (0.03), soccer_ball (0.02)
+  Frame 1159: jersey (0.08), ping-pong_ball (0.04), Band_Aid (0.04), neck_brace (0.03), soccer_ball (0.02)
+  Frame 1160: jersey (0.13), ping-pong_ball (0.04), Band_Aid (0.03), soccer_ball (0.03), neck_brace (0.02)
+  Frame 1161: jersey (0.15), Band_Aid (0.04), ping-pong_ball (0.03), dumbbell (0.03), neck_brace (0.02)
+  Frame 1162: jersey (0.16), Band_Aid (0.05), ping-pong_ball (0.05), soccer_ball (0.03), dumbbell (0.02)
+  Frame 1163: jersey (0.18), Band_Aid (0.05), ping-pong_ball (0.05), soccer_ball (0.03), dumbbell (0.02)
+  Frame 1164: jersey (0.24), ping-pong_ball (0.04), Band_Aid (0.04), soccer_ball (0.03), neck_brace (0.03)
+  Frame 1165: jersey (0.28), Band_Aid (0.04), soccer_ball (0.04), ping-pong_ball (0.04), dumbbell (0.03)
+  Frame 1166: jersey (0.29), soccer_ball (0.05), Band_Aid (0.03), ping-pong_ball (0.03), dumbbell (0.03)
+  Frame 1167: jersey (0.33), soccer_ball (0.05), dumbbell (0.04), ping-pong_ball (0.03), Band_Aid (0.03)
+  Frame 1168: jersey (0.39), soccer_ball (0.04), dumbbell (0.03), balance_beam (0.03), Band_Aid (0.03)
+  Frame 1169: jersey (0.40), Band_Aid (0.03), dumbbell (0.03), balance_beam (0.03), soccer_ball (0.03)
+  Frame 1170: jersey (0.34), dumbbell (0.05), balance_beam (0.03), soccer_ball (0.03), Band_Aid (0.03)
+  Frame 1171: jersey (0.34), dumbbell (0.05), balance_beam (0.04), soccer_ball (0.03), Band_Aid (0.03)
+  Frame 1172: jersey (0.43), dumbbell (0.05), balance_beam (0.04), soccer_ball (0.02), Band_Aid (0.02)
+  Frame 1173: jersey (0.50), dumbbell (0.04), balance_beam (0.02), maillot_(tank_suit) (0.02), crutch (0.02)
+  Frame 1174: jersey (0.59), dumbbell (0.04), balance_beam (0.02), maillot_(tank_suit) (0.02), maillot_(tights) (0.02)
+    Ângulos: left_elbow=115.3°, right_elbow=94.0°
+  Frame 1175: jersey (0.74), dumbbell (0.02), maillot_(tank_suit) (0.02), maillot_(tights) (0.02), crutch (0.01)
+    Ângulos: left_elbow=109.3°, right_elbow=94.3°
+  Frame 1176: jersey (0.79), dumbbell (0.02), balance_beam (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: left_elbow=104.0°, right_elbow=92.0°
+  Frame 1177: jersey (0.76), dumbbell (0.02), balance_beam (0.02), maillot_(tights) (0.01), crutch (0.01)
+    Ângulos: right_elbow=91.9°
+  Frame 1178: jersey (0.70), dumbbell (0.03), balance_beam (0.02), maillot_(tank_suit) (0.01), maillot_(tights) (0.01)
+  Frame 1179: jersey (0.79), dumbbell (0.02), crutch (0.01), maillot_(tights) (0.01), balance_beam (0.01)
+  Frame 1180: jersey (0.72), crutch (0.02), dumbbell (0.02), maillot_(tank_suit) (0.01), maillot_(tights) (0.01)
+  Frame 1181: jersey (0.69), crutch (0.02), maillot_(tank_suit) (0.02), dumbbell (0.02), maillot_(tights) (0.01)
+  Frame 1182: jersey (0.76), crutch (0.02), dumbbell (0.01), maillot_(tank_suit) (0.01), maillot_(tights) (0.01)
+  Frame 1183: jersey (0.74), dumbbell (0.02), balance_beam (0.01), crutch (0.01), velvet (0.01)
+  Frame 1184: jersey (0.80), dumbbell (0.02), balance_beam (0.01), crutch (0.01), maillot_(tights) (0.01)
+  Frame 1185: jersey (0.84), dumbbell (0.01), crutch (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+  Frame 1186: jersey (0.83), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+  Frame 1187: jersey (0.85), dumbbell (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01), crutch (0.01)
+  Frame 1188: jersey (0.85), crutch (0.01), maillot_(tank_suit) (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1189: jersey (0.83), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01)
+  Frame 1190: jersey (0.84), dumbbell (0.01), crutch (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+  Frame 1191: jersey (0.87), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01)
+  Frame 1192: jersey (0.87), crutch (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01), dumbbell (0.01)
+  Frame 1193: jersey (0.85), crutch (0.02), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=93.6°
+  Frame 1194: jersey (0.86), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=95.5°
+  Frame 1195: jersey (0.90), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01), bulletproof_vest (0.01)
+  Frame 1196: jersey (0.90), crutch (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=99.4°
+  Frame 1197: jersey (0.90), crutch (0.02), maillot_(tights) (0.01), maillot_(tank_suit) (0.01), dumbbell (0.00)
+  Frame 1198: jersey (0.89), crutch (0.02), maillot_(tights) (0.01), maillot_(tank_suit) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=94.6°
+  Frame 1199: jersey (0.88), crutch (0.02), maillot_(tights) (0.01), maillot_(tank_suit) (0.01), dumbbell (0.01)
+  Frame 1200: jersey (0.88), crutch (0.02), dumbbell (0.01), bulletproof_vest (0.01), maillot_(tights) (0.01)
+  Frame 1201: jersey (0.89), crutch (0.01), bulletproof_vest (0.01), maillot_(tights) (0.00), apron (0.00)
+  Frame 1202: jersey (0.89), crutch (0.01), bulletproof_vest (0.01), maillot_(tights) (0.00), apron (0.00)
+  Frame 1203: jersey (0.89), crutch (0.02), bulletproof_vest (0.01), maillot_(tights) (0.00), dumbbell (0.00)
+    Ângulos: right_elbow=95.7°
+  Frame 1204: jersey (0.88), crutch (0.02), bulletproof_vest (0.01), maillot_(tights) (0.00), dumbbell (0.00)
+  Frame 1205: jersey (0.84), crutch (0.03), bulletproof_vest (0.01), dumbbell (0.01), maillot_(tights) (0.01)
+  Frame 1206: jersey (0.84), crutch (0.02), bulletproof_vest (0.01), dumbbell (0.01), maillot_(tights) (0.01)
+  Frame 1207: jersey (0.87), crutch (0.01), bulletproof_vest (0.01), maillot_(tights) (0.01), stole (0.01)
+  Frame 1208: jersey (0.83), crutch (0.02), maillot_(tights) (0.01), dumbbell (0.01), bulletproof_vest (0.01)
+  Frame 1209: jersey (0.81), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+  Frame 1210: jersey (0.83), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+  Frame 1211: jersey (0.86), crutch (0.01), bulletproof_vest (0.01), maillot_(tights) (0.01), dumbbell (0.01)
+  Frame 1212: jersey (0.86), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1213: jersey (0.82), dumbbell (0.01), crutch (0.01), bulletproof_vest (0.01), parallel_bars (0.01)
+  Frame 1214: jersey (0.87), crutch (0.02), bulletproof_vest (0.01), dumbbell (0.01), maillot_(tights) (0.01)
+    Ângulos: right_elbow=94.0°
+  Frame 1215: jersey (0.90), dumbbell (0.01), crutch (0.01), bulletproof_vest (0.01), maillot_(tights) (0.01)
+    Ângulos: right_elbow=94.7°
+  Frame 1216: jersey (0.85), dumbbell (0.01), crutch (0.01), bulletproof_vest (0.01), maillot_(tights) (0.01)
+    Ângulos: right_elbow=95.6°
+  Frame 1217: jersey (0.84), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=95.5°
+  Frame 1218: jersey (0.84), dumbbell (0.02), crutch (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=98.2°
+  Frame 1219: jersey (0.84), crutch (0.02), maillot_(tights) (0.01), dumbbell (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=98.5°
+  Frame 1220: jersey (0.86), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=96.4°
+  Frame 1221: jersey (0.87), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=94.1°
+  Frame 1222: jersey (0.85), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1223: jersey (0.85), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1224: jersey (0.85), dumbbell (0.01), crutch (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+  Frame 1225: jersey (0.87), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=95.8°
+  Frame 1226: jersey (0.85), dumbbell (0.01), crutch (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=96.1°
+  Frame 1227: jersey (0.83), dumbbell (0.01), crutch (0.01), bulletproof_vest (0.01), maillot_(tights) (0.01)
+    Ângulos: right_elbow=97.0°
+  Frame 1228: jersey (0.84), crutch (0.01), dumbbell (0.01), bulletproof_vest (0.01), maillot_(tights) (0.01)
+    Ângulos: right_elbow=97.0°
+  Frame 1229: jersey (0.85), crutch (0.01), dumbbell (0.01), bulletproof_vest (0.01), maillot_(tights) (0.01)
+    Ângulos: right_elbow=100.0°
+  Frame 1230: jersey (0.83), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=97.9°
+  Frame 1231: jersey (0.88), dumbbell (0.01), crutch (0.01), bulletproof_vest (0.01), maillot_(tights) (0.01)
+    Ângulos: right_elbow=94.9°
+  Frame 1232: jersey (0.87), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1233: jersey (0.87), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01), crutch (0.01)
+  Frame 1234: jersey (0.85), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01), crutch (0.01)
+    Ângulos: right_elbow=95.6°
+  Frame 1235: jersey (0.85), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=96.3°
+  Frame 1236: jersey (0.85), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01), apron (0.01)
+    Ângulos: right_elbow=96.1°
+  Frame 1237: jersey (0.85), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01), crutch (0.01)
+    Ângulos: right_elbow=97.4°
+  Frame 1238: jersey (0.86), maillot_(tights) (0.01), crutch (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=97.8°
+  Frame 1239: jersey (0.83), maillot_(tights) (0.01), crutch (0.01), maillot_(tank_suit) (0.01), dumbbell (0.01)
+    Ângulos: right_elbow=97.2°
+  Frame 1240: jersey (0.81), maillot_(tights) (0.02), crutch (0.02), maillot_(tank_suit) (0.01), dumbbell (0.01)
+    Ângulos: right_elbow=98.1°
+  Frame 1241: jersey (0.84), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=99.1°
+  Frame 1242: jersey (0.84), crutch (0.02), maillot_(tights) (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=99.9°
+  Frame 1243: jersey (0.84), crutch (0.02), dumbbell (0.01), maillot_(tights) (0.01), maillot_(tank_suit) (0.01)
+    Ângulos: right_elbow=99.1°
+  Frame 1244: jersey (0.85), crutch (0.01), dumbbell (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=100.4°
+  Frame 1245: jersey (0.84), bulletproof_vest (0.01), maillot_(tights) (0.01), dumbbell (0.01), crutch (0.01)
+  Frame 1246: jersey (0.80), maillot_(tights) (0.01), bulletproof_vest (0.01), dumbbell (0.01), maillot_(tank_suit) (0.01)
+  Frame 1247: jersey (0.83), maillot_(tights) (0.02), crutch (0.02), maillot_(tank_suit) (0.01), dumbbell (0.01)
+  Frame 1248: jersey (0.85), crutch (0.01), maillot_(tights) (0.01), bulletproof_vest (0.01), maillot_(tank_suit) (0.01)
+  Frame 1249: jersey (0.89), maillot_(tights) (0.01), bulletproof_vest (0.01), crutch (0.01), dumbbell (0.01)
+  Frame 1250: jersey (0.89), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01), bulletproof_vest (0.01)
+  Frame 1251: jersey (0.89), maillot_(tights) (0.01), crutch (0.01), dumbbell (0.01), bulletproof_vest (0.01)
+  Frame 1252: jersey (0.89), maillot_(tights) (0.01), dumbbell (0.01), crutch (0.01), maillot_(tank_suit) (0.01)
+  Frame 1253: jersey (0.88), maillot_(tights) (0.01), dumbbell (0.01), crutch (0.01), bulletproof_vest (0.01)
+    Ângulos: right_elbow=102.7°
+  Frame 1254: jersey (0.89), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01), bulletproof_vest (0.01)
+  Frame 1255: jersey (0.90), crutch (0.01), maillot_(tights) (0.01), dumbbell (0.01), stole (0.01)
+  Frame 1256: jersey (0.91), maillot_(tights) (0.01), dumbbell (0.01), crutch (0.01), stole (0.00)
+  Frame 1257: jersey (0.88), maillot_(tights) (0.01), dumbbell (0.01), crutch (0.01), bulletproof_vest (0.01)
+  Frame 1258: jersey (0.87), dumbbell (0.01), maillot_(tights) (0.01), crutch (0.01), bulletproof_vest (0.01)
+
+==================================================
+ANOMALIAS DETECTADAS:
+==================================================
+
+Total de anomalias detectadas: 1290
+  - Alta severidade: 1
+  - Média severidade: 50
+  - Baixa severidade: 1239
+
+Anômalias de Alta Severidade:
+  Frame 305 - Pessoa P008: Movimento brusco detectado em right_elbow: mudança de 128.4°
+
+Anômalias de Média Severidade (resumo):
+  - Ângulos extremos: 43 ocorrências
+  - Movimentos bruscos: 7 ocorrências
+
+  Exemplos:
+    Frame 195 - PP003: Postura anômala: ângulo extremo de cotovelo (4.3°)
+    Frame 196 - PP003: Postura anômala: ângulo extremo de cotovelo (1.4°)
+    Frame 197 - PP003: Postura anômala: ângulo extremo de cotovelo (12.3°)
+    Frame 198 - PP003: Postura anômala: ângulo extremo de cotovelo (6.2°)
+    Frame 199 - PP003: Postura anômala: ângulo extremo de cotovelo (3.8°)
+    Frame 200 - PP003: Postura anômala: ângulo extremo de cotovelo (14.3°)
+    Frame 201 - PP003: Postura anômala: ângulo extremo de cotovelo (7.2°)
+    Frame 202 - PP003: Postura anômala: ângulo extremo de cotovelo (12.5°)
+    Frame 202 - PP003: Postura anômala: ângulo extremo de cotovelo (4.7°)
+    Frame 203 - PP003: Postura anômala: ângulo extremo de cotovelo (1.2°)
+    Frame 204 - PP003: Postura anômala: ângulo extremo de cotovelo (10.2°)
+    Frame 205 - PP003: Movimento brusco detectado em right_elbow: mudança de 74.4°
+    Frame 229 - PP003: Postura anômala: ângulo extremo de cotovelo (11.1°)
+    Frame 230 - PP003: Postura anômala: ângulo extremo de cotovelo (11.5°)
+    Frame 236 - PP004: Movimento brusco detectado em left_elbow: mudança de 65.7°
+    Frame 236 - PP004: Postura anômala: ângulo extremo de cotovelo (172.2°)
+    Frame 281 - PP008: Postura anômala: ângulo extremo de cotovelo (2.9°)
+    Frame 282 - PP008: Postura anômala: ângulo extremo de cotovelo (18.7°)
+    Frame 283 - PP008: Postura anômala: ângulo extremo de cotovelo (17.4°)
+    Frame 289 - PP008: Postura anômala: ângulo extremo de cotovelo (3.9°)
+    Frame 290 - PP008: Postura anômala: ângulo extremo de cotovelo (13.3°)
+    Frame 292 - PP008: Movimento brusco detectado em left_elbow: mudança de 67.6°
+    Frame 298 - PP008: Movimento brusco detectado em left_elbow: mudança de 62.2°
+    Frame 298 - PP008: Postura anômala: ângulo extremo de cotovelo (178.7°)
+    Frame 300 - PP008: Movimento brusco detectado em right_elbow: mudança de 72.3°
+    Frame 305 - PP008: Postura anômala: ângulo extremo de cotovelo (9.9°)
+    Frame 306 - PP008: Postura anômala: ângulo extremo de cotovelo (6.6°)
+    Frame 308 - PP008: Postura anômala: ângulo extremo de cotovelo (13.9°)
+    Frame 314 - PP008: Postura anômala: ângulo extremo de cotovelo (13.7°)
+    Frame 316 - PP008: Postura anômala: ângulo extremo de cotovelo (4.1°)
+    Frame 317 - PP008: Postura anômala: ângulo extremo de cotovelo (11.5°)
+    Frame 318 - PP008: Movimento brusco detectado em left_elbow: mudança de 54.7°
+    Frame 318 - PP008: Postura anômala: ângulo extremo de cotovelo (17.6°)
+    Frame 341 - PP008: Movimento brusco detectado em left_elbow: mudança de 46.5°
+    Frame 342 - PP010: Postura anômala: ângulo extremo de cotovelo (2.0°)
+    Frame 343 - PP010: Postura anômala: ângulo extremo de cotovelo (8.4°)
+    Frame 344 - PP010: Postura anômala: ângulo extremo de cotovelo (9.2°)
+    Frame 345 - PP010: Postura anômala: ângulo extremo de cotovelo (11.5°)
+    Frame 346 - PP010: Postura anômala: ângulo extremo de cotovelo (5.7°)
+    Frame 347 - PP010: Postura anômala: ângulo extremo de cotovelo (6.9°)
+    Frame 348 - PP010: Postura anômala: ângulo extremo de cotovelo (11.1°)
+    Frame 349 - PP010: Postura anômala: ângulo extremo de cotovelo (11.3°)
+    Frame 719 - PP013: Postura anômala: ângulo extremo de cotovelo (172.7°)
+    Frame 720 - PP013: Postura anômala: ângulo extremo de cotovelo (172.0°)
+    Frame 722 - PP013: Postura anômala: ângulo extremo de cotovelo (172.3°)
+    Frame 723 - PP013: Postura anômala: ângulo extremo de cotovelo (178.7°)
+    Frame 724 - PP013: Postura anômala: ângulo extremo de cotovelo (170.8°)
+    Frame 726 - PP013: Postura anômala: ângulo extremo de cotovelo (173.6°)
+    Frame 858 - PP013: Postura anômala: ângulo extremo de cotovelo (174.8°)
+    Frame 859 - PP013: Postura anômala: ângulo extremo de cotovelo (174.6°)
+
+Anômalias de Baixa Severidade: 1239 ocorrências (dados de pose incertos)
+
+================================================================================
