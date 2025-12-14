@@ -329,16 +329,12 @@ def classify_activities(state: PipelineState):
             person_image = person.get("image")
             
             # Classify using both pose landmarks and image
-            if person["pose"]["landmarks"]:
-                activity = classify_activity(
-                    person["pose"]["landmarks"], 
-                    image=person_image
-                )
-                person["activity"] = activity
-            else:
-                # If no pose landmarks, try image-only classification
-                activity = classify_activity([], image=person_image)
-                person["activity"] = activity
+            # Pass landmarks (may be empty) and image for dual-mode classification
+            activity = classify_activity(
+                person["pose"]["landmarks"], 
+                image=person_image
+            )
+            person["activity"] = activity
 
     return state
 
