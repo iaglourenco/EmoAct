@@ -6,11 +6,13 @@ from emoact.types import Landmark
 from ultralytics.models import YOLO
 import numpy as np
 
-# Load YOLOv11 classification model
+# Load YOLOv11 classification model for image-based activity classification
+# Model path follows the same pattern as pose.py and objects.py
 try:
     classification_model = YOLO("models/yolo11n-cls.pt")
 except Exception as e:
     print(f"Warning: Could not load YOLOv11 classification model: {e}")
+    print("Image-based classification will be unavailable. Only pose-based classification will work.")
     classification_model = None
 
 
