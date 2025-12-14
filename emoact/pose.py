@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from ultralytics.models import YOLO
 
 model = YOLO("models/yolo11n-pose.pt")
@@ -32,7 +33,7 @@ def detect_poses_in_frame(frame):
         where bbox is (left, top, right, bottom)
         and keypoints is a flattened array of [x, y, confidence] values
     """
-    results = model(frame)
+    results = model(frame, verbose=False)
     poses = []
     for result in results:
         keypoints = result.keypoints

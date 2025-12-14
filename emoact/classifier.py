@@ -100,7 +100,9 @@ def calculate_all_joint_angles(landmarks: list[Landmark]) -> PoseAngles:
     right_elbow = get_landmark_by_name(landmarks, "right elbow")
     right_wrist = get_landmark_by_name(landmarks, "right wrist")
     if right_shoulder and right_elbow and right_wrist:
-        angles["right_elbow"] = calculate_angle(right_shoulder, right_elbow, right_wrist)
+        angles["right_elbow"] = calculate_angle(
+            right_shoulder, right_elbow, right_wrist
+        )
 
     # Calculate left knee angle (hip-knee-ankle)
     left_hip = get_landmark_by_name(landmarks, "left hip")
@@ -130,12 +132,11 @@ def calculate_all_joint_angles(landmarks: list[Landmark]) -> PoseAngles:
 
     # Calculate right shoulder angle
     if right_elbow and right_shoulder and right_hip:
-        angles["right_shoulder"] = calculate_angle(right_elbow, right_shoulder, right_hip)
+        angles["right_shoulder"] = calculate_angle(
+            right_elbow, right_shoulder, right_hip
+        )
 
     return angles
-
-
-
 
 
 def get_image_predictions(image: np.ndarray) -> list[ImagePrediction]:
@@ -155,7 +156,7 @@ def get_image_predictions(image: np.ndarray) -> list[ImagePrediction]:
     try:
         # Run inference
         results = classification_model(image, verbose=False)
-        
+
         if len(results) > 0:
             result = results[0]
             probs = result.probs
@@ -163,15 +164,14 @@ def get_image_predictions(image: np.ndarray) -> list[ImagePrediction]:
                 # Get top N predictions
                 top_indices = probs.top5
                 top_conf = probs.top5conf
-                
+
                 predictions = []
                 for i in range(min(TOP_PREDICTIONS_COUNT, len(top_indices))):
                     idx = top_indices[i]
                     conf = top_conf[i]
-                    predictions.append({
-                        "class_name": result.names[idx],
-                        "confidence": float(conf)
-                    })
+                    predictions.append(
+                        {"class_name": result.names[idx], "confidence": float(conf)}
+                    )
                 return predictions
     except Exception as e:
         print(f"Warning: Image classification failed: {e}")
@@ -180,7 +180,9 @@ def get_image_predictions(image: np.ndarray) -> list[ImagePrediction]:
     return []
 
 
-def collect_activity_data(landmarks: list[Landmark], image: Optional[np.ndarray] = None) -> ActivityRawData:
+def collect_activity_data(
+    landmarks: list[Landmark], image: Optional[np.ndarray] = None
+) -> ActivityRawData:
     """
     Collect raw activity data from pose landmarks and image classification.
     No inference or interpretation - just raw measurements for LLM processing.
@@ -195,7 +197,7 @@ def collect_activity_data(landmarks: list[Landmark], image: Optional[np.ndarray]
     # Collect pose data
     pose_available = landmarks is not None and len(landmarks) > 0
     pose_angles = calculate_all_joint_angles(landmarks if pose_available else [])
-    
+
     # Collect image classification data
     image_predictions = get_image_predictions(image) if image is not None else []
     image_classification_available = len(image_predictions) > 0
