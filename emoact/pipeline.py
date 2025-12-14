@@ -41,7 +41,22 @@ def detect_faces(state: PipelineState):
                 "emotions": [],
                 "pose": {"landmarks": []},
                 "person_id": "",
-                "activity": "unknown",
+                "activity": {
+                    "pose_landmarks": [],
+                    "pose_angles": {
+                        "left_elbow": None,
+                        "right_elbow": None,
+                        "left_knee": None,
+                        "right_knee": None,
+                        "left_hip": None,
+                        "right_hip": None,
+                        "left_shoulder": None,
+                        "right_shoulder": None,
+                    },
+                    "image_predictions": [],
+                    "pose_available": False,
+                    "image_classification_available": False,
+                },
             }
             frame_info["persons"].append(person_info)
 
@@ -240,27 +255,6 @@ def draw(state: PipelineState):
                     thickness=1,
                 )
 
-            # Draw activity
-            if person.get("activity") and person["activity"] != "unknown":
-                activity_text = f"Activity: {person['activity']}"
-                text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
-                # Background rectangle for text
-                cv2.rectangle(
-                    image,
-                    (left, bottom + 55),
-                    (left + text_size[0] + 4, bottom + 55 + text_size[1] + 8),
-                    (150, 150, 255),  # Light purple for activity
-                    -1,
-                )
-                draw_text(
-                    image,
-                    activity_text,
-                    position=(left + 2, bottom + 55 + text_size[1] + 3),
-                    font_scale=0.5,
-                    color=(255, 255, 255),
-                    thickness=1,
-                )
-
         # Draw objects with consistent styling
         for obj in frame_info["objects"]:
             left, top, right, bottom = obj["bbox"]
@@ -315,17 +309,23 @@ def track_faces(state: PipelineState) -> PipelineState:
     return state
 
 
-# TODO: Add a classification node to classify activities based on detected poses and also use 'yolov11-cls' model to classifify images
 def classify_activities(state: PipelineState):
-    from emoact.classifier import classify_activity
+    """
+    Collect raw activity data from pose landmarks and YOLOv11-cls model.
+    No inference - just raw data collection for LLM processing.
+    """
+    from emoact.classifier import collect_activity_data
 
     for frame_info in state["frames"]:
+        image = frame_info["image"]
         for person in frame_info["persons"]:
-            if person["pose"]["landmarks"]:
-                activity = classify_activity(person["pose"]["landmarks"])
-                person["activity"] = activity
-            else:
-                person["activity"] = "unknown"
+            # Collect raw data from both pose landmarks and image
+            # Pass full frame for image classification (not just face crop)
+            activity_data = collect_activity_data(
+                person["pose"]["landmarks"], 
+                image=image
+            )
+            person["activity"] = activity_data
 
     return state
 

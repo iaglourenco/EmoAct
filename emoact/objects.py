@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from ultralytics.models import YOLO
 
 model = YOLO("models/yolo11n.pt")
@@ -11,7 +12,7 @@ def detect_objects_in_frame(frame):
         List of tuples: (bbox, class_id, confidence)
         where bbox is (left, top, right, bottom)
     """
-    results = model(frame)
+    results = model(frame, verbose=False)
     objects = []
 
     for result in results:
