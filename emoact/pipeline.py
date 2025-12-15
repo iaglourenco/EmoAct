@@ -352,10 +352,17 @@ def summarize(state: PipelineState):
 
     # Generate comprehensive summary using LLM
     transcription = state.get("transcription", "No audio transcription available.")
+
+    # Get output directory from state or use current directory
+    import os
+
+    output_dir = os.path.dirname(state.get("output_path", ".")) or "."
+
     llm_summary = generate_video_summary(
         transcription=transcription,
         frame_data_summary=frame_data_summary,
         video_duration=video_duration,
+        output_dir=output_dir,
     )
 
     state["summary"] = llm_summary
@@ -430,12 +437,11 @@ graph_builder.add_conditional_edges(
     {"has_faces": "detect_poses", "no_faces": "detect_objects"},
 )
 graph_builder.add_edge("detect_poses", "detect_emotions")
-
-graph_builder.add_edge("detect_emotions", "detect_objects")
-graph_builder.add_edge("detect_objects", "track_faces")
+graph_builder.add_edge("detect_emotions", "track_faces")
 graph_builder.add_edge("track_faces", "classify_activities")
 
-graph_builder.add_edge("classify_activities", "transcribe_audio")
+graph_builder.add_edge("classify_activities", "detect_objects")
+graph_builder.add_edge("detect_objects", "transcribe_audio")
 graph_builder.add_edge("transcribe_audio", "draw")
 graph_builder.add_edge("draw", "summarize")
 graph_builder.add_edge("summarize", "save_video")
@@ -445,12 +451,11 @@ graph_builder.add_edge("save_video", "export_summary")
 print()
 graph = graph_builder.compile()
 draw_graph(graph)
-
 if __name__ == "__main__":
     from tqdm import tqdm
 
     initial_state: PipelineState = {
-        "video_path": "input/cropped.mp4",
+        "video_path": "input/input_video.mp4",
         "output_path": "output.mp4",
         "fps": 0.0,
         "transcription": "",
@@ -462,7 +467,7 @@ if __name__ == "__main__":
 
     # Create progress bar
     with tqdm(
-        total=len(graph.nodes),
+        total=len(graph.nodes) - 2,
         desc="Processing video",
         unit="step",
     ) as pbar:
