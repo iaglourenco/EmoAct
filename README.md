@@ -88,13 +88,13 @@ Define as estruturas de dados TypedDict para tipagem estática:
 
 | Componente | Modelo | Descrição |
 |------------|--------|-----------|
-| Face | InsightFace Buffalo_L | Detecção, embedding, gênero/idade |
-| Emoções | dima806/facial_emotions | Classificação de emoções faciais |
-| Pose | YOLOv11n-pose | Estimativa de keypoints corporais |
-| Objetos | YOLOv11n | Detecção de objetos COCO |
-| Atividade | YOLOv11n-cls | Classificação de imagem |
-| Áudio | Whisper Base | Transcrição speech-to-text |
-| Sumário | LLM Local | Geração de texto (servidor local) |
+| Face | [InsightFace](https://github.com/deepinsight/insightface) Buffalo_L | Detecção, embedding, gênero/idade |
+| Emoções | [dima806/facial_emotions](https://huggingface.co/dima806/facial_emotions_image_detection) | Classificação de emoções faciais |
+| Pose | [YOLOv11n-pose](https://docs.ultralytics.com/tasks/pose/) | Estimativa de keypoints corporais |
+| Objetos | [YOLOv11n](https://docs.ultralytics.com/pt/tasks/detect/) | Detecção de objetos COCO |
+| Atividade | [YOLOv11n-cls](https://docs.ultralytics.com/pt/tasks/classify/) | Classificação de imagem |
+| Áudio | [Whisper](https://github.com/openai/whisper) Base | Transcrição speech-to-text |
+| Sumário | LLM Local via [LM Studio](https://lmstudio.ai/) | Geração de texto (servidor local) |
 
 ## Configuração
 
@@ -102,15 +102,6 @@ Define as estruturas de dados TypedDict para tipagem estática:
 ```bash
 pip install -r requirements.txt
 ```
-
-### Modelos
-Os modelos devem estar no diretório `models/`:
-- `yolo11n.pt`, `yolo11n-pose.pt`, `yolo11n-cls.pt`
-- `buffalo_l/` (modelos InsightFace)
-- `whisper/base.pt`
-
-### LLM
-Requer um servidor LLM local rodando na porta 1234 com API compatível com OpenAI.
 
 ## Uso
 
