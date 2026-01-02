@@ -142,7 +142,7 @@ class FaceTracker:
         elif face_embedding is not None:
             person_data["embedding"] = face_embedding.copy()
 
-        # 2. CAPTURA DO REPRESENTANTE (Para o Merge/Re-ID final) -- PARTE QUE FALTOU
+        # 2. CAPTURA DO REPRESENTANTE (Para o Merge/Re-ID final)
         if face_location:
             top, right, bottom, left, _ = face_location
 
