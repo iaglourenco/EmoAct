@@ -452,17 +452,51 @@ print()
 graph = graph_builder.compile()
 draw_graph(graph)
 if __name__ == "__main__":
+    import argparse
     from tqdm import tqdm
 
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(
+        description="EmoAct - Sistema de análise de vídeo para detecção de emoções, atividades e identificação de pessoas"
+    )
+    parser.add_argument(
+        "--video-path",
+        "-v",
+        type=str,
+        default="input/input_video.mp4",
+        help="Caminho para o vídeo de entrada (padrão: input/input_video.mp4)",
+    )
+    parser.add_argument(
+        "--output-path",
+        "-o",
+        type=str,
+        default="output.mp4",
+        help="Caminho para o vídeo de saída (padrão: output.mp4)",
+    )
+    parser.add_argument(
+        "--object-conf-threshold",
+        type=float,
+        default=0.5,
+        help="Threshold de confiança para detecção de objetos (padrão: 0.5)",
+    )
+    parser.add_argument(
+        "--pose-conf-threshold",
+        type=float,
+        default=0.3,
+        help="Threshold de confiança para detecção de pose (padrão: 0.3)",
+    )
+
+    args = parser.parse_args()
+
     initial_state: PipelineState = {
-        "video_path": "input/input_video.mp4",
-        "output_path": "output.mp4",
+        "video_path": args.video_path,
+        "output_path": args.output_path,
         "fps": 0.0,
         "transcription": "",
         "frames": [],
         "summary": "",
-        "object_conf_threshold": 0.5,
-        "pose_conf_threshold": 0.3,
+        "object_conf_threshold": args.object_conf_threshold,
+        "pose_conf_threshold": args.pose_conf_threshold,
     }
 
     # Create progress bar

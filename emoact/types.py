@@ -31,18 +31,21 @@ class ImagePrediction(TypedDict):
 
 class ActivityRawData(TypedDict):
     """Raw data for LLM processing - no inference, just measurements"""
+
     pose_landmarks: list[Landmark]  # Raw pose landmark data
     pose_angles: PoseAngles  # Calculated joint angles
     image_predictions: list[ImagePrediction]  # Top predictions from YOLO classifier
     pose_available: bool  # Whether pose data is available
-    image_classification_available: bool  # Whether image classification ran successfully
+    image_classification_available: (
+        bool  # Whether image classification ran successfully
+    )
 
 
 class PersonInfo(TypedDict):
     person_id: str
     gender: int  # 0 for female, 1 for male,
     age: int  # in years
-    face_embedding: ndarray  # 128-d vector or None if not computed
+    face_embedding: ndarray  # 512-d vector or None if not computed
     face_location: tuple[
         int, int, int, int, float
     ]  # (left, top, right, bottom, confidence)
