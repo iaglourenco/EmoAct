@@ -72,7 +72,7 @@ Implementa o grafo de estados usando **LangGraph** para coordenar o fluxo de pro
 | Objetos | [YOLOv11n](https://docs.ultralytics.com/pt/tasks/detect/) | Detecção de objetos COCO |
 | Atividade | [YOLOv11n-cls](https://docs.ultralytics.com/pt/tasks/classify/) | Classificação de imagem |
 | Áudio | [Whisper](https://github.com/openai/whisper) Base | Transcrição speech-to-text |
-| Sumário | LLM Local via [LM Studio](https://lmstudio.ai/) | Geração de texto (servidor local) |
+| Sumário    | [Gemma3 12B](https://lmstudio.ai/models/google/gemma-3-12b) local via [LM Studio](https://lmstudio.ai/) | Geração de texto (servidor local) |
 
 ## Configuração
 
